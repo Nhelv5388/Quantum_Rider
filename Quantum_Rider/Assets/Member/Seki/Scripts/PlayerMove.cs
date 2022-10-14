@@ -30,7 +30,7 @@ public class PlayerMove : MonoBehaviour
         {//ç∂ÉNÉäÉbÉN
             if (_Pressed)
             {
-                Debug.Log("Ç®Ç≥ÇÍÇΩ");
+                //Debug.Log("Ç®Ç≥ÇÍÇΩ");
                 _Pressed = false;
                 Direction();
                 BeamActive();
@@ -106,5 +106,11 @@ public class PlayerMove : MonoBehaviour
     void VelocityApply()
     {
         _Myvelocity = this.gameObject.GetComponent<Rigidbody2D>().velocity;
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Wall"))
+        Debug.Log("Ç ÇØ");
     }
 }
