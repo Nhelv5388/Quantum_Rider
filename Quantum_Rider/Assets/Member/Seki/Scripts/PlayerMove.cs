@@ -7,12 +7,12 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     float hoverMaxX, hoverMaxY = 0, hoverPower = 1;
     [SerializeField]
-    GameObject rotationObject;//マウスクリックに応じて角度が変わるオブジェクト
+    GameObject rotationObject,beamObject;//マウスクリックに応じて角度が変わるオブジェクト
     Quaternion _Rotation;
 
     bool _Pressed = true;
     const int _Power = 200;
-    Vector3 _Myvelocity, _HoverVec, _HoverDirection;
+    Vector3 _Myvelocity, _HoverVec, _HoverDirection, _PlayerScreenPos;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,9 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Direction();
+        BeamRotation();
+        PlayerImageReturn();
         if (Input.GetMouseButton(0))
         {//左クリック
             if (_Pressed)
@@ -37,33 +40,45 @@ public class PlayerMove : MonoBehaviour
         else if (Input.GetMouseButtonUp(0))
         {//離したらビーム非表示
             _Pressed = true;
-            rotationObject.SetActive(false);
+            BeamActiveFalse();
         }
     }
-
-    void Direction()
+    void PlayerImageReturn()
     {
-        //進む方向決め
-        var pos = Camera.main.WorldToScreenPoint(transform.localPosition);
-        _Rotation = Quaternion.LookRotation(Vector3.forward, Input.mousePosition - pos);
+        var vec = Input.mousePosition - _PlayerScreenPos;
+        if (vec.x < 0)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else if(vec.x>0)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
+        }
+    }
+    void Direction()
+    {//進む方向決め
+        _PlayerScreenPos = Camera.main.WorldToScreenPoint(transform.localPosition);
+        _Rotation = Quaternion.LookRotation
+            (Vector3.forward, Input.mousePosition - _PlayerScreenPos);
         _HoverVec = _Rotation.eulerAngles;
         _HoverDirection = Quaternion.Euler(_HoverVec) * -Vector3.up;
+        //Debug.Log(Input.mousePosition - pos);
+    }
+    void BeamRotation()
+    {//ビーム方向
+        rotationObject.transform.localRotation = _Rotation;
     }
     void BeamActive()
-    {
-        //ビーム表示、ビーム方向
-        rotationObject.SetActive(true);
-        rotationObject.transform.localRotation = _Rotation;
-
+    {//ビーム表示
+        beamObject.SetActive(true);
+        BeamRotation();
         Invoke("BeamActiveFalse", 0.1f);
-
-        
     }
     void BeamActiveFalse()
-    {
-        rotationObject.SetActive(false);
+    {//ビーム非表示
+        beamObject.SetActive(false);
     }
-    private void Hover()
+    void Hover()
     {//浮く
         this.gameObject.GetComponent<Rigidbody2D>().AddForce
         (_HoverDirection * hoverPower * _Power);
