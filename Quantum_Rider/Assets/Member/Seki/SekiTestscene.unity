@@ -942,9 +942,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rayStart: {fileID: 816295217}
-  hoverMax: 2
-  hoverPower: 3
-  rot: {fileID: 1789449438}
+  hoverMaxX: 0
+  hoverMaxY: 0
+  hoverPower: 400
+  rotationObject: {fileID: 1789449438}
 --- !u!1 &1634207383
 GameObject:
   m_ObjectHideFlags: 0
