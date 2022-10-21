@@ -8,22 +8,26 @@ public class PlayerMove : MonoBehaviour
     float hoverMaxX, hoverMaxY = 0, hoverPower = 1;
     [SerializeField]
     GameObject rotationObjectRight, rotationObjectLeft, beamRight,beamLeft;//マウスクリックに応じて角度が変わるオブジェクト
+    GameObject[] targets;
+    GameObject enemy;
     Quaternion _RotationPlayer,_RotationRight,_RotationLeft;
     
+    float count = 0;
+
     bool _Pressed = true;
     const int _Power = 200;
-    Vector3 _Myvelocity, _HoverVec, _HoverDirection, _PlayerScreenPos;
+    Vector3 _Myvelocity, _HoverVec, _HoverDirection, _PlayerScreenPos,_distance;
 
     // Start is called before the first frame update
     void Start()
     {
-        EnemySearch enemySearch = GetComponent<EnemySearch>();
-        enemySearch.one += PlayerImageReturn;
+        targets = GameObject.FindGameObjectsWithTag("Enemy");
     }
 
     // Update is called once per frame
     void Update()
     {
+        EnemySearch();
         Direction();
         BeamRotation();
         PlayerImageReturn();
@@ -43,14 +47,45 @@ public class PlayerMove : MonoBehaviour
             BeamActiveFalse();
         }
     }
+
+    void EnemySearch()
+    {
+        count += Time.deltaTime;
+        if (count >= 1)
+        {
+            count = 0;
+            foreach (GameObject t in targets)
+            {
+                if (Vector3.Distance
+                    (transform.position,
+                    t.gameObject.transform.position) <= 6)
+                {
+                    enemy = t;
+                    //Debug.Log("ちかい");
+                    break;
+                }
+                enemy = null;
+            }
+        }
+    }
     void PlayerImageReturn()
-    {//プレイヤーの画像反転
-        var vec = Input.mousePosition - _PlayerScreenPos;
-        if (vec.x < 0)
+    {//プレイヤーの画像反転g
+        if(enemy!=null)
+        {//敵いる
+            _distance = _PlayerScreenPos-
+                Camera.main.WorldToScreenPoint
+                (enemy.transform.localPosition);
+        }
+        else
+        {
+            _distance = Input.mousePosition - _PlayerScreenPos;
+        }
+        
+        if (_distance.x < 0)
         {
             this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
-        else if(vec.x>0)
+        else if (_distance.x > 0)
         {
             this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
@@ -115,11 +150,5 @@ public class PlayerMove : MonoBehaviour
     void VelocityApply()
     {
         _Myvelocity = this.gameObject.GetComponent<Rigidbody2D>().velocity;
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if(collision.CompareTag("Wall"))
-        Debug.Log("ぬけ");
     }
 }
