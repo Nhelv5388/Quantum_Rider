@@ -17,7 +17,8 @@ public class PlayerMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        EnemySearch enemySearch = GetComponent<EnemySearch>();
+        enemySearch.one += PlayerImageReturn;
     }
 
     // Update is called once per frame
@@ -47,11 +48,11 @@ public class PlayerMove : MonoBehaviour
         var vec = Input.mousePosition - _PlayerScreenPos;
         if (vec.x < 0)
         {
-            this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
         else if(vec.x>0)
         {
-            this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
+            this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
     }
     void Direction()
