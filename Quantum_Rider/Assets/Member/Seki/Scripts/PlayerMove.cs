@@ -7,22 +7,27 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     float hoverMaxX, hoverMaxY = 0, hoverPower = 1;
     [SerializeField]
-    GameObject rotationObject,beamObject;//マウスクリックに応じて角度が変わるオブジェクト
-    Quaternion _Rotation;
+    GameObject rotationObjectRight, rotationObjectLeft, beamRight,beamLeft;//マウスクリックに応じて角度が変わるオブジェクト
+    GameObject[] targets;
+    GameObject enemy;
+    Quaternion _RotationPlayer,_RotationRight,_RotationLeft;
+    
+    float count = 0;
 
     bool _Pressed = true;
     const int _Power = 200;
-    Vector3 _Myvelocity, _HoverVec, _HoverDirection, _PlayerScreenPos;
+    Vector3 _Myvelocity, _HoverVec, _HoverDirection, _PlayerScreenPos,_distance;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        targets = GameObject.FindGameObjectsWithTag("Enemy");
     }
 
     // Update is called once per frame
     void Update()
     {
+        EnemySearch();
         Direction();
         BeamRotation();
         PlayerImageReturn();
@@ -30,7 +35,6 @@ public class PlayerMove : MonoBehaviour
         {//左クリック
             if (_Pressed)
             {
-                //Debug.Log("おされた");
                 _Pressed = false;
                 Direction();
                 BeamActive();
@@ -43,40 +47,79 @@ public class PlayerMove : MonoBehaviour
             BeamActiveFalse();
         }
     }
-    void PlayerImageReturn()
+
+    void EnemySearch()
     {
-        var vec = Input.mousePosition - _PlayerScreenPos;
-        if (vec.x < 0)
+        count += Time.deltaTime;
+        if (count >= 1)
         {
-            this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            count = 0;
+            foreach (GameObject t in targets)
+            {
+                if (Vector3.Distance
+                    (transform.position,
+                    t.gameObject.transform.position) <= 6)
+                {
+                    enemy = t;
+                    //Debug.Log("ちかい");
+                    break;
+                }
+                enemy = null;
+            }
         }
-        else if(vec.x>0)
+    }
+    void PlayerImageReturn()
+    {//プレイヤーの画像反転g
+        if(enemy!=null)
+        {//敵いる
+            _distance = _PlayerScreenPos-
+                Camera.main.WorldToScreenPoint
+                (enemy.transform.localPosition);
+        }
+        else
+        {
+            _distance = Input.mousePosition - _PlayerScreenPos;
+        }
+        
+        if (_distance.x < 0)
         {
             this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
+        }
+        else if (_distance.x > 0)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
     }
     void Direction()
     {//進む方向決め
         _PlayerScreenPos = Camera.main.WorldToScreenPoint(transform.localPosition);
-        _Rotation = Quaternion.LookRotation
+        var rightPos = Camera.main.WorldToScreenPoint(rotationObjectRight.transform.position);
+        var leftPos = Camera.main.WorldToScreenPoint(rotationObjectLeft.transform.position);
+        _RotationPlayer = Quaternion.LookRotation
             (Vector3.forward, Input.mousePosition - _PlayerScreenPos);
-        _HoverVec = _Rotation.eulerAngles;
+        _RotationRight = Quaternion.LookRotation
+            (Vector3.forward, Input.mousePosition - rightPos);
+        _RotationLeft = Quaternion.LookRotation
+            (Vector3.forward, Input.mousePosition - leftPos);
+        _HoverVec = _RotationPlayer.eulerAngles;
         _HoverDirection = Quaternion.Euler(_HoverVec) * -Vector3.up;
-        //Debug.Log(Input.mousePosition - pos);
     }
     void BeamRotation()
     {//ビーム方向
-        rotationObject.transform.localRotation = _Rotation;
+        rotationObjectRight.transform.localRotation = _RotationRight;
+        rotationObjectLeft.transform.localRotation = _RotationLeft;
     }
     void BeamActive()
     {//ビーム表示
-        beamObject.SetActive(true);
+        beamRight.SetActive(true);
+        beamLeft.SetActive(true);
         BeamRotation();
         Invoke("BeamActiveFalse", 0.1f);
     }
     void BeamActiveFalse()
     {//ビーム非表示
-        beamObject.SetActive(false);
+        beamRight.SetActive(false);
+        beamLeft.SetActive(false);
     }
     void Hover()
     {//浮く
@@ -93,6 +136,7 @@ public class PlayerMove : MonoBehaviour
         {
             _Myvelocity.x = -hoverMaxX;
         }
+
         if (_Myvelocity.y > hoverMaxY)
         {
             _Myvelocity.y = hoverMaxY;
@@ -106,11 +150,5 @@ public class PlayerMove : MonoBehaviour
     void VelocityApply()
     {
         _Myvelocity = this.gameObject.GetComponent<Rigidbody2D>().velocity;
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if(collision.CompareTag("Wall"))
-        Debug.Log("ぬけ");
     }
 }
