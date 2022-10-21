@@ -19,7 +19,6 @@ public class ColDamageFloor : MonoBehaviour
 
     void Update()
     {
-        
         if (startCol)
         {
             nowTime += Time.deltaTime;
@@ -55,5 +54,4 @@ public class ColDamageFloor : MonoBehaviour
             endCol = true;
         }
     }
-
 }
