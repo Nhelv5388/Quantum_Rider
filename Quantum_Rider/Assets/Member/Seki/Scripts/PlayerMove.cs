@@ -7,9 +7,9 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     float hoverMaxX, hoverMaxY = 0, hoverPower = 1;
     [SerializeField]
-    GameObject rotationObject,beamObject;//マウスクリックに応じて角度が変わるオブジェクト
-    Quaternion _Rotation;
-
+    GameObject rotationObjectRight, rotationObjectLeft, beamRight,beamLeft;//マウスクリックに応じて角度が変わるオブジェクト
+    Quaternion _RotationPlayer,_RotationRight,_RotationLeft;
+    
     bool _Pressed = true;
     const int _Power = 200;
     Vector3 _Myvelocity, _HoverVec, _HoverDirection, _PlayerScreenPos;
@@ -17,7 +17,7 @@ public class PlayerMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -30,7 +30,6 @@ public class PlayerMove : MonoBehaviour
         {//左クリック
             if (_Pressed)
             {
-                //Debug.Log("おされた");
                 _Pressed = false;
                 Direction();
                 BeamActive();
@@ -44,7 +43,7 @@ public class PlayerMove : MonoBehaviour
         }
     }
     void PlayerImageReturn()
-    {
+    {//プレイヤーの画像反転
         var vec = Input.mousePosition - _PlayerScreenPos;
         if (vec.x < 0)
         {
@@ -58,25 +57,33 @@ public class PlayerMove : MonoBehaviour
     void Direction()
     {//進む方向決め
         _PlayerScreenPos = Camera.main.WorldToScreenPoint(transform.localPosition);
-        _Rotation = Quaternion.LookRotation
+        var rightPos = Camera.main.WorldToScreenPoint(rotationObjectRight.transform.position);
+        var leftPos = Camera.main.WorldToScreenPoint(rotationObjectLeft.transform.position);
+        _RotationPlayer = Quaternion.LookRotation
             (Vector3.forward, Input.mousePosition - _PlayerScreenPos);
-        _HoverVec = _Rotation.eulerAngles;
+        _RotationRight = Quaternion.LookRotation
+            (Vector3.forward, Input.mousePosition - rightPos);
+        _RotationLeft = Quaternion.LookRotation
+            (Vector3.forward, Input.mousePosition - leftPos);
+        _HoverVec = _RotationPlayer.eulerAngles;
         _HoverDirection = Quaternion.Euler(_HoverVec) * -Vector3.up;
-        //Debug.Log(Input.mousePosition - pos);
     }
     void BeamRotation()
     {//ビーム方向
-        rotationObject.transform.localRotation = _Rotation;
+        rotationObjectRight.transform.localRotation = _RotationRight;
+        rotationObjectLeft.transform.localRotation = _RotationLeft;
     }
     void BeamActive()
     {//ビーム表示
-        beamObject.SetActive(true);
+        beamRight.SetActive(true);
+        beamLeft.SetActive(true);
         BeamRotation();
         Invoke("BeamActiveFalse", 0.1f);
     }
     void BeamActiveFalse()
     {//ビーム非表示
-        beamObject.SetActive(false);
+        beamRight.SetActive(false);
+        beamLeft.SetActive(false);
     }
     void Hover()
     {//浮く
@@ -93,6 +100,7 @@ public class PlayerMove : MonoBehaviour
         {
             _Myvelocity.x = -hoverMaxX;
         }
+
         if (_Myvelocity.y > hoverMaxY)
         {
             _Myvelocity.y = hoverMaxY;
