@@ -27,14 +27,17 @@ public class ChangeScene : MonoBehaviour
             case Scene.Scene1:
                 SceneManager.LoadScene("Title");
                 this.Player.SetActive(false);
+                Debug.Log("ˆÚ“®‚µ‚Ü‚µ‚½");
                 break;
             case Scene.Scene2:
                 SceneManager.LoadScene("GameOver");
                 this.Player.SetActive(true);
+                Debug.Log("ˆÚ“®‚µ‚Ü‚µ‚½");
                 break;
             case Scene.Scene3:
                 SceneManager.LoadScene("Clear");
                 this.Player.SetActive(false);
+                Debug.Log("ˆÚ“®‚µ‚Ü‚µ‚½");
                 break;
             default:
                 Debug.Log("No Map");
