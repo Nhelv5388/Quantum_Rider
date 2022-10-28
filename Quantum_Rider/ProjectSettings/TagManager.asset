@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - ChargeEnemy
   - PlayerAttack
+  - EnemyAttack
   layers:
   - Default
   - TransparentFX

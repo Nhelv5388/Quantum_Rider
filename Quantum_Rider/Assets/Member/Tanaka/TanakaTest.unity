@@ -610,6 +610,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1933866503425185382, guid: 954eb2da381c79d49b032d9b04b4abec, type: 3}
+      propertyPath: _EnemyTag
+      value: EnemyAttack
+      objectReference: {fileID: 0}
     - target: {fileID: 2902922482491604762, guid: 954eb2da381c79d49b032d9b04b4abec, type: 3}
       propertyPath: m_TagString
       value: PlayerAttack
