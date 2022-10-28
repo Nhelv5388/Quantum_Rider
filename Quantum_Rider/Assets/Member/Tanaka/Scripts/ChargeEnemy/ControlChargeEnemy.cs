@@ -1,0 +1,112 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ControlChargeEnemy : MonoBehaviour
+{
+    AreaSerchPlayer areaSerchPlayer;
+
+    //巡回、突撃それぞれの速度
+    [SerializeField]
+    private float PatrolSpeed = default;
+    [SerializeField]
+    private float ChargeSpeed = default;
+
+    //ダメージを与えた後のクールタイム
+    [SerializeField]
+    private float attackCoolDown = 3.0f;
+
+    private bool startCoolDown = false;
+
+    private float nowTime = 0;
+
+    //進行方向
+    private int direction = 1;
+
+    void Start()
+    {
+        areaSerchPlayer = GetComponentInChildren<AreaSerchPlayer>();
+    }
+
+
+    void Update()
+    {
+        //攻撃のクールタイム中は移動速度を変化させない
+        if (startCoolDown)
+        {
+            nowTime += Time.deltaTime;
+            if (nowTime >= attackCoolDown)
+            {
+                startCoolDown = false;
+                nowTime = 0;
+            }
+            MovePatrol();
+        }
+        else
+        {
+            if (areaSerchPlayer.foundPlayer)
+            {
+                MoveCharge();
+            }
+            else
+            {
+                MovePatrol();
+            }
+        }
+    }
+
+    //巡回中(プレイヤー未発見時)
+    private void MovePatrol()
+    {
+        this.transform.localPosition = new Vector2(this.transform.localPosition.x + PatrolSpeed * direction, this.transform.localPosition.y);
+    }
+    //突撃中(プレイヤー発見時)
+    private void MoveCharge()
+    {
+        this.transform.localPosition = new Vector2(this.transform.localPosition.x + ChargeSpeed * direction, this.transform.localPosition.y);
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if(col.gameObject.tag == "Wall")
+        {
+            ReturnEnemy(col);
+        }
+        if(col.gameObject.tag == "Player")
+        {
+            ChargeHit(col);
+        }
+    }
+
+    private void ReturnEnemy(Collision2D col)
+    {
+        //左に壁
+        if (col.gameObject.transform.localPosition.x <= this.transform.localPosition.x)
+        {
+            direction = 1;
+            this.gameObject.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+        }
+        else if (col.gameObject.transform.localPosition.x >= this.transform.localPosition.x)
+        {
+            direction = -1;
+            this.gameObject.transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.tag == "PlayerAttack")
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
+
+    private void ChargeHit(Collision2D col)
+    {
+        if (!startCoolDown)
+        {
+            Debug.Log("衝突ダメージ");
+            startCoolDown = true;
+        }
+    }
+}
