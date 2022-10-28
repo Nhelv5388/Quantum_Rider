@@ -5,6 +5,7 @@ using UnityEngine;
 public class ControlChargeEnemy : MonoBehaviour
 {
     AreaSerchPlayer areaSerchPlayer;
+    FloorSerch floorSerch;
 
     //巡回、突撃それぞれの速度
     [SerializeField]
@@ -23,9 +24,13 @@ public class ControlChargeEnemy : MonoBehaviour
     //進行方向
     private int direction = 1;
 
+    [SerializeField]
+    public Collision2D detectionFloor;
+
     void Start()
     {
         areaSerchPlayer = GetComponentInChildren<AreaSerchPlayer>();
+        floorSerch = GetComponentInChildren<FloorSerch>();
     }
 
 
@@ -53,6 +58,11 @@ public class ControlChargeEnemy : MonoBehaviour
                 MovePatrol();
             }
         }
+
+        if (floorSerch.noFloor)
+        {
+            ReturnEnemy(detectionFloor);
+        }
     }
 
     //巡回中(プレイヤー未発見時)
@@ -64,18 +74,6 @@ public class ControlChargeEnemy : MonoBehaviour
     private void MoveCharge()
     {
         this.transform.localPosition = new Vector2(this.transform.localPosition.x + ChargeSpeed * direction, this.transform.localPosition.y);
-    }
-
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        if(col.gameObject.tag == "Wall")
-        {
-            ReturnEnemy(col);
-        }
-        if(col.gameObject.tag == "Player")
-        {
-            ChargeHit(col);
-        }
     }
 
     private void ReturnEnemy(Collision2D col)
@@ -92,21 +90,32 @@ public class ControlChargeEnemy : MonoBehaviour
             this.gameObject.transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if(col.gameObject.tag == "PlayerAttack")
-        {
-            this.gameObject.SetActive(false);
-        }
-    }
-
     private void ChargeHit(Collision2D col)
     {
         if (!startCoolDown)
         {
             Debug.Log("衝突ダメージ");
             startCoolDown = true;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if(col.gameObject.tag == "Wall")
+        {
+            ReturnEnemy(col);
+        }
+        if(col.gameObject.tag == "Player")
+        {
+            ChargeHit(col);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.tag == "PlayerAttack")
+        {
+            this.gameObject.SetActive(false);
         }
     }
 }
