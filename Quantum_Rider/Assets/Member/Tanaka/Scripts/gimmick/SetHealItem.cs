@@ -25,4 +25,14 @@ public class SetHealItem : MonoBehaviour
             this.gameObject.SetActive(false);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        //G‚ê‚½‚ç”ñ•\¦‚É‚·‚é
+        if (col.gameObject.tag == "Player")
+        {
+            Debug.Log("HP‚ğ5‰ñ•œ");
+            this.gameObject.SetActive(false);
+        }
+    }
 }
