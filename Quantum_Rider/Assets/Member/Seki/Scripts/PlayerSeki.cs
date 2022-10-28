@@ -6,6 +6,8 @@ public class PlayerSeki : MonoBehaviour
 {
     [SerializeField]
     int playerHP = 10;
+
+    string _EnemyTag;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,4 +19,14 @@ public class PlayerSeki : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag(_EnemyTag))
+        {
+            playerHP = PlayerManager.Instance.Damage(1, playerHP);
+        }
+    }
+
+
 }
