@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerSeki : MonoBehaviour
 {
-    public int playerHP = 10;
+    [SerializeField]
+    int playerHP = 10;
     // Start is called before the first frame update
     void Start()
     {
