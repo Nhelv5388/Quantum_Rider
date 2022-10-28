@@ -7,6 +7,10 @@ TagManager:
   - Wall
   - DamageFloor
   - HealSphere
+  - Enemy
+  - ChargeEnemy
+  - PlayerAttack
+  - EnemyAttack
   layers:
   - Default
   - TransparentFX
