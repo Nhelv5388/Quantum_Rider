@@ -6,6 +6,27 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
     public Animator anim;
+    public GameObject Player;
+    private bool Start;
+
+    public enum Scene
+    {
+        Scene1,
+        Scene2,
+        Scene3,
+    }
+
+    void Update()
+    {
+        if(Start)
+        {
+            for (int i = 0; i < SceneManager.sceneCount; i++)
+            {
+                SceneManager.LoadScene(1);
+                Player.SetActive(true);
+            }
+        }
+    }
 
     public void Change()
     {
