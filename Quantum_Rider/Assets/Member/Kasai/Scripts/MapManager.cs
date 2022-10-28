@@ -8,17 +8,20 @@ public class MapManager : MonoBehaviour
     public static MapManager Instance { get => _instance; }
     static MapManager _instance;
     private static string _mapName;
-    private int _PlayerMaxHp = 10;//Managerが持つプレイヤーのHP保管用
+    PlayerManager playerManager;
     public enum SceneID
     {
         Title,
         Tutorial,
-        MainGameScene,
+        MainGameScene1,
         GameOver,
-        GameClear
+        GameClear,
+        None
     }
     private void Awake()
     {
+
+        playerManager = PlayerManager.Instance;
         if (Instance == null)
         {
             _instance = this;
@@ -29,9 +32,19 @@ public class MapManager : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+    
     void Start()
     {
-        _mapName = SceneManager.GetActiveScene().name;   
+        SceneManager.sceneLoaded += OnSceneLoad;
+        _mapName = SceneManager.GetActiveScene().name;
+        //Fade.Instance.fadeDelegate += Delegedetest;
+    }
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            MapManager.Instance.CallFadeOut(SceneID.Tutorial);
+        }
     }
     public int SceneStart(int HP,int MaxHP)
     {
@@ -44,35 +57,41 @@ public class MapManager : MonoBehaviour
     }
     public void SceneChange(SceneID Scene)
     {
-        switch(Scene)
+        switch (Scene)
         {
             case SceneID.Title:
                 SceneManager.LoadScene("TitleScene");
-                PlayerManager.Instance.PlayerSetActive(false);
+                //PlayerManager.Instance.PlayerSetActive(false);
+                playerManager.PlayerSetActive(false);
                 break;
             case SceneID.Tutorial:
-                SceneManager.LoadScene("Tutorial");
-                PlayerManager.Instance.PlayerSetActive(true);
+                SceneManager.LoadScene("TutorialScene");
+                //playerManager.PlayerSetActive(true);
                 break;
-            case SceneID.MainGameScene:
+            case SceneID.MainGameScene1:
                 SceneManager.LoadScene("MainGameScene");
-                PlayerManager.Instance.PlayerSetActive(true);
+                playerManager.PlayerSetActive(true);
                 break;
             case SceneID.GameOver:
                 SceneManager.LoadScene("GameOver");
-                PlayerManager.Instance.PlayerSetActive(false);
+                playerManager.PlayerSetActive(false);
                 break;
             case SceneID.GameClear:
                 SceneManager.LoadScene("GameClear");
-                PlayerManager.Instance.PlayerSetActive(false);
+                playerManager.PlayerSetActive(false);
                 break;
             default:
                 Debug.LogWarning("そのマップは存在しません");
                 break;
         }
     }
+    void OnSceneLoad(Scene scene, LoadSceneMode mode)
+    {
+        Fade.Instance.FadeReset();
+    }
+    public void CallFadeOut(SceneID scene)
+    {
+       StartCoroutine(Fade.Instance.FadeChange(false,SceneChange, scene));
+    }
 
-    //シーンが始まったときの処理
-    //シーンごとの処理の分岐
-    
 }

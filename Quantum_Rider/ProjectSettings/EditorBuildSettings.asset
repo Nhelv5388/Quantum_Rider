@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Member/Kasai/KasaiTestScene.unity
+    guid: 7d5c633100812784395e3fc4d1bcd8cd
+  - enabled: 1
+    path: Assets/Scenes/TutorialScene.unity
+    guid: 4776485a709ae2b4882ba74d778bf77e
+  - enabled: 1
+    path: Assets/Scenes/TitleScene.unity
+    guid: 2350336bfe04c654a881a6ead23c0b5a
+  - enabled: 1
+    path: Assets/Scenes/MainGameScene.unity
+    guid: 935bab73c2d02704280190a1456627fb
   m_configObjects: {}

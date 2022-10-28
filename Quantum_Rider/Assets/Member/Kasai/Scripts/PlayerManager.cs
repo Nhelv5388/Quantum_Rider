@@ -10,8 +10,12 @@ public class PlayerManager : MonoBehaviour
     private GameObject playerObject;
     private int _returnHP=0;
 
+    MapManager mapManager;
+
     private void Awake()
     {
+
+        mapManager = MapManager.Instance;
         if(Instance == null)
         {
             _instance = this;
@@ -29,7 +33,8 @@ public class PlayerManager : MonoBehaviour
         _returnHP= HP;
         if (_returnHP <= 0)
         {
-            //‚µ‚Ë
+            //MapManager.Instance.SceneChange(MapManager.SceneID.GameOver);
+            mapManager.SceneChange(MapManager.SceneID.GameOver);
         }
         return _returnHP;
                
