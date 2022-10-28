@@ -41,7 +41,7 @@ public static class Example
     */
     private static void OnChanged(GridBrushBase brush)
     {
-        Debug.Log(brush.name);
+        //Debug.Log(brush.name);
     }
 }
 

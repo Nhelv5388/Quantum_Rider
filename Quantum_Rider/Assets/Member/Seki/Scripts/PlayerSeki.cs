@@ -6,7 +6,7 @@ public class PlayerSeki : MonoBehaviour
 {
     [SerializeField]
     int playerHP = 10;
-
+    [SerializeField]
     string _EnemyTag;
     // Start is called before the first frame update
     void Start()
