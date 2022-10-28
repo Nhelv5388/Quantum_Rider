@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PoolSpown : MonoBehaviour
 {
+    /*
     [SerializeField]
     bool useObjectPool = true;
     [SerializeField]
@@ -56,4 +57,5 @@ public class PoolSpown : MonoBehaviour
             destroyer.StartDestroyTimer(destroyWaitTime);
         }
     }
+    */
 }

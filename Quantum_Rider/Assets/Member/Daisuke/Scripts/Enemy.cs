@@ -8,44 +8,56 @@ public class Enemy : MonoBehaviour
     private GameObject BulletPrefab;
     [SerializeField]
     private float WaitTime;
-    private bool EnemyFlag = true;
+    private bool EnemyFlag;
     [SerializeField]
     private float ShotDamage;
 
-    private void Update()
+    private void Start()
     {
-        EnemyMove();
-
+        EnemyFlag = true;
     }
 
-    private void EnemyMove()
+    // Update is called once per frame
+    private void Update()
     {
-        if(EnemyFlag == true)
+        if (Input.GetKeyDown("space"))
         {
             ShotPrefab();
+        }
+        /*if (EnemyFlag == true)
+        {
+            ShotPrefab();
+        }*/
+        EnemyHP();
+    }
+
+    private void EnemyHP()
+    {
+        if(EnemyFlag == false)
+        {
+            Destroy(this.gameObject);
         }
     }
 
     IEnumerator ShotPrefab()
     {
-        if (EnemyFlag == true)
-        {
-            //GameObject bullet = Instantiate(BulletPrefab, this.transform.position, Quaternion.Euler(transform.parent.eulerAngles.x, transform.parent.eulerAngles.y, 0));
-            //Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>(); 
-            //bulletRigidbody.AddForce();
-
-            Destroy(BulletPrefab, 5.0f);  
-        }
+        GameObject bullet = Instantiate(BulletPrefab, this.transform.position, Quaternion.identity);
+        Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>(); //ë≈ÇøèoÇ∑íeÇ…Ç¬Ç¢ÇƒÇÃèàóù
+        bulletRigidbody.AddForce(10,0,0);Å@//íeÇéwíËÇµÇΩï˚å¸Ç÷Ç∆ÇŒÇ∑
+        Debug.Log(this.transform);
 
         yield return new WaitForSeconds(WaitTime);
     }
 
-    private void OnTriggerEnter(Collider other)
+
+    /*private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Tama")
+        if(other.gameObject.tag == "tama")
         {
             EnemyFlag = false;
             Destroy(this.gameObject);
+
         }
-    }
+    }*/
+
 }

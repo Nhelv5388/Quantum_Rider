@@ -5,7 +5,7 @@ using UnityEngine.Pool;
 
 public class PoolManager : MonoBehaviour
 {
-    ObjectPool<GameObject> pool;
+    /*ObjectPool<GameObject> pool;
     public GameObject Prefab { get; private set; }
     void Awake()
     {
@@ -40,4 +40,5 @@ public class PoolManager : MonoBehaviour
     {
         pool.Release(obj);
     }
+    */
 }
