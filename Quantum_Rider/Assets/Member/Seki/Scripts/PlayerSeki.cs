@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class PlayerSeki : MonoBehaviour
 {
-    public int playerHP = 10;
+    [SerializeField]
+    int playerHP = 10;
+    [SerializeField]
+    string _EnemyTag = "Enemy";
     // Start is called before the first frame update
     void Start()
     {
@@ -16,4 +19,14 @@ public class PlayerSeki : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag(_EnemyTag))
+        {
+            playerHP = PlayerManager.Instance.Damage(1, playerHP);
+        }
+    }
+
+
 }

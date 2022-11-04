@@ -7,7 +7,7 @@ public class ChangeScene : MonoBehaviour
 {
     public Animator anim;
     public GameObject Player;
-    private bool Start;
+    private static string Map;
 
     public enum Scene
     {
@@ -16,21 +16,35 @@ public class ChangeScene : MonoBehaviour
         Scene3,
     }
 
-    void Update()
-    {
-        if(Start)
-        {
-            for (int i = 0; i < SceneManager.sceneCount; i++)
-            {
-                SceneManager.LoadScene(1);
-                Player.SetActive(true);
-            }
-        }
-    }
-
     public void Change()
     {
         StartCoroutine(SceneChange());
+        Map = SceneManager.GetActiveScene().name;
+    }
+
+    public void SceneChange(Scene Scene)
+    {
+        switch (Scene)
+        {
+            case Scene.Scene1:
+                SceneManager.LoadScene("Title");
+                this.Player.SetActive(false);
+                Debug.Log("ˆÚ“®‚µ‚Ü‚µ‚½");
+                break;
+            case Scene.Scene2:
+                SceneManager.LoadScene("GameOver");
+                this.Player.SetActive(true);
+                Debug.Log("ˆÚ“®‚µ‚Ü‚µ‚½");
+                break;
+            case Scene.Scene3:
+                SceneManager.LoadScene("Clear");
+                this.Player.SetActive(false);
+                Debug.Log("ˆÚ“®‚µ‚Ü‚µ‚½");
+                break;
+            default:
+                Debug.Log("No Map");
+                break;
+        }
     }
 
     IEnumerator SceneChange()
