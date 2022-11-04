@@ -8,6 +8,7 @@ public class MapManager : MonoBehaviour
     public static MapManager Instance { get => _instance; }
     static MapManager _instance;
     private static string _mapName;
+
     PlayerManager playerManager;
     public enum SceneID
     {
@@ -61,12 +62,12 @@ public class MapManager : MonoBehaviour
         {
             case SceneID.Title:
                 SceneManager.LoadScene("TitleScene");
-                //PlayerManager.Instance.PlayerSetActive(false);
+                PlayerManager.Instance.PlayerSetActive(false);
                 playerManager.PlayerSetActive(false);
                 break;
             case SceneID.Tutorial:
                 SceneManager.LoadScene("TutorialScene");
-                //playerManager.PlayerSetActive(true);
+                playerManager.PlayerSetActive(true);
                 break;
             case SceneID.MainGameScene1:
                 SceneManager.LoadScene("MainGameScene");

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Gate : MonoBehaviour
 {
+    [SerializeField] private MapManager.SceneID mapName;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,12 @@ public class Gate : MonoBehaviour
     void Update()
     {
         
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            MapManager.Instance.SceneChange(mapName);
+        }
     }
 }

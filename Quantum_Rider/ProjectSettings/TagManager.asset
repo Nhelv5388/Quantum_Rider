@@ -11,6 +11,7 @@ TagManager:
   - ChargeEnemy
   - PlayerAttack
   - Floor
+  - Start
   layers:
   - Default
   - TransparentFX

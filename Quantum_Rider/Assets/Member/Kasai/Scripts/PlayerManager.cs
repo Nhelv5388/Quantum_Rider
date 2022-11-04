@@ -8,6 +8,7 @@ public class PlayerManager : MonoBehaviour
     static PlayerManager _instance;
 
     private GameObject playerObject;
+    private GameObject startObject;
     private int _returnHP=0;
 
     MapManager mapManager;
@@ -25,8 +26,9 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         playerObject = GameObject.FindGameObjectWithTag("Player");
+        startObject = GameObject.FindGameObjectWithTag("Start");
     }
-    public int Damage(int Damage,int HP)
+    public int Damage(int Damage,int HP)//ダメージ処理
     {
         //プレイヤーのHPバーを作ろうね
         HP -= Damage;
@@ -39,7 +41,7 @@ public class PlayerManager : MonoBehaviour
         return _returnHP;
                
     }
-    public int Heal(int Heal, int HP, int MaxHP)
+    public int Heal(int Heal, int HP, int MaxHP)//体力回復
     {
         
         //プレイヤーのHPバーを作ろうね
@@ -52,11 +54,12 @@ public class PlayerManager : MonoBehaviour
         return _returnHP;
 
     }
-    public void PlayerSetActive(bool setActive)
+    public void PlayerSetActive(bool setActive)//プレイヤーの表示切替(タイトルなどではfalseにする)
     {
         if(setActive)
         {
             playerObject.SetActive(true);
+            playerObject.transform.position = startObject.transform.position;//プレイヤーの座標をStartObjectに移動
         }
         else
         {
