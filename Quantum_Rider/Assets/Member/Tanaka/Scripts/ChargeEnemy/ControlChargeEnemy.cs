@@ -15,7 +15,7 @@ public class ControlChargeEnemy : MonoBehaviour
 
     //ダメージを与えた後のクールタイム
     [SerializeField]
-    private float attackCoolDown = 3.0f;
+    private float attackCoolDown = 1.0f;
 
     private bool startCoolDown = false;
 
@@ -23,6 +23,7 @@ public class ControlChargeEnemy : MonoBehaviour
 
     //進行方向
     private int direction = 1;
+    private bool RetrunNow = false;
 
     [SerializeField]
     public Collision2D detectionFloor;
@@ -61,7 +62,7 @@ public class ControlChargeEnemy : MonoBehaviour
 
         if (floorSerch.noFloor)
         {
-            ReturnEnemy(detectionFloor);
+            ReturnEnemy();
         }
     }
 
@@ -76,18 +77,22 @@ public class ControlChargeEnemy : MonoBehaviour
         this.transform.localPosition = new Vector2(this.transform.localPosition.x + ChargeSpeed * direction, this.transform.localPosition.y);
     }
 
-    private void ReturnEnemy(Collision2D col)
+    //転回
+    private void ReturnEnemy()
     {
-        //左に壁
-        if (col.gameObject.transform.localPosition.x <= this.transform.localPosition.x)
+        //右に進む
+        if (RetrunNow)
         {
             direction = 1;
             this.gameObject.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            RetrunNow = false;
         }
-        else if (col.gameObject.transform.localPosition.x >= this.transform.localPosition.x)
+        //左に進む
+        else if (!RetrunNow)
         {
             direction = -1;
             this.gameObject.transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
+            RetrunNow = true;
         }
     }
     private void ChargeHit(Collision2D col)
@@ -103,14 +108,14 @@ public class ControlChargeEnemy : MonoBehaviour
     {
         if(col.gameObject.tag == "Wall")
         {
-            ReturnEnemy(col);
+            ReturnEnemy();
         }
         if(col.gameObject.tag == "Player")
         {
             ChargeHit(col);
         }
     }
-
+    
     private void OnTriggerEnter2D(Collider2D col)
     {
         if(col.gameObject.tag == "PlayerAttack")

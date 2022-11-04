@@ -13,6 +13,14 @@ public class FloorSerch : MonoBehaviour
             noFloor = false;
         }
     }
+
+    private void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Floor")
+        {
+            noFloor = false;
+        }
+    }
     private void OnTriggerExit2D(Collider2D col)
     {
         if(col.gameObject.tag == "Floor")
