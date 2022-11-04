@@ -23,16 +23,20 @@ public class UIManager : MonoBehaviour
     }
     // Start is called before the first frame update
     void Start()
-    {
+    {/*
         if(_HPBar==null)
         {
             _HPBar = GameObject.Find("HPBar").GetComponent<Image>();
-        }
+        }*/
         _MaxHP = HPManager.instance.GetHP();
         HPManager.instance.hpChange += HPBarChange;
     }
     void HPBarChange()
     {
+        if (_HPBar == null)
+        {
+            _HPBar = GameObject.Find("HPBar").GetComponent<Image>();
+        }
         _NowHP = HPManager.instance.GetHP();
         _HPBar.transform.localScale=
             new Vector3((int)(HPBarLength*((float)_NowHP/_MaxHP)), 1, 1);

@@ -538,7 +538,6 @@ GameObject:
   - component: {fileID: 8650864119220043544}
   - component: {fileID: 8650864119220043550}
   - component: {fileID: 8650864119220043546}
-  - component: {fileID: 1933866503425185382}
   - component: {fileID: 3894065113463540654}
   m_Layer: 0
   m_Name: Player 1
@@ -656,19 +655,6 @@ MonoBehaviour:
   rotationObjectLeft: {fileID: 5883583240263395572}
   beamRight: {fileID: 8650864119855930883}
   beamLeft: {fileID: 6604059943551185867}
---- !u!114 &1933866503425185382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8650864119220043551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46a321e0ddfd14e47ba38a4b136b7876, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _EnemyTag: Enemy
 --- !u!61 &3894065113463540654
 BoxCollider2D:
   m_ObjectHideFlags: 0

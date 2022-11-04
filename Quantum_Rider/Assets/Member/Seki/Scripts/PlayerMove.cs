@@ -88,7 +88,7 @@ public class PlayerMove : MonoBehaviour
     {//ƒvƒŒƒCƒ„[‚Ì‰æ‘œ”½“]
         if(enemy!=null)
         {//“G‚¢‚é
-            Debug.Log(enemy);
+            //Debug.Log(enemy);
             _distance = _PlayerScreenPos-
                 Camera.main.WorldToScreenPoint
                 (enemy.transform.localPosition);

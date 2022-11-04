@@ -31,9 +31,19 @@ public class GameManager : MonoBehaviour
     {
         
     }
+    public void SceneChange(string gotoScene)
+    {
+        SceneManager.LoadScene(gotoScene);
+    }
+
+    public string GetSceneName()
+    {
+        return SceneManager.GetActiveScene().name;
+    }
 
     private void GameOver()
     {
-        SceneManager.LoadScene("GameOver");
+        SceneChange("GameOver");
     }
+
 }
