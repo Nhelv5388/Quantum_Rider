@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PlayerSeki : MonoBehaviour
 {
-    [SerializeField]
-    int playerHP = 10;
+
     [SerializeField]
     string _EnemyTag = "Enemy";
     // Start is called before the first frame update
@@ -24,7 +23,7 @@ public class PlayerSeki : MonoBehaviour
     {
         if(collision.gameObject.CompareTag(_EnemyTag))
         {
-            playerHP = PlayerManager.Instance.Damage(1, playerHP);
+            HPManager.instance.Damage(1);
         }
     }
 

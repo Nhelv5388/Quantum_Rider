@@ -75,7 +75,7 @@ public class PlayerMove : MonoBehaviour
                     }
                 }
             }
-            Debug.Log(dis);
+            //Debug.Log(dis);
 
             if(dis>6)
             {
