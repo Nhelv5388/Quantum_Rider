@@ -47,31 +47,48 @@ public class PlayerMove : MonoBehaviour
             BeamActiveFalse();
         }
     }
-
     void EnemySearch()
     {
         count += Time.deltaTime;
         if (count >= 1)
         {
             count = 0;
+            var min = 0f ;
+            var dis = 0f;
             foreach (GameObject t in targets)
             {
-                if (Vector3.Distance
-                    (transform.position,
-                    t.gameObject.transform.position) <= 6)
+               
+                dis = Vector3.Distance
+                (transform.position,
+                t.gameObject.transform.position);
+                if (dis <= 6)
                 {
-                    enemy = t;
-                    //Debug.Log("ちかい");
-                    break;
+                    if (min == 0 || dis < min)
+                    {//最初の敵若しくは一番近い敵
+                        enemy = t;
+                        min = dis;//最小の距離を更新
+                        Debug.Log(t);
+                    }
+                    else
+                    {
+
+                    }
                 }
+            }
+            Debug.Log(dis);
+
+            if(dis>6)
+            {
                 enemy = null;
             }
+
         }
     }
     void PlayerImageReturn()
-    {//プレイヤーの画像反転g
+    {//プレイヤーの画像反転
         if(enemy!=null)
         {//敵いる
+            Debug.Log(enemy);
             _distance = _PlayerScreenPos-
                 Camera.main.WorldToScreenPoint
                 (enemy.transform.localPosition);
@@ -81,11 +98,11 @@ public class PlayerMove : MonoBehaviour
             _distance = Input.mousePosition - _PlayerScreenPos;
         }
         
-        if (_distance.x < 0)
+        if(_distance.x < 0)
         {
             this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
-        else if (_distance.x > 0)
+        else if(_distance.x > 0)
         {
             this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
