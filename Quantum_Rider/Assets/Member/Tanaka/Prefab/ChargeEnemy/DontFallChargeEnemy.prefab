@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PatrolSpeed: 0.01
-  ChargeSpeed: 0.03
+  ChargeSpeed: 0.02
   attackCoolDown: 5
 --- !u!61 &246088944763655291
 BoxCollider2D:

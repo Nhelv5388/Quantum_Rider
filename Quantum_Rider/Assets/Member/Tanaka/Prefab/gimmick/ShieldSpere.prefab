@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sheildItemImage: {fileID: 2803329550984385606}
   sheildImage: {fileID: 2803329551661374482}
-  playerPos: {fileID: 0}
+  playerPos: {fileID: 8650864119220043551, guid: 954eb2da381c79d49b032d9b04b4abec, type: 3}
   activeSheild: 0
 --- !u!58 &2803329551091542428
 CircleCollider2D:

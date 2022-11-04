@@ -15,7 +15,7 @@ public class ControlChargeEnemy : MonoBehaviour
 
     //ダメージを与えた後のクールタイム
     [SerializeField]
-    private float attackCoolDown = 3.0f;
+    private float attackCoolDown = 1.0f;
 
     private bool startCoolDown = false;
 
@@ -115,7 +115,7 @@ public class ControlChargeEnemy : MonoBehaviour
             ChargeHit(col);
         }
     }
-
+    
     private void OnTriggerEnter2D(Collider2D col)
     {
         if(col.gameObject.tag == "PlayerAttack")
