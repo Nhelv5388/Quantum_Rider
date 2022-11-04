@@ -34,11 +34,8 @@ public class UIManager : MonoBehaviour
     void HPBarChange()
     {
         _NowHP = HPManager.instance.GetHP();
-        //Debug.Log(_NowHP);
-        //Debug.Log(_MaxHP);
-        //float a = _NowHP / _MaxHP;
-        Debug.Log(HPBarLength * (float)_NowHP/_MaxHP);
-        _HPBar.transform.localScale=new Vector3((int)(HPBarLength*((float)_NowHP/_MaxHP)), 1, 1);
+        _HPBar.transform.localScale=
+            new Vector3((int)(HPBarLength*((float)_NowHP/_MaxHP)), 1, 1);
     }
     // Update is called once per frame
     void Update()

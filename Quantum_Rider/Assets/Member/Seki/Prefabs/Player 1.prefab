@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 3153861476094123078}
   m_Layer: 0
   m_Name: beeee
-  m_TagString: Untagged
+  m_TagString: PlayerAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -668,7 +668,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46a321e0ddfd14e47ba38a4b136b7876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHP: 10
   _EnemyTag: Enemy
 --- !u!61 &3894065113463540654
 BoxCollider2D:
@@ -709,7 +708,7 @@ GameObject:
   - component: {fileID: 8650864119322582133}
   m_Layer: 0
   m_Name: beeee
-  m_TagString: Untagged
+  m_TagString: PlayerAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
