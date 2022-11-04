@@ -292,7 +292,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3751323215586907016, guid: 950cc5a6ebdc47447991e435b9d1d7b0, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3751323215586907016, guid: 950cc5a6ebdc47447991e435b9d1d7b0, type: 3}
       propertyPath: m_LocalRotation.x
@@ -304,7 +304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3751323215586907016, guid: 950cc5a6ebdc47447991e435b9d1d7b0, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3751323215586907016, guid: 950cc5a6ebdc47447991e435b9d1d7b0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -316,7 +316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3751323215586907016, guid: 950cc5a6ebdc47447991e435b9d1d7b0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3751323215586907016, guid: 950cc5a6ebdc47447991e435b9d1d7b0, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -326,26 +326,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere 2
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4895883660510639404, guid: 950cc5a6ebdc47447991e435b9d1d7b0, type: 3}
+    - target: {fileID: 3751323215586907020, guid: 950cc5a6ebdc47447991e435b9d1d7b0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 950cc5a6ebdc47447991e435b9d1d7b0, type: 3}
---- !u!1 &800469042 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3751323215586907020, guid: 950cc5a6ebdc47447991e435b9d1d7b0, type: 3}
-  m_PrefabInstance: {fileID: 800469041}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &800469043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800469042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f2d63af36b03804c8afa9c8bcf1697a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &811132960
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -379,7 +365,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3751323215586907016, guid: 99a6cbfa5f66bf5409bceddd2dff3ff1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3751323215586907016, guid: 99a6cbfa5f66bf5409bceddd2dff3ff1, type: 3}
       propertyPath: m_LocalRotation.x
@@ -387,11 +373,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3751323215586907016, guid: 99a6cbfa5f66bf5409bceddd2dff3ff1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3751323215586907016, guid: 99a6cbfa5f66bf5409bceddd2dff3ff1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3751323215586907016, guid: 99a6cbfa5f66bf5409bceddd2dff3ff1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -403,7 +389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3751323215586907016, guid: 99a6cbfa5f66bf5409bceddd2dff3ff1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 3751323215586907016, guid: 99a6cbfa5f66bf5409bceddd2dff3ff1, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -413,26 +399,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere 3
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4895883660510639404, guid: 99a6cbfa5f66bf5409bceddd2dff3ff1, type: 3}
+    - target: {fileID: 3751323215586907020, guid: 99a6cbfa5f66bf5409bceddd2dff3ff1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99a6cbfa5f66bf5409bceddd2dff3ff1, type: 3}
---- !u!1 &811132961 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3751323215586907020, guid: 99a6cbfa5f66bf5409bceddd2dff3ff1, type: 3}
-  m_PrefabInstance: {fileID: 811132960}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &811132962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 811132961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12658f953be0f614bbd5eec00663f9ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1611694466
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,7 +522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3751323215586907016, guid: 2fee1818b6251c741a6d7d59d92f62a1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3751323215586907016, guid: 2fee1818b6251c741a6d7d59d92f62a1, type: 3}
       propertyPath: m_LocalRotation.x
@@ -562,7 +534,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3751323215586907016, guid: 2fee1818b6251c741a6d7d59d92f62a1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3751323215586907016, guid: 2fee1818b6251c741a6d7d59d92f62a1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -574,7 +546,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3751323215586907016, guid: 2fee1818b6251c741a6d7d59d92f62a1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3751323215586907016, guid: 2fee1818b6251c741a6d7d59d92f62a1, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -584,26 +556,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4895883660510639404, guid: 2fee1818b6251c741a6d7d59d92f62a1, type: 3}
+    - target: {fileID: 3751323215586907020, guid: 2fee1818b6251c741a6d7d59d92f62a1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fee1818b6251c741a6d7d59d92f62a1, type: 3}
---- !u!1 &1714658762 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3751323215586907020, guid: 2fee1818b6251c741a6d7d59d92f62a1, type: 3}
-  m_PrefabInstance: {fileID: 1714658761}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1714658763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1714658762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 835e9accd0972d5459d3929cd623c9b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1967050400
 PrefabInstance:
   m_ObjectHideFlags: 0

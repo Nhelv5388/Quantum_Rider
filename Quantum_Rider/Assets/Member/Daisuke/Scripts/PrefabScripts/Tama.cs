@@ -4,22 +4,52 @@ using UnityEngine;
 
 public class Tama : MonoBehaviour
 {
-    //public float MoveSpeed = 20.0f;         // 移動値
-    //public float time = 3f;
-    // Start is called before the first frame update
+    [SerializeField]
+    private float WaitTime;
+
+    // 最初の位置
+    private Vector3 initialPos;
+
+
     void Start()
     {
-
+        // 初期位置情報の取得
+        initialPos = transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // 位置の更新
-        //transform.Translate(0.03f, 0, 0);
-        transform.position += Vector3.right * Time.deltaTime;
-        //transform.Translate(MoveSpeed * Time.deltaTime, 0, 0);
-        //Destroy(this.gameObject, time);
+        transform.position += transform.right * Time.deltaTime;
+        //Destroy(this,gameObject,3f);
+
+
     }
 
+    /*
+    IEnumerator ShotPrefab1()
+    {
+        transform.position += transform.right * Time.deltaTime * 2;
+        yield return new WaitForSeconds(WaitTime);
+
+    }
+
+    IEnumerator ShotPrefab2()
+    {
+        transform.position += transform.right * Time.deltaTime * 2;
+        yield return new WaitForSeconds(WaitTime);
+
+    }
+    */
+
+    private void Reset()
+    {
+        if(Time.deltaTime < 5)
+        {
+            transform.position = initialPos;
+        }
+
+
+    }
+
+    
 }
