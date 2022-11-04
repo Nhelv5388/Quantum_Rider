@@ -54,6 +54,7 @@ public class PlayerMove : MonoBehaviour
         if (count >= 1)
         {
             count = 0;
+            
             foreach (GameObject t in targets)
             {
                 if (Vector3.Distance
@@ -81,11 +82,11 @@ public class PlayerMove : MonoBehaviour
             _distance = Input.mousePosition - _PlayerScreenPos;
         }
         
-        if (_distance.x < 0)
+        if(_distance.x < 0)
         {
             this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
-        else if (_distance.x > 0)
+        else if(_distance.x > 0)
         {
             this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
