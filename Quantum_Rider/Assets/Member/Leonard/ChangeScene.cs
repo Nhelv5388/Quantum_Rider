@@ -7,6 +7,7 @@ public class ChangeScene : MonoBehaviour
 {
     public Animator anim;
     public GameObject Player;
+    private static string Map;
 
     public enum Scene
     {
@@ -18,6 +19,7 @@ public class ChangeScene : MonoBehaviour
     public void Change()
     {
         StartCoroutine(SceneChange());
+        Map = SceneManager.GetActiveScene().name;
     }
 
     public void SceneChange(Scene Scene)
