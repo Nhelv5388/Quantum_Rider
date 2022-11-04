@@ -79,7 +79,7 @@ public class PlayerMove : MonoBehaviour
 
             if(dis>6)
             {
-                //enemy = null;
+                enemy = null;
             }
 
         }
