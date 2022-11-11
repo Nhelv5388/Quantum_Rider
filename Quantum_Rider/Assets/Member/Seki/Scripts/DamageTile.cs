@@ -31,9 +31,10 @@ public class DamageTile : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        //Debug.Log("aaa");
         if (collision.gameObject.CompareTag("Player"))
         {
+            //Debug.Log("ì¸Ç¡ÇΩ");
             _count = 0;
             onPlayer = true;
         }
@@ -45,6 +46,7 @@ public class DamageTile : MonoBehaviour
        
         if (collision.gameObject.CompareTag("Player"))
         {
+            //Debug.Log("èoÇΩ");
             _count = 0;
             onPlayer = false;
         }
