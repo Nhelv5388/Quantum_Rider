@@ -9,6 +9,9 @@ public class BeamMove : MonoBehaviour
 
     GameObject parent;
 
+    [SerializeField]
+    int speed = 1;
+
     Vector3 direction;
     // Start is called before the first frame update
     void Start()
@@ -20,8 +23,8 @@ public class BeamMove : MonoBehaviour
     void Update()
     {
         direction = Quaternion.Euler
-           (parent.transform.rotation.eulerAngles) * Vector3.right;
-        this.gameObject.transform.Translate(direction * Time.deltaTime);
+           (parent.transform.rotation.eulerAngles) * -Vector3.up;
+        this.gameObject.transform.Translate(direction * Time.deltaTime * speed);
     }
 
     private void OnEnable()
@@ -32,6 +35,6 @@ public class BeamMove : MonoBehaviour
 
     private void OnDisable()
     {
-        
+        this.gameObject.transform.position = parent.transform.position;
     }
 }
