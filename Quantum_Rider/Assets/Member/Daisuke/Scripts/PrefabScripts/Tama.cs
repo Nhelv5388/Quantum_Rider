@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Tama : MonoBehaviour
 {
-    [SerializeField]
-    private float WaitTime;
+    //[SerializeField]
+    //private float WaitTime;
 
     // Å‰‚ÌˆÊ’u
     private Vector3 initialPos;
