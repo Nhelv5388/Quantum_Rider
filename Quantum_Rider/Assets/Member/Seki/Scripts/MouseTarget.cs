@@ -14,6 +14,6 @@ public class MouseTarget : MonoBehaviour
     void Update()
     {
         //Cursor.visible = false;
-        this.gameObject.transform.position =new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y,0);
+        this.gameObject.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y,0);
     }
 }
