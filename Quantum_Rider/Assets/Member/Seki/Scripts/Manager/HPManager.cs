@@ -55,5 +55,9 @@ public class HPManager : MonoBehaviour
         }
         return _PlayerHP;
     }
+    public void HpReset()
+    {
+        _PlayerHP = _MaxHP;
+    }
 
 }

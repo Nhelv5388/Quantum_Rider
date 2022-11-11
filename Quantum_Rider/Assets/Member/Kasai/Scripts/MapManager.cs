@@ -63,23 +63,25 @@ public class MapManager : MonoBehaviour
             case SceneID.Title:
                 SceneManager.LoadScene("TitleScene");
                 PlayerManager.Instance.PlayerSetActive(false);
-                playerManager.PlayerSetActive(false);
+                //playerManager.PlayerSetActive(false);
                 break;
             case SceneID.Tutorial:
                 SceneManager.LoadScene("TutorialScene");
-                playerManager.PlayerSetActive(true);
+                HPManager.instance.HpReset();
+                //playerManager.PlayerSetActive(true);
                 break;
             case SceneID.MainGameScene1:
                 SceneManager.LoadScene("MainGameScene");
-                playerManager.PlayerSetActive(true);
+                HPManager.instance.HpReset();
+                //playerManager.PlayerSetActive(true);
                 break;
             case SceneID.GameOver:
                 SceneManager.LoadScene("GameOver");
-                playerManager.PlayerSetActive(false);
+                //playerManager.PlayerSetActive(false);
                 break;
             case SceneID.GameClear:
                 SceneManager.LoadScene("GameClear");
-                playerManager.PlayerSetActive(false);
+                //playerManager.PlayerSetActive(false);
                 break;
             default:
                 Debug.LogWarning("ÇªÇÃÉ}ÉbÉvÇÕë∂ç›ÇµÇ‹ÇπÇÒ");
@@ -89,6 +91,7 @@ public class MapManager : MonoBehaviour
     void OnSceneLoad(Scene scene, LoadSceneMode mode)
     {
         Fade.Instance.FadeReset();
+
     }
     public void CallFadeOut(SceneID scene)
     {
