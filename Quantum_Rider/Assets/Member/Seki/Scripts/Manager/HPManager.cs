@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class HPManager : MonoBehaviour
 {
-    
     public static HPManager instance = null;
 
     public delegate void HPZero();
@@ -14,6 +13,7 @@ public class HPManager : MonoBehaviour
 
     [SerializeField]
     private int _PlayerHP=10;
+    private int _MaxHP;
     private void Awake()
     {
         if (instance == null)
@@ -29,14 +29,12 @@ public class HPManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        _MaxHP = _PlayerHP;
     }
-
     public int GetHP()
     {
         return _PlayerHP;
     }
-
     public int Damage(int damage)
     {
         _PlayerHP -= damage;
@@ -47,4 +45,15 @@ public class HPManager : MonoBehaviour
         }
         return _PlayerHP;
     }
+    public int Heal(int heal)
+    {
+        _PlayerHP += heal;
+        hpChange();
+        if (_PlayerHP >= _MaxHP)
+        {
+            _PlayerHP = _MaxHP;
+        }
+        return _PlayerHP;
+    }
+
 }
