@@ -8,7 +8,8 @@ public class PlayerMove : MonoBehaviour
     float hoverMaxX, hoverMaxY = 0, hoverPower = 1;
     [SerializeField]
     GameObject rotationObjectRight, rotationObjectLeft, beamRight,beamLeft;//マウスクリックに応じて角度が変わるオブジェクト
-    GameObject[] targets;
+    [SerializeField]
+    GameObject[] targets,rightGun,leftGun;
     GameObject enemy;
     Quaternion _RotationPlayer,_RotationRight,_RotationLeft;
     
@@ -67,16 +68,10 @@ public class PlayerMove : MonoBehaviour
                     {//最初の敵若しくは一番近い敵
                         enemy = t;
                         min = dis;//最小の距離を更新
-                        Debug.Log(t);
-                    }
-                    else
-                    {
-
+                        Debug.Log(dis);
                     }
                 }
             }
-            //Debug.Log(dis);
-
             if(dis>6)
             {
                 enemy = null;
@@ -91,7 +86,7 @@ public class PlayerMove : MonoBehaviour
             //Debug.Log(enemy);
             _distance = _PlayerScreenPos-
                 Camera.main.WorldToScreenPoint
-                (enemy.transform.localPosition);
+                (enemy.transform.position);
         }
         else
         {
@@ -100,11 +95,61 @@ public class PlayerMove : MonoBehaviour
         
         if(_distance.x < 0)
         {
+            //Debug.Log("右向き");
             this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
+            FlipFalse();
         }
         else if(_distance.x > 0)
         {
+            //Debug.Log("左向き");
             this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            FlipTrue();
+        }
+    }
+
+    void FlipTrue()
+    {//銃のレイヤー変え
+        foreach(var t in rightGun)
+        {
+            if (t.gameObject.
+                GetComponent<SpriteRenderer>().sortingOrder >=7)
+            {
+                t.gameObject.
+                GetComponent<SpriteRenderer>().sortingOrder -= 4;
+            }
+                
+        }
+        foreach (var t in leftGun)
+        {
+            if(t.gameObject.
+                GetComponent<SpriteRenderer>().sortingOrder <= 5)
+            {
+                t.gameObject.
+                GetComponent<SpriteRenderer>().sortingOrder += 4;
+            }
+            
+        }
+    }
+
+    void FlipFalse()
+    {//銃のレイヤー変え
+        foreach (var t in rightGun)
+        {
+            if (t.gameObject.
+                GetComponent<SpriteRenderer>().sortingOrder <= 5)
+            {
+                t.gameObject.
+                GetComponent<SpriteRenderer>().sortingOrder += 4;
+            }
+        }
+        foreach (var t in leftGun)
+        {
+            if (t.gameObject.
+                GetComponent<SpriteRenderer>().sortingOrder >= 7)
+            {
+                t.gameObject.
+                GetComponent<SpriteRenderer>().sortingOrder -= 4;
+            }
         }
     }
     void Direction()
