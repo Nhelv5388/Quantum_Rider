@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class SetShieldItem : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject sheildItemImage;
-    [SerializeField]
-    private GameObject sheildImage;
-    [SerializeField]
+    //シールドのアイテム画像
+    private GameObject shieldItemImage;
+    //プレイヤーに付属させるシールド画像
+    private GameObject shieldImage;
+    //プレイヤーの画像
     private GameObject playerPos;
 
-    public bool activeSheild = false;
+    private bool activeSheild = false;
+    private bool usedShieldItem = false;
 
     void Start()
     {
+        shieldItemImage = transform .Find("ShieldItemImage").gameObject;
+        shieldImage = transform.Find("ShieldImage").gameObject;
+        playerPos = GameObject.Find("Player");
         this.gameObject.SetActive(true);
     }
 
@@ -22,35 +26,27 @@ public class SetShieldItem : MonoBehaviour
     {
         if (activeSheild)
         {
-            sheildImage.transform.position = playerPos.transform.localPosition;
+            shieldImage.transform.position = playerPos.transform.localPosition;
         }
         else
         {
-            sheildImage.SetActive(false);
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        //触れたら非表示にする
-        if (col.gameObject.tag == "Player")
-        {
-            Debug.Log("シールド展開");
-            sheildItemImage.gameObject.SetActive(false);
-            sheildImage.SetActive(true);
-            activeSheild = true;
+            shieldImage.SetActive(false);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        //触れたら非表示にする
-        if (col.gameObject.tag == "Player")
+        if (!usedShieldItem)
         {
-            Debug.Log("シールド展開");
-            sheildItemImage.gameObject.SetActive(false);
-            sheildImage.SetActive(true);
-            activeSheild = true;
+            //触れたら非表示にする
+            if (col.gameObject.tag == "Player")
+            {
+                Debug.Log("シールド展開");
+                shieldItemImage.gameObject.SetActive(false);
+                shieldImage.SetActive(true);
+                activeSheild = true;
+                usedShieldItem = true;
+            }
         }
     }
 }
