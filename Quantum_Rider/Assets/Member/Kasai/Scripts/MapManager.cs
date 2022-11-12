@@ -90,12 +90,12 @@ public class MapManager : MonoBehaviour
     }
     void OnSceneLoad(Scene scene, LoadSceneMode mode)
     {
-        Fade.Instance.FadeReset();
+        //Fade.FadeReset();
 
     }
     public void CallFadeOut(SceneID scene)
     {
-       StartCoroutine(Fade.Instance.FadeChange(false,SceneChange, scene));
+       //StartCoroutine(Fade.FadeChange(false,SceneChange, scene));
     }
 
 }
