@@ -7,7 +7,7 @@ public class BeamMove : MonoBehaviour
 
     [SerializeField]
 
-    GameObject parent;
+    GameObject beamPos,beamDirection;
 
     [SerializeField]
     int speed = 1;
@@ -22,19 +22,18 @@ public class BeamMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        direction = Quaternion.Euler
-           (parent.transform.rotation.eulerAngles) * -Vector3.up;
-        this.gameObject.transform.Translate(direction * Time.deltaTime * speed);
+        this.gameObject.transform.Translate(Vector3.up* Time.deltaTime * speed);
     }
 
     private void OnEnable()
     {
+        this.gameObject.transform.position = beamPos.transform.position;
 
-        
+        this.gameObject.transform.rotation = beamDirection.transform.rotation;
     }
 
     private void OnDisable()
     {
-        this.gameObject.transform.position = parent.transform.position;
+        this.gameObject.transform.position = beamPos.transform.position;
     }
 }

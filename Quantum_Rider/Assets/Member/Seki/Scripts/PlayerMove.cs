@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField]
-    float hoverMaxX, hoverMaxY = 0, hoverPower = 1;
+    float hoverMaxX, hoverMaxY = 0, hoverPower = 1,beamActiveTime=0.5f;
 
     [SerializeField,Header("マウスクリックに応じて角度が変わるオブジェクト")]
     GameObject rotationObjectRight, rotationObjectLeft, beamRight,beamLeft;
@@ -51,7 +51,7 @@ public class PlayerMove : MonoBehaviour
         else if (Input.GetMouseButtonUp(0))
         {//離したらビーム非表示
             _Pressed = true;
-            BeamActiveFalse();
+            //BeamActiveFalse();
         }
     }
     void EnemySearch()
@@ -74,7 +74,7 @@ public class PlayerMove : MonoBehaviour
                     {//最初の敵もしくは一番近い敵
                         enemy = t;
                         min = dis;//最小の距離を更新
-                        Debug.Log(dis);
+                        //Debug.Log(dis);
                     }
                 }
             }
@@ -82,7 +82,6 @@ public class PlayerMove : MonoBehaviour
             {
                 enemy = null;
             }
-
         }
     }
     void PlayerImageReturn()
@@ -182,7 +181,7 @@ public class PlayerMove : MonoBehaviour
         beamRight.SetActive(true);
         beamLeft.SetActive(true);
         BeamRotation();
-        Invoke("BeamActiveFalse", 0.1f);
+        Invoke("BeamActiveFalse", beamActiveTime);
     }
     void BeamActiveFalse()
     {//ビーム非表示
