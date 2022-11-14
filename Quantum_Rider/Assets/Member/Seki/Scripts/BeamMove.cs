@@ -28,7 +28,6 @@ public class BeamMove : MonoBehaviour
     {
         //‚±‚±‚ÉÁ‚·ğŒ‚ğ
         if(collision.gameObject.CompareTag("Wall")||
-            collision.gameObject.CompareTag("Player") || 
             collision.gameObject.CompareTag("Floor")||
             collision.gameObject.CompareTag("Enemy"))
         {
