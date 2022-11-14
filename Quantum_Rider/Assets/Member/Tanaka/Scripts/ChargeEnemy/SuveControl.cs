@@ -105,7 +105,7 @@ public class SuveControl : MonoBehaviour
     }
 
     private void ReturnEnemy()
-    {
+    {    
         //右に進む
         if (direction == 1)
         {
@@ -125,14 +125,15 @@ public class SuveControl : MonoBehaviour
     {
         if (!startCoolDown)
         {
-            Debug.Log("衝突ダメージ");
+            HPManager.instance.Damage(1);
             startCoolDown = true;
         }
     }
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if(col.gameObject.tag == "Floor")
+        Debug.Log(col.gameObject.tag);
+        if (col.gameObject.tag == "Floor")
         {
             //現在の床の両端を計算する
             floorRightEdge = col.gameObject.transform.position.x + (col.gameObject.transform.localScale.x / 2);

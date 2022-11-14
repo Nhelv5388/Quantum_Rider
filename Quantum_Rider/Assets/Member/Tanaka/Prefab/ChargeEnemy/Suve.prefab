@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 679002936082839233}
   m_Layer: 0
   m_Name: Suve
-  m_TagString: ChargeEnemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

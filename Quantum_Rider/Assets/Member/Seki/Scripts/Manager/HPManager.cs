@@ -42,6 +42,7 @@ public class HPManager : MonoBehaviour
         if(_PlayerHP<=0)
         {
             hpZero();
+            HpReset();
         }
         return _PlayerHP;
     }

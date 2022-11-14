@@ -42,10 +42,10 @@ public class MapManager : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
-        {
-            MapManager.Instance.CallFadeOut(SceneID.Tutorial);
-        }
+        //if (Input.GetKeyUp(KeyCode.Escape))
+        //{
+        //    MapManager.Instance.CallFadeOut(SceneID.Tutorial);
+        //}
     }
     public int SceneStart(int HP,int MaxHP)
     {

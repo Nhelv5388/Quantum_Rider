@@ -73,7 +73,7 @@ public class Fade : MonoBehaviour
     {
         if(fadeImage==null)
         {
-            fadeImage = GameObject.Find("FadeImage").GetComponent<Image>();
+            //fadeImage = GameObject.Find("FadeImage").GetComponent<Image>();
         }
         
     }

@@ -22,7 +22,7 @@ public class BulletMove : MonoBehaviour
     {
 
 
-        if(!collision.gameObject.CompareTag("Enemy"))
+        if(collision.gameObject.CompareTag("Wall")||collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Floor"))
         {
             Destroy(this.gameObject);
         }
