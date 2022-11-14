@@ -7,8 +7,9 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     float hoverMaxX, hoverMaxY = 0, hoverPower = 1,beamActiveTime=0.5f;
 
-    [SerializeField,Header("マウスクリックに応じて角度が変わるオブジェクト")]
-    GameObject rotationObjectRight, rotationObjectLeft, beamRight,beamLeft;
+    [SerializeField]
+    GameObject rotationObjectRight, rotationObjectLeft, 
+        beamRight,beamLeft, beamRightPos, beamLeftPos;
 
     [SerializeField]
     GameObject[] targets,rightGun,leftGun;
@@ -178,10 +179,12 @@ public class PlayerMove : MonoBehaviour
     }
     void BeamActive()
     {//ビーム表示
-        beamRight.SetActive(true);
-        beamLeft.SetActive(true);
+        Instantiate(beamRight, beamRightPos.transform.position, _RotationRight);
+        Instantiate(beamLeft, beamLeftPos.transform.position, _RotationLeft);
+        /*:beamRight.SetActive(true);
+        beamLeft.SetActive(true);*/
         BeamRotation();
-        Invoke("BeamActiveFalse", beamActiveTime);
+        //Invoke("BeamActiveFalse", beamActiveTime);
     }
     void BeamActiveFalse()
     {//ビーム非表示
