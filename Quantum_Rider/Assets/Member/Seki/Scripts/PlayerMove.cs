@@ -5,18 +5,24 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField]
-    float hoverMaxX, hoverMaxY = 0, hoverPower = 1;
-    [SerializeField]
-    GameObject rotationObjectRight, rotationObjectLeft, beamRight,beamLeft;//マウスクリックに応じて角度が変わるオブジェクト
+    float hoverMaxX, hoverMaxY = 0, hoverPower = 1,beamActiveTime=0.5f;
+
+    [SerializeField,Header("マウスクリックに応じて角度が変わるオブジェクト")]
+    GameObject rotationObjectRight, rotationObjectLeft, beamRight,beamLeft;
+
     [SerializeField]
     GameObject[] targets,rightGun,leftGun;
+
     GameObject enemy;
     Quaternion _RotationPlayer,_RotationRight,_RotationLeft;
     
     float count = 0;
 
     bool _Pressed = true;
-    const int _Power = 200;
+
+    const int Power = 200;
+    const float SerchRange = 6;
+
     Vector3 _Myvelocity, _HoverVec, _HoverDirection, _PlayerScreenPos,_distance;
 
     // Start is called before the first frame update
@@ -45,7 +51,7 @@ public class PlayerMove : MonoBehaviour
         else if (Input.GetMouseButtonUp(0))
         {//離したらビーム非表示
             _Pressed = true;
-            BeamActiveFalse();
+            //BeamActiveFalse();
         }
     }
     void EnemySearch()
@@ -54,7 +60,7 @@ public class PlayerMove : MonoBehaviour
         if (count >= 1)
         {
             count = 0;
-            var min = 0f ;
+            var min = 0f;
             var dis = 0f;
             foreach (GameObject t in targets)
             {
@@ -62,21 +68,20 @@ public class PlayerMove : MonoBehaviour
                 dis = Vector3.Distance
                 (transform.position,
                 t.gameObject.transform.position);
-                if (dis <= 6)
+                if (dis <= SerchRange)
                 {
                     if (min == 0 || dis < min)
-                    {//最初の敵若しくは一番近い敵
+                    {//最初の敵もしくは一番近い敵
                         enemy = t;
                         min = dis;//最小の距離を更新
-                        Debug.Log(dis);
+                        //Debug.Log(dis);
                     }
                 }
             }
-            if(dis>6)
+            if(dis>SerchRange)
             {
                 enemy = null;
             }
-
         }
     }
     void PlayerImageReturn()
@@ -176,7 +181,7 @@ public class PlayerMove : MonoBehaviour
         beamRight.SetActive(true);
         beamLeft.SetActive(true);
         BeamRotation();
-        Invoke("BeamActiveFalse", 0.1f);
+        Invoke("BeamActiveFalse", beamActiveTime);
     }
     void BeamActiveFalse()
     {//ビーム非表示
@@ -186,7 +191,7 @@ public class PlayerMove : MonoBehaviour
     void Hover()
     {//浮く
         this.gameObject.GetComponent<Rigidbody2D>().AddForce
-        (_HoverDirection * hoverPower * _Power);
+        (_HoverDirection * hoverPower * Power);
 
         VelocityApply();
 
