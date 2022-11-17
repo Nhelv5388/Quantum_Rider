@@ -7552,8 +7552,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 679002936082839239, guid: cd007b2c2031dbf48be68c842f9f4ca4, type: 3}
+      propertyPath: ChargeSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 679002936082839239, guid: cd007b2c2031dbf48be68c842f9f4ca4, type: 3}
+      propertyPath: PatrolSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 679002936082839239, guid: cd007b2c2031dbf48be68c842f9f4ca4, type: 3}
       propertyPath: immortality
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 679002936082839239, guid: cd007b2c2031dbf48be68c842f9f4ca4, type: 3}
+      propertyPath: attackCoolDown
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd007b2c2031dbf48be68c842f9f4ca4, type: 3}

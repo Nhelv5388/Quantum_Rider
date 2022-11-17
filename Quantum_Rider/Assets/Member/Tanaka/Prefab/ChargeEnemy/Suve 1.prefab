@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 679002936082839232}
   - component: {fileID: 679002936082839233}
   m_Layer: 0
-  m_Name: Suve
+  m_Name: Suve 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -269,9 +269,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 260335e284e463146a486d2e585809b8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8143c8c89a8c5d945a31ea59513056b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
