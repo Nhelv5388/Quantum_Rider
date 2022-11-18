@@ -16,15 +16,15 @@ public class SetHealItem : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        //G‚ê‚½‚ç”ñ•\¦‚É‚·‚é
-        if(col.gameObject.tag == "Player")
-        {
-            Debug.Log("HP‚ğ5‰ñ•œ");
-            this.gameObject.SetActive(false);
-        }
-    }
+    //private void OnCollisionEnter2D(Collision2D col)
+    //{
+    //    //G‚ê‚½‚ç”ñ•\¦‚É‚·‚é
+    //    if(col.gameObject.tag == "Player")
+    //    {
+    //        Debug.Log("HP‚ğ5‰ñ•œ");
+    //        this.gameObject.SetActive(false);
+    //    }
+    //}
 
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -32,6 +32,8 @@ public class SetHealItem : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             Debug.Log("HP‚ğ5‰ñ•œ");
+            HPManager.instance.Heal(10);
+            HPManager.instance.HpReset();
             this.gameObject.SetActive(false);
         }
     }

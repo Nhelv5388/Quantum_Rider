@@ -38,6 +38,10 @@ public class UIManager : MonoBehaviour
             _HPBar = GameObject.Find("HPBar").GetComponent<Image>();
         }
         _NowHP = HPManager.instance.GetHP();
+        if(_NowHP > _MaxHP)
+        {
+            _NowHP = _MaxHP;
+        }
         _HPBar.transform.localScale=
             new Vector3((int)(HPBarLength*((float)_NowHP/_MaxHP)), 1, 1);
     }
