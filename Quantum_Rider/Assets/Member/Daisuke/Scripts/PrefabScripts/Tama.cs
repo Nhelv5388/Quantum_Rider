@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Tama : MonoBehaviour
 {
-    //[SerializeField]
-    //private float WaitTime;
+    [SerializeField]
+    private float WaitTime;
+    [SerializeField]
+    private float ShotSpeed;
+    private float TIME;
 
     // Å‰‚ÌˆÊ’u
     private Vector3 initialPos;
@@ -19,27 +22,33 @@ public class Tama : MonoBehaviour
 
     void Update()
     {
-        transform.position += transform.right * Time.deltaTime;
+        ShotPrefab();
+
+        TIME += Time.deltaTime;
+
+        if (TIME > 5)
+        {
+            transform.position += transform.right * Time.deltaTime * ShotSpeed;
+            //ShotPrefab();
+            TIME = 0;
+        }
+        
+        //transform.position += transform.right * Time.deltaTime;
         //Destroy(this,gameObject,3f);
 
-
+        
     }
 
-    /*
-    IEnumerator ShotPrefab1()
+    
+    IEnumerator ShotPrefab()
     {
-        transform.position += transform.right * Time.deltaTime * 2;
         yield return new WaitForSeconds(WaitTime);
+        transform.position += transform.right * Time.deltaTime * ShotSpeed;
 
+        Debug.Log("aaa");
     }
 
-    IEnumerator ShotPrefab2()
-    {
-        transform.position += transform.right * Time.deltaTime * 2;
-        yield return new WaitForSeconds(WaitTime);
 
-    }
-    */
 
     private void Reset()
     {
