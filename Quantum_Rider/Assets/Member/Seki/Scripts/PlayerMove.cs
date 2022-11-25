@@ -29,6 +29,7 @@ public class PlayerMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("start");
         targets = GameObject.FindGameObjectsWithTag("Enemy");
     }
 
@@ -65,7 +66,8 @@ public class PlayerMove : MonoBehaviour
             var dis = 0f;
             foreach (GameObject t in targets)
             {
-               
+                Debug.Log(t);
+                //Debug.Log(t.gameObject.transform.position);
                 dis = Vector3.Distance
                 (transform.position,
                 t.gameObject.transform.position);
@@ -87,6 +89,7 @@ public class PlayerMove : MonoBehaviour
     }
     void PlayerImageReturn()
     {//ÉvÉåÉCÉÑÅ[ÇÃâÊëúîΩì]
+        //Debug.Log(enemy);
         if(enemy!=null)
         {//ìGÇ¢ÇÈ
             //Debug.Log(enemy);
