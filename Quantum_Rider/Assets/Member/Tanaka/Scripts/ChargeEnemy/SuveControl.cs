@@ -80,10 +80,16 @@ public class SuveControl : MonoBehaviour
         //プレイヤーの端が床の端を超えたら戻る
         if (enemyRightEdge >= floorRightEdge)
         {
+            this.transform.position = new Vector3(this.gameObject.transform.position.x - (enemyRightEdge - floorRightEdge),
+                this.gameObject.transform.position.y,
+                this.gameObject.transform.position.z);
             ReturnEnemy();
         }
         else if (enemyLeftEdge <= floorLeftEdge)
         {
+            this.transform.position = new Vector3(this.gameObject.transform.position.x - (enemyLeftEdge - floorLeftEdge),
+                this.gameObject.transform.position.y,
+                this.gameObject.transform.position.z);
             ReturnEnemy();
         }
 
