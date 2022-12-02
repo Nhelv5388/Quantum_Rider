@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MapManager : MonoBehaviour
 {
     public static MapManager Instance { get => _instance; }
     static MapManager _instance;
-    private static string _mapName;
+    [SerializeField] private float _fadeTime;
+    private Image _image;
 
     PlayerManager playerManager;
     public enum SceneID
@@ -21,7 +23,6 @@ public class MapManager : MonoBehaviour
     }
     private void Awake()
     {
-
         playerManager = PlayerManager.Instance;
         if (Instance == null)
         {
@@ -33,28 +34,22 @@ public class MapManager : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    
+
     void Start()
     {
         SceneManager.sceneLoaded += OnSceneLoad;
-        _mapName = SceneManager.GetActiveScene().name;
-        //Fade.Instance.fadeDelegate += Delegedetest;
+        Fade.fadeDelegate += CallFadeIn;
     }
     private void Update()
     {
-        //if (Input.GetKeyUp(KeyCode.Escape))
-        //{
-        //    MapManager.Instance.CallFadeOut(SceneID.Tutorial);
-        //}
-    }
-    public int SceneStart(int HP,int MaxHP)
-    {
-        int returnHP;
-        if(_mapName == "TutorialScene"||_mapName=="MainGameScene")
+        if(Input.GetKeyDown(KeyCode.I))
         {
-            HP = MaxHP;
+            StartCoroutine(Fade.IEFadeIn(_image, _fadeTime));
         }
-        return returnHP = HP;
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            StartCoroutine(Fade.IEFadeOut(_image, _fadeTime));
+        }
     }
     public void SceneChange(SceneID Scene)
     {
@@ -63,39 +58,40 @@ public class MapManager : MonoBehaviour
             case SceneID.Title:
                 SceneManager.LoadScene("TitleScene");
                 PlayerManager.Instance.PlayerSetActive(false);
-                //playerManager.PlayerSetActive(false);
                 break;
             case SceneID.Tutorial:
                 SceneManager.LoadScene("TutorialScene");
                 HPManager.instance.HpReset();
-                //playerManager.PlayerSetActive(true);
                 break;
             case SceneID.MainGameScene1:
                 SceneManager.LoadScene("MainGameScene");
                 HPManager.instance.HpReset();
-                //playerManager.PlayerSetActive(true);
                 break;
             case SceneID.GameOver:
                 SceneManager.LoadScene("GameOver");
-                //playerManager.PlayerSetActive(false);
                 break;
             case SceneID.GameClear:
                 SceneManager.LoadScene("GameClear");
-                //playerManager.PlayerSetActive(false);
                 break;
             default:
                 Debug.LogWarning("そのマップは存在しません");
                 break;
         }
     }
+    public void CallFadeIn(SceneID scene)
+    {
+        //StartCoroutine(Fade.FadeChange(false,SceneChange, scene));
+        //StartCoroutine(Fade.FadeChange(_image,_fadeTime,SceneChange,scene));
+        Fade.FadeChange(_image, _fadeTime, SceneChange, scene);
+    }
     void OnSceneLoad(Scene scene, LoadSceneMode mode)
     {
-        //Fade.FadeReset();
-
+        if (_image == null)
+        {
+            _image = GameObject.Find("FadeImage").GetComponent<Image>();
+        }
+        Debug.Log(_image);
+        //シーン実行時にimage取得
+        StartCoroutine(Fade.IEFadeIn(_image, _fadeTime));
     }
-    public void CallFadeOut(SceneID scene)
-    {
-       //StartCoroutine(Fade.FadeChange(false,SceneChange, scene));
-    }
-
 }

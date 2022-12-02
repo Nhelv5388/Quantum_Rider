@@ -7504,6 +7504,10 @@ PrefabInstance:
       value: Suve
       objectReference: {fileID: 0}
     - target: {fileID: 679002936082839237, guid: cd007b2c2031dbf48be68c842f9f4ca4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 679002936082839237, guid: cd007b2c2031dbf48be68c842f9f4ca4, type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
@@ -18550,7 +18554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &410914460
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18584,7 +18588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -19360,6 +19364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 654e7f5174637a2479a30665b27a8793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _fadeTime: 3
 --- !u!1 &445443488
 GameObject:
   m_ObjectHideFlags: 0
@@ -30919,7 +30924,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &703036649
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31041,7 +31046,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 703036648}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75ad9df1753a06f45b8179a6ec27665d, type: 3}
   m_Name: 
@@ -64359,8 +64364,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da82088266fa49428776e15809c0071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 410914462}
-  fadetime: 5
+  _image: {fileID: 0}
+  fadetime: 2
 --- !u!4 &1247653498
 Transform:
   m_ObjectHideFlags: 0
@@ -105398,7 +105403,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9187958649811024565, guid: 18a5c6449903cd040b1ebc69e5ebbb21, type: 3}
       propertyPath: cursortrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9187958649811024566, guid: 18a5c6449903cd040b1ebc69e5ebbb21, type: 3}
       propertyPath: m_Name
