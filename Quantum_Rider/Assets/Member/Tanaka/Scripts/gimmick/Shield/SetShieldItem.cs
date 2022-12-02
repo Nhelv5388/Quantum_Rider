@@ -18,7 +18,6 @@ public class SetShieldItem : MonoBehaviour
     {
         shieldItemImage = transform .Find("ShieldItemImage").gameObject;
         shieldImage = transform.Find("ShieldImage").gameObject;
-        playerPos = GameObject.Find("Player");
         this.gameObject.SetActive(true);
     }
 
@@ -44,6 +43,7 @@ public class SetShieldItem : MonoBehaviour
                 Debug.Log("シールド展開");
                 shieldItemImage.gameObject.SetActive(false);
                 shieldImage.SetActive(true);
+                playerPos = col.gameObject;
                 activeSheild = true;
                 usedShieldItem = true;
             }
