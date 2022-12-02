@@ -148,7 +148,7 @@ MonoBehaviour:
   direction: 0
   playerSerch: {fileID: 679002935805377110}
   AttackArea: {fileID: 722270312250993019}
-  immortality: 1
+  immortality: 0
 --- !u!50 &679002936082839232
 Rigidbody2D:
   serializedVersion: 4

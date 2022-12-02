@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 679002936082839232}
   - component: {fileID: 679002936082839233}
   m_Layer: 0
-  m_Name: Suve 1
+  m_Name: Suve(OnImmortality)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
