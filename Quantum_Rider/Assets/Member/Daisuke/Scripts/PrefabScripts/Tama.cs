@@ -4,61 +4,64 @@ using UnityEngine;
 
 public class Tama : MonoBehaviour
 {
+    /*
     [SerializeField]
     private float WaitTime;
+    
+    private float time;
+    [SerializeField]
+    private float ShotTime;
+    */
     [SerializeField]
     private float ShotSpeed;
-    private float TIME;
-
-    // Å‰‚ÌˆÊ’u
-    private Vector3 initialPos;
 
 
     void Start()
     {
-        // ‰ŠúˆÊ’uî•ñ‚ÌŽæ“¾
-        initialPos = transform.position;
+        //time = 0;
     }
 
     void Update()
-    {
-        ShotPrefab();
+    {        
 
-        TIME += Time.deltaTime;
+        transform.position += transform.right * Time.deltaTime * ShotSpeed;
 
-        if (TIME > 5)
+        /*
+        time += Time.deltaTime;
+
+        if (time > ShotTime)
         {
-            transform.position += transform.right * Time.deltaTime * ShotSpeed;
-            //ShotPrefab();
-            TIME = 0;
+            ShotPrefab();
+            time = 0;
         }
-        
-        //transform.position += transform.right * Time.deltaTime;
+        */
         //Destroy(this,gameObject,3f);
-
         
     }
 
-    
-    IEnumerator ShotPrefab()
+    /*
+    private void ShotPrefab()
     {
-        yield return new WaitForSeconds(WaitTime);
+        //yield return new WaitForSeconds(WaitTime);
+
+        Instantiate(this.gameObject, new Vector3(0, 0, 1), Quaternion.identity);
         transform.position += transform.right * Time.deltaTime * ShotSpeed;
 
         Debug.Log("aaa");
     }
-
-
-
-    private void Reset()
+    */
+   /*private void OnTriggerEnter(Collider other)
     {
-        if(Time.deltaTime < 5)
+
+        if (other.gameObject)
         {
-            transform.position = initialPos;
+
+            Debug.Log("atata");
+            Destroy(this.gameObject);
+
         }
-
-
     }
+   */
 
     
 }
