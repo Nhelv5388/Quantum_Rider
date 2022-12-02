@@ -6,12 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Member/Seki/Scenes/GameOver.unity
-    guid: 7baed360fd79e8a4792d75fc2fdf66da
+    path: Assets/Member/Leonard/TitleScreen/Title.unity
+    guid: 1abb44b95e73b4240889cf126e8c3823
   - enabled: 1
-    path: Assets/Member/Seki/Scenes/Title.unity
-    guid: 22a24acdc14f15145907d0ecd131cd4b
-  - enabled: 1
-    path: Assets/Member/Seki/Scenes/Main1.unity
-    guid: a089d6b21fa78dd4aa01ad93b092e50d
+    path: Assets/Member/Leonard/TitleScreen/game.unity
+    guid: 0d5520c2fbd68a04a996b325ef68daf3
   m_configObjects: {}
