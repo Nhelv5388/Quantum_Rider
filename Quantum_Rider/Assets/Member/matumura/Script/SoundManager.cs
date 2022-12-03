@@ -37,6 +37,6 @@ public class SoundManager : MonoBehaviour
         {
             return;
         }
-        bgmAudioSource.Play();
+        bgmAudioSource.PlayOneShot(clip);
     }
 }

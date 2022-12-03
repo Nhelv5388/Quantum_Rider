@@ -10,6 +10,7 @@ public static class Fade
 
 	public delegate void FadeDelegate(MapManager.SceneID scene);
     public static FadeDelegate fadeDelegate;
+    public static bool isFade = false;
     //public static IEnumerator FadeChange(bool trigger, FadeDelegate fadeDelegate, MapManager.SceneID scene)
     //{
         //true‚Åfadein
@@ -38,7 +39,7 @@ public static class Fade
     //}
     public static IEnumerator IEFadeIn(/*Image _image, float _fadeTime, FadeDelegate fadeDelegate, MapManager.SceneID scene*/Image _image, float _fadeTime)
     {
-        Debug.Log("fadein");
+        //Debug.Log("fadein");
         if (_image == null)
         {
             _image = GameObject.Find("FadeImage").GetComponent<Image>();
@@ -60,16 +61,19 @@ public static class Fade
                 if (_image.color.a == 0)
                 {
                     time = 0;
+                    isFade = false;
                     break;
                 }
             }
             //fadeDelegate(scene);
+            
         }
 
     }
-    public static IEnumerator IEFadeOut(Image _image, float _fadeTime)
+    public static IEnumerator IEFadeOut(/*Image _image, float _fadeTime*/Image _image, float _fadeTime, FadeDelegate fadeDelegate, MapManager.SceneID scene)
     {
-        Debug.Log("fadeout");
+        //Debug.Log("fadeout");
+        isFade = true;
         if (_image == null)
         {
             _image = GameObject.Find("FadeImage").GetComponent<Image>();
@@ -96,13 +100,14 @@ public static class Fade
                     break;
                 }
             }
+            fadeDelegate(scene);
         }
         
     }
     public static void FadeChange(Image _image, float _fadeTime, FadeDelegate fadeDelegate, MapManager.SceneID scene)
     {
-        StaticMono.StartCoroutine(IEFadeOut(_image, _fadeTime));
-        fadeDelegate(scene);
-        StaticMono.StartCoroutine(IEFadeIn(_image, _fadeTime));
+        StaticMono.StartCoroutine(IEFadeOut(_image, _fadeTime,fadeDelegate,scene));
+
+        //StaticMono.StartCoroutine(IEFadeIn(_image, _fadeTime));
     }
 }

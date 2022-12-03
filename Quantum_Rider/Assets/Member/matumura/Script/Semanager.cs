@@ -47,6 +47,6 @@ public class Semanager : MonoBehaviour
             return;
         }
         //‚ ‚ê‚ÎPlay()
-        s.audiosource.Play();
+        s.audiosource.PlayOneShot(s.clip);
     }
 }

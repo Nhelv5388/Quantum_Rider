@@ -48,8 +48,12 @@ public class MapManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.O))
         {
-            StartCoroutine(Fade.IEFadeOut(_image, _fadeTime));
+            StartCoroutine(Fade.IEFadeOut(_image, _fadeTime,SceneChange,SceneID.GameOver));
         }
+        //if (Input.GetKeyDown(KeyCode.J)&&GameObject.Find("fdsaf") == null)
+        //{
+        //    Debug.Log("a");
+        //}
     }
     public void SceneChange(SceneID Scene)
     {
@@ -86,10 +90,12 @@ public class MapManager : MonoBehaviour
     }
     void OnSceneLoad(Scene scene, LoadSceneMode mode)
     {
-        if (_image == null)
+        if (_image == null&& GameObject.Find("FadeImage") != null)
         {
             _image = GameObject.Find("FadeImage").GetComponent<Image>();
+            
         }
+        
         Debug.Log(_image);
         //ÉVÅ[Éìé¿çséûÇ…imageéÊìæ
         StartCoroutine(Fade.IEFadeIn(_image, _fadeTime));

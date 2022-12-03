@@ -4,21 +4,7 @@ using UnityEngine;
 
 public class FadeImage : MonoBehaviour
 {
-    public static FadeImage Instance { get => _instance; }
-    static FadeImage _instance;
-    private void Awake()
-    {
-        
-        if (Instance == null)
-        {
-            _instance = this;
-            DontDestroyOnLoad(this.gameObject);
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
-    }
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +14,10 @@ public class FadeImage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Semanager.instance.Play("testSE");
+            Debug.Log("SE");
+        }
     }
 }
