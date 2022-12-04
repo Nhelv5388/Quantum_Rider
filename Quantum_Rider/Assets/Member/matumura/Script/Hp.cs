@@ -2,37 +2,110 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
-public class HP : MonoBehaviour
+public class Hp : MonoBehaviour
 {
-    //このスクリプトはプレイヤーにつけて頂きたい。。
-    //貼り付けたらSliderをスクリプトにドラッグします。
 
-    public int hp = 10;//hpを10にする。SliderのMaxValueとValueはこれに合わせます
-    private Slider _slider;//Sliderの値を代入する_sliderを宣言
-    public GameObject slider;//体力ゲージに指定するSlider
+    public GameObject a;//a～jがhpでいう1～10です
+    public GameObject b;
+    public GameObject c;
+    public GameObject d;
+    public GameObject e;
+    public GameObject f;
+    public GameObject g;
+    public GameObject h;
+    public GameObject i;
+    public GameObject j;
 
-    // Use this for initialization
+    int Life = 10;
+
+       
     void Start()
     {
-        //_slider = slider.GetComponent();//sliderを取得する
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        _slider.value = hp;//スライダーとHPの紐づけ
-    }
-
-    void OnTriggerEnter(Collider collision)
-    {
-        if (collision.gameObject.tag == "Enemy")//当たった相手のタグがEnemyなら//hpを-1ずつ変える
+        //ダメージ判定見つけられなかったんで、テストでスペース押したら減る(非表示)ようにしてます。
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            hp -= 1;
+            Life -= 1;
+            Debug.Log(Life);
         }
 
-        if (hp <= 0)//もしhpが0以下なら
+        if(Life == 10)
         {
-            print("GameOver");//GameOverとコンソールに表示する
+            a.SetActive(true);
+        }
+
+        if(Life == 9)
+        {
+            a.SetActive(false);
+            b.SetActive(true);
+            
+        }
+
+        if (Life == 8)
+        {
+            b.SetActive(false);
+            c.SetActive(true);
+
+        }
+
+        if (Life == 7)
+        {
+            c.SetActive(false);
+            d.SetActive(true);
+
+        }
+
+        if (Life == 6)
+        {
+            d.SetActive(false);
+            e.SetActive(true);
+
+        }
+
+        if (Life == 5)
+        {
+            e.SetActive(false);
+            f.SetActive(true);
+
+        }
+
+        if (Life == 4)
+        {
+            f.SetActive(false);
+            g.SetActive(true);
+
+        }
+
+        if (Life == 3)
+        {
+            g.SetActive(false);
+            h.SetActive(true);
+
+        }
+
+        if (Life == 2)
+        {
+            h.SetActive(false);
+            i.SetActive(true);
+
+        }
+
+        if (Life == 1)
+        {
+            i.SetActive(false);
+            
+        }
+
+        if (Life == 0)
+        {
+            j.SetActive(false);
+
         }
     }
+
 }
