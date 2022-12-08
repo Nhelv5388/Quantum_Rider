@@ -34,7 +34,13 @@ public class Hp : MonoBehaviour
             Debug.Log(Life);
         }
 
-        if(Life == 10)
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Life += 1;
+            Debug.Log(Life);
+        }
+
+        if (Life == 10)
         {
             a.SetActive(true);
         }
