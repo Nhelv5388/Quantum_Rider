@@ -10,12 +10,6 @@ public class SetHealItem : MonoBehaviour
         this.gameObject.SetActive(true);
     }
 
-
-    void Update()
-    {
-        
-    }
-
     //private void OnCollisionEnter2D(Collision2D col)
     //{
     //    //G‚ê‚½‚ç”ñ•\¦‚É‚·‚é

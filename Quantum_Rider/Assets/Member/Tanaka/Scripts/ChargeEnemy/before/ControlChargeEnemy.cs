@@ -18,20 +18,43 @@ public class ControlChargeEnemy : MonoBehaviour
     private float attackCoolDown = 1.0f;
 
     private bool startCoolDown = false;
-
     private float nowTime = 0;
 
     //進行方向
-    private int direction = 1;
-    private bool RetrunNow = false;
+    private bool RightDirection = true;
+    private bool returnNow = false;
+    
 
     [SerializeField]
-    public Collision2D detectionFloor;
+    private GameObject detectionFloor;
+    private Vector3 dStartPos = new Vector3(0.5f, -0.45f, 0f);
+    [SerializeField]
+    private GameObject playerSerch;
+    private Vector3 pStartPos = new Vector3(4.0f, 1.0f, 0.0f);
 
+    [Header("以下デバッグ用\n(不死)")]
+    [SerializeField]
+    private bool immortality = false;
+    [Header("(停止)")]
+    [SerializeField]
+    private bool stopping = false;
     void Start()
     {
+        if(this.gameObject.transform.localRotation == Quaternion.Euler(0f, 0f, 0f))
+        {
+            RightDirection = true;
+        }
+        else
+        {
+            RightDirection = false;
+        }
+
         areaSerchPlayer = GetComponentInChildren<AreaSerchPlayer>();
         floorSerch = GetComponentInChildren<FloorSerch>();
+        
+        playerSerch.transform.localPosition = dStartPos;
+        detectionFloor.transform.localPosition = pStartPos;
+        
     }
 
 
@@ -59,68 +82,107 @@ public class ControlChargeEnemy : MonoBehaviour
                 MovePatrol();
             }
         }
-
-        if (floorSerch.noFloor)
+        if (floorSerch.noFloor || returnNow)
         {
-            ReturnEnemy();
+            StartCoroutine(ReturnEnemy());
         }
+        //判別ようにアタッチしたRB対策
+        detectionFloor.transform.localPosition = dStartPos;
+        playerSerch.transform.localPosition = pStartPos;
+        
     }
 
     //巡回中(プレイヤー未発見時)
     private void MovePatrol()
     {
-        this.transform.localPosition = new Vector2(this.transform.localPosition.x + PatrolSpeed * direction, this.transform.localPosition.y);
+        if (!stopping)
+        {
+            //SerializeFieldで操作しやすいように100で割る
+            this.transform.Translate(PatrolSpeed / 100, 0, 0);
+        }
+
     }
-    //突撃中(プレイヤー発見時)
     private void MoveCharge()
     {
-        this.transform.localPosition = new Vector2(this.transform.localPosition.x + ChargeSpeed * direction, this.transform.localPosition.y);
-    }
-
-    //転回
-    private void ReturnEnemy()
-    {
-        //右に進む
-        if (RetrunNow)
+        if (!stopping)
         {
-            direction = 1;
-            this.gameObject.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
-            RetrunNow = false;
+            //SerializeFieldで操作しやすいように100で割る
+            this.transform.Translate(ChargeSpeed / 100, 0, 0);
+        }
+
+    }
+    //転回
+    IEnumerator ReturnEnemy()
+    {
+        returnNow = false;
+        //右に進む
+        if (RightDirection)
+        {
+            RightDirection = false;
+            this.gameObject.transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
         }
         //左に進む
-        else if (!RetrunNow)
+        else if (!RightDirection)
         {
-            direction = -1;
-            this.gameObject.transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
-            RetrunNow = true;
+            RightDirection = true;
+            this.gameObject.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
         }
+        yield return new WaitForSeconds(1);
     }
-    private void ChargeHit(Collision2D col)
+    
+    private void ChargeHit()
     {
         if (!startCoolDown)
         {
-            Debug.Log("衝突ダメージ");
+            //Debug.Log("衝突ダメージ");
             startCoolDown = true;
         }
     }
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if(col.gameObject.tag == "Wall")
+        if (col.gameObject.tag == "Wall")
         {
-            ReturnEnemy();
+            Debug.Log(this.gameObject.name);
+            returnNow = true;
         }
-        if(col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "Enemy")
         {
-            ChargeHit(col);
+            returnNow = true;
+        }
+        if (col.gameObject.tag == "Player")
+        {
+            ChargeHit();
+        }
+
+    }
+    private void OnCollisionStay2D(Collision2D col)
+    {
+        //バグ対策
+        if (col.gameObject.tag == "Enemy")
+        {
+            if(col.gameObject.transform.localRotation == Quaternion.Euler(0f, 0f, 0f))
+            {
+                if(this.gameObject.transform.localRotation == Quaternion.Euler(0f, -180f, 0f))
+                {
+                    returnNow = true;
+                }
+            }
+            else
+            {
+                returnNow = true;
+            }
         }
     }
-    
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.tag == "PlayerAttack")
+        //プレイヤーの攻撃で死亡
+        if (!immortality)
         {
-            this.gameObject.SetActive(false);
+            if (col.gameObject.tag == "PlayerAttack")
+            {
+                this.gameObject.SetActive(false);
+            }
         }
     }
 }

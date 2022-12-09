@@ -13,6 +13,7 @@ public class SetShieldItem : MonoBehaviour
 
     private bool activeSheild = false;
     private bool usedShieldItem = false;
+    static public bool usingShieldItem = false;
 
     void Start()
     {
@@ -35,7 +36,7 @@ public class SetShieldItem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (!usedShieldItem)
+        if (!usedShieldItem && !usingShieldItem)
         {
             //êGÇÍÇΩÇÁîÒï\é¶Ç…Ç∑ÇÈ
             if (col.gameObject.tag == "Player")
@@ -46,6 +47,7 @@ public class SetShieldItem : MonoBehaviour
                 playerPos = col.gameObject;
                 activeSheild = true;
                 usedShieldItem = true;
+                usingShieldItem = true;
             }
         }
     }
