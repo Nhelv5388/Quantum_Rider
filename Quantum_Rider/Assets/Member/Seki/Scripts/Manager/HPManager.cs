@@ -41,13 +41,13 @@ public class HPManager : MonoBehaviour
     public int Damage(int damage)
     {
         _PlayerHP -= damage;
-
-        if(_PlayerHP<=0)
+        hpChange();
+        if (_PlayerHP<=0)
         {
             hpZero();
             HpReset();
         }
-        hpChange();
+        
         return _PlayerHP;
     }
     public int Heal(int heal)

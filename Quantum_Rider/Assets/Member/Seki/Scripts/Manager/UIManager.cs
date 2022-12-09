@@ -9,8 +9,8 @@ public class UIManager : MonoBehaviour
     private int _MaxHP, _NowHP = 0;
     const int HPBarLength = 10;
     public static UIManager instance = null;
-
-    private GameObject HPUI;
+    [SerializeField]
+    private GameObject HPUI=null;
     private void Awake()
     {
 
@@ -54,8 +54,10 @@ public class UIManager : MonoBehaviour
         }
 
         HPUI.GetComponent<Hp>().Life = _NowHP;
+        /*
         _HPBar.transform.localScale=
             new Vector3((int)(HPBarLength*((float)_NowHP/_MaxHP)), 1, 1);
+        */
     }
     // Update is called once per frame
     void Update()
