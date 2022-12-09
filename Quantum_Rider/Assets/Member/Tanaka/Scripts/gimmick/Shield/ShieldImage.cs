@@ -20,6 +20,7 @@ public class ShieldImage : MonoBehaviour
     {
         if(col.gameObject.tag == "EnemyAttack" || col.gameObject.tag == "DamageFloor")
         {
+            HPManager.instance.Heal(1);
             this.gameObject.SetActive(false);
             SetShieldItem.usingShieldItem = false;
         }
