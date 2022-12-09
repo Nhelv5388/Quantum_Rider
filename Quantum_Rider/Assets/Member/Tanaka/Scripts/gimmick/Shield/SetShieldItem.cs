@@ -42,12 +42,16 @@ public class SetShieldItem : MonoBehaviour
             if (col.gameObject.tag == "Player")
             {
                 Debug.Log("シールド展開");
+
+                ShieldImage.shieldActive = true;
+
                 shieldItemImage.gameObject.SetActive(false);
                 shieldImage.SetActive(true);
                 playerPos = col.gameObject;
                 activeSheild = true;
                 usedShieldItem = true;
                 usingShieldItem = true;
+                
             }
         }
     }
