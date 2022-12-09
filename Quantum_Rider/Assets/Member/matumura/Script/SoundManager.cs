@@ -1,60 +1,35 @@
 using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
+    //Soundクラス配列
     [SerializeField]
-    AudioSource bgmAudioSource;
+    private Sound[] sounds;
 
     public static SoundManager instance;
 
-    
-
     private void Awake()
     {
+        //AudioManagerインスタンスがなければ生成する
+        //存在すればDestroy,return
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(this.gameObject);
         }
         else
         {
-            Destroy(this.gameObject);
-        }
-
-    }
-    
-    public float BgmVolume
-    {
-        get
-        {
-            return bgmAudioSource.volume;
-        }
-        set
-        {
-            bgmAudioSource.volume = Mathf.Clamp01(value);
-        }
-    }
-    
-    void Start()
-    {
-        GameObject soundManager = CheckOtherSoundManager();
-        bool checkResult = soundManager != null && soundManager != gameObject;
-        if (checkResult)
-        {
             Destroy(gameObject);
-        }
-        DontDestroyOnLoad(gameObject);
-    }
-    GameObject CheckOtherSoundManager()
-    {
-        return GameObject.FindGameObjectWithTag("SoundManager");
-    }
-    public void PlayBgm(AudioClip clip)
-    {
-        bgmAudioSource.clip = clip;
-        if (clip == null)
-        {
             return;
         }
-        bgmAudioSource.Play();
+
+        DontDestroyOnLoad(gameObject);
+
+
+        //Soundクラスに入れたデータをAudioSourceに当てはめる
+        foreach (Sound s in sounds)
+        {
+            s.audiosource = gameObject.AddComponent<AudioSource>();
+            s.audiosource.clip = s.clip;
+            s.audiosource.volume = s.volume;
+        }
     }
 }
