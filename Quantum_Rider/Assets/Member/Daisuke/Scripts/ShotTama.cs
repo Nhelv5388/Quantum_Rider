@@ -42,7 +42,12 @@ public class ShotTama : MonoBehaviour
     // enemy‚ª€‚ñ‚¾‚çe‚àÁ‚¦‚é
     private void GunDestroy()
     {
+        /*
+        if(Destroy(gameObject.tag == Enemy))
+        {
 
+        }
+        */
     }
 
 }
