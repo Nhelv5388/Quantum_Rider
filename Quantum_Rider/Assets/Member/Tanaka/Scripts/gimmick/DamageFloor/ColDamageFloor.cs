@@ -11,9 +11,14 @@ public class ColDamageFloor : MonoBehaviour
     private bool startCol = false;
     private bool endCol = false;
 
+    GameObject seManager;
+    Semanager se = null;
+
     void Start()
     {
-
+        //(テスト用の名前のため後で変更予定)
+        seManager = GameObject.Find("SEManager");
+        se = seManager.GetComponent<Semanager>();
     }
 
 
@@ -27,6 +32,9 @@ public class ColDamageFloor : MonoBehaviour
             {
                 nowTime = 0.0f;
                 Debug.Log("フィールドダメージ");
+
+                //SE再生
+                se.Play("4");
             }
             if (endCol)
             {

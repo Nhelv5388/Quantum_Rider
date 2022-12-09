@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShieldImage : MonoBehaviour
 {
-    
+    static public bool shieldActive = false;
     void Start()
     {
         

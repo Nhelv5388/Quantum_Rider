@@ -4,31 +4,41 @@ using UnityEngine;
 
 public class SetHealItem : MonoBehaviour
 {
+    private GameObject healImage;
+    private bool usedHeal = false;
 
+    GameObject seManager;
+    Semanager se = null;
     void Start()
     {
         this.gameObject.SetActive(true);
-    }
+        healImage = transform.Find("HealImage").gameObject;
 
-    //private void OnCollisionEnter2D(Collision2D col)
-    //{
-    //    //触れたら非表示にする
-    //    if(col.gameObject.tag == "Player")
-    //    {
-    //        Debug.Log("HPを5回復");
-    //        this.gameObject.SetActive(false);
-    //    }
-    //}
+
+        //(テスト用の名前のため後で変更予定)
+        seManager = GameObject.Find("SEManager");
+        se = seManager.GetComponent<Semanager>();
+
+    }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
         //触れたら非表示にする
         if (col.gameObject.tag == "Player")
         {
-            Debug.Log("HPを5回復");
-            HPManager.instance.Heal(10);
-            HPManager.instance.HpReset();
-            this.gameObject.SetActive(false);
+            if (!usedHeal)
+            {
+                usedHeal = true;
+
+                //SE再生
+                se.Play("1");
+
+                healImage.gameObject.SetActive(false);
+
+                Debug.Log("HPを5回復");
+                HPManager.instance.Heal(10);
+                HPManager.instance.HpReset();
+            }
         }
     }
 }
