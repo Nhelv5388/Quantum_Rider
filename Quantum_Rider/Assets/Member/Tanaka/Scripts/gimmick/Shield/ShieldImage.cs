@@ -21,6 +21,7 @@ public class ShieldImage : MonoBehaviour
         if(col.gameObject.tag == "EnemyAttack" || col.gameObject.tag == "DamageFloor")
         {
             this.gameObject.SetActive(false);
+            SetShieldItem.usingShieldItem = false;
         }
     }
 }
