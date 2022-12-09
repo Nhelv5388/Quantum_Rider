@@ -15,11 +15,18 @@ public class SetShieldItem : MonoBehaviour
     private bool usedShieldItem = false;
     static public bool usingShieldItem = false;
 
+    GameObject seManager;
+    Semanager se = null;
+
     void Start()
     {
         shieldItemImage = transform .Find("ShieldItemImage").gameObject;
         shieldImage = transform.Find("ShieldImage").gameObject;
         this.gameObject.SetActive(true);
+
+        //(テスト用の名前のため後で変更予定)
+        seManager = GameObject.Find("SEManager");
+        se = seManager.GetComponent<Semanager>();
     }
 
     void Update()
@@ -44,6 +51,9 @@ public class SetShieldItem : MonoBehaviour
                 Debug.Log("シールド展開");
 
                 ShieldImage.shieldActive = true;
+
+                //SE再生
+                se.Play("6");
 
                 shieldItemImage.gameObject.SetActive(false);
                 shieldImage.SetActive(true);
