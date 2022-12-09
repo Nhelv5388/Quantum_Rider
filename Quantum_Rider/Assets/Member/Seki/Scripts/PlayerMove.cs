@@ -21,6 +21,8 @@ public class PlayerMove : MonoBehaviour
 
     bool _Pressed = true;
 
+    public bool moveFrag=true;
+
     const int Power = 200;
     const float SerchRange = 6;
 
@@ -29,7 +31,7 @@ public class PlayerMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("start");
+        //Debug.Log("start");
         targets = GameObject.FindGameObjectsWithTag("Enemy");
     }
 
@@ -61,35 +63,46 @@ public class PlayerMove : MonoBehaviour
         count += Time.deltaTime;
         if (count >= 1)
         {
+            targets = GameObject.FindGameObjectsWithTag("Enemy");
             count = 0;
-            var min = 0f;
-            var dis = 0f;
+            var min = 0f;//最小
+            var dis = 0f;//プレイヤーと敵の距離
             foreach (GameObject t in targets)
             {
-                Debug.Log(t);
+                //Debug.Log(t);
+
                 //Debug.Log(t.gameObject.transform.position);
                 dis = Vector3.Distance
                 (transform.position,
                 t.gameObject.transform.position);
                 if (dis <= SerchRange)
-                {
+                {//サーチ範囲内なら
+                    Debug.Log("敵近いよ");
                     if (min == 0 || dis < min)
                     {//最初の敵もしくは一番近い敵
+                        Debug.Log("ターゲットは"+ t);
+                        
                         enemy = t;
                         min = dis;//最小の距離を更新
-                        //Debug.Log(dis);
+                        Debug.Log(min);
+
                     }
+                }
+                else
+                {
+                    enemy = null;
                 }
             }
             if(dis>SerchRange)
             {
-                enemy = null;
+                
+                //enemy = null;
             }
         }
     }
     void PlayerImageReturn()
     {//プレイヤーの画像反転
-        //Debug.Log(enemy);
+        Debug.Log(enemy);
         if(enemy!=null)
         {//敵いる
             //Debug.Log(enemy);
