@@ -17,7 +17,7 @@ public class PlayerMove : MonoBehaviour
     GameObject enemy;
     Quaternion _RotationPlayer,_RotationRight,_RotationLeft;
     
-    float count = 0;
+    float count,min,dis = 0;
 
     bool _Pressed = true;
 
@@ -61,12 +61,12 @@ public class PlayerMove : MonoBehaviour
     void EnemySearch()
     {
         count += Time.deltaTime;
+        
         if (count >= 1)
         {
             targets = GameObject.FindGameObjectsWithTag("Enemy");
             count = 0;
-            var min = 0f;//最小
-            var dis = 0f;//プレイヤーと敵の距離
+            
             foreach (GameObject t in targets)
             {
                 //Debug.Log(t);
@@ -77,19 +77,25 @@ public class PlayerMove : MonoBehaviour
                 t.gameObject.transform.position);
                 if (dis <= SerchRange)
                 {//サーチ範囲内なら
+                 //
+                 /*
                     Debug.Log("敵近いよ");
+                    Debug.Log("最小"+min);
+                    Debug.Log("距離"+dis);*/
+                    
                     if (min == 0 || dis < min)
                     {//最初の敵もしくは一番近い敵
                         Debug.Log("ターゲットは"+ t);
                         
                         enemy = t;
                         min = dis;//最小の距離を更新
-                        Debug.Log(min);
+                        
 
                     }
                 }
                 else
                 {
+                    min = 0;
                     enemy = null;
                 }
             }
