@@ -5,66 +5,31 @@ using UnityEngine;
 public class Tama45 : MonoBehaviour
 {
     [SerializeField]
-    private float WaitTime;
-    [SerializeField]
     private float ShotSpeed;
-    private float time;
-    [SerializeField]
-    private float ShotTime;
 
 
     void Start()
     {
-        time = 0;
+        //time = 0;
     }
 
     void Update()
     {
-        Invoke(nameof(Shot), 2.0f);
-        //transform.position += transform.right * Time.deltaTime * ShotSpeed;
+        transform.position += transform.up * Time.deltaTime * ShotSpeed;
 
+    }
 
-        time += Time.deltaTime;
+    private void OnTriggerEnter(Collider other)
+    {
 
-        if (time > ShotTime)
+        if (other.gameObject)
         {
-            transform.position += transform.right * Time.deltaTime * ShotSpeed;
-            ShotPrefab();
-            time = 0;
+
+            Debug.Log("atata");
+            Destroy(this.gameObject);
+
         }
-
-        //Destroy(this,gameObject,3f);
-
     }
-
-    private void Shot()
-    {
-        transform.position += transform.right * Time.deltaTime * ShotSpeed;
-    }
-
-
-    IEnumerator ShotPrefab()
-    {
-        yield return new WaitForSeconds(WaitTime);
-
-        Instantiate(this.gameObject, new Vector3(0, 0, 1), Quaternion.identity);
-        transform.position += transform.right * Time.deltaTime * ShotSpeed;
-
-        Debug.Log("aaa");
-    }
-
-    /*private void OnTriggerEnter(Collider other)
-     {
-
-         if (other.gameObject)
-         {
-
-             Debug.Log("atata");
-             Destroy(this.gameObject);
-
-         }
-     }
-    */
 
 
 }

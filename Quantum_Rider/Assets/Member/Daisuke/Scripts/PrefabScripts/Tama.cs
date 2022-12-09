@@ -4,14 +4,7 @@ using UnityEngine;
 
 public class Tama : MonoBehaviour
 {
-    /*
-    [SerializeField]
-    private float WaitTime;
-    
-    private float time;
-    [SerializeField]
-    private float ShotTime;
-    */
+
     [SerializeField]
     private float ShotSpeed;
 
@@ -23,34 +16,11 @@ public class Tama : MonoBehaviour
 
     void Update()
     {        
-
         transform.position += transform.right * Time.deltaTime * ShotSpeed;
-
-        /*
-        time += Time.deltaTime;
-
-        if (time > ShotTime)
-        {
-            ShotPrefab();
-            time = 0;
-        }
-        */
-        //Destroy(this,gameObject,3f);
-        
+        Destroy(this.gameObject, 5.0f);
     }
 
-    /*
-    private void ShotPrefab()
-    {
-        //yield return new WaitForSeconds(WaitTime);
-
-        Instantiate(this.gameObject, new Vector3(0, 0, 1), Quaternion.identity);
-        transform.position += transform.right * Time.deltaTime * ShotSpeed;
-
-        Debug.Log("aaa");
-    }
-    */
-   /*private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
 
         if (other.gameObject)
@@ -61,7 +31,5 @@ public class Tama : MonoBehaviour
 
         }
     }
-   */
 
-    
 }
