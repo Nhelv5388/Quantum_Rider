@@ -61,21 +61,26 @@ public class MapManager : MonoBehaviour
         {
             case SceneID.Title:
                 SceneManager.LoadScene("TitleScene");
+                SoundManager.instance.Play("Title");
                 PlayerManager.Instance.PlayerSetActive(false);
                 break;
             case SceneID.Tutorial:
                 SceneManager.LoadScene("TutorialScene");
+                SoundManager.instance.Play("MainGame");
                 HPManager.instance.HpReset();
                 break;
             case SceneID.MainGameScene1:
                 SceneManager.LoadScene("MainGameScene");
+                SoundManager.instance.Play("MainGame");
                 HPManager.instance.HpReset();
                 break;
             case SceneID.GameOver:
                 SceneManager.LoadScene("GameOver");
+                SoundManager.instance.Play("GameOver");
                 break;
             case SceneID.GameClear:
                 SceneManager.LoadScene("GameClear");
+                SoundManager.instance.Play("Title");//仮置き
                 break;
             default:
                 Debug.LogWarning("そのマップは存在しません");

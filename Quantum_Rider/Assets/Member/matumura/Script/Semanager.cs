@@ -37,7 +37,7 @@ public class Semanager : MonoBehaviour
     }
 
 
-    public void Play(String name)
+    public void Play(string name)
     {
         //
         Sound s = Array.Find(sounds, sound => sound.name == name);

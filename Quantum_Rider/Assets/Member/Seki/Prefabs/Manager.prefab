@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3028280363453493133}
   - component: {fileID: 8711971632835216550}
   - component: {fileID: 4261292687833318915}
+  - component: {fileID: 2659558406797175625}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -124,7 +125,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
+  - name: Title
+    clip: {fileID: 8300000, guid: 5e9617b2c0bb2804994f46ae282c1079, type: 3}
+    volume: 0.5
+    audiosource: {fileID: 0}
+  - name: MainGame
+    clip: {fileID: 8300000, guid: ee2c8f29268e6264799c520aceaafc5a, type: 3}
+    volume: 0.5
+    audiosource: {fileID: 0}
   - name: 
     clip: {fileID: 0}
-    volume: 0
+    volume: 0.5
     audiosource: {fileID: 0}
+  - name: GameOver
+    clip: {fileID: 8300000, guid: 94aabf4673f612942b933d6c8a4b2f40, type: 3}
+    volume: 0.5
+    audiosource: {fileID: 0}
+--- !u!114 &2659558406797175625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3028280363453493110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 654e7f5174637a2479a30665b27a8793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fadeTime: 0.5

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 public class SoundManager : MonoBehaviour
 {
     //SoundƒNƒ‰ƒX”z—ñ
@@ -31,5 +32,23 @@ public class SoundManager : MonoBehaviour
             s.audiosource.clip = s.clip;
             s.audiosource.volume = s.volume;
         }
+    }
+    public void Play(string name)
+    {
+        //
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+
+        if (s == null)
+        {
+            print("Sound" + name + "was not found");
+            return;
+        }
+        //‚ ‚ê‚ÎPlay()
+        s.audiosource.Play();
+    }
+    public void Stop()
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        s.audiosource.Stop();
     }
 }
