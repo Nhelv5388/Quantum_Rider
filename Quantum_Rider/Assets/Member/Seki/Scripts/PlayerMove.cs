@@ -38,7 +38,7 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Fade.isFade)
+        if (!Fade.isFade)
         {
             EnemySearch();
             Direction();
