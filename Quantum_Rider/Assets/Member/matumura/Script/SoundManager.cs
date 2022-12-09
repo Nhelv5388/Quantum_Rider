@@ -4,6 +4,24 @@ public class SoundManager : MonoBehaviour
     [SerializeField]
     AudioSource bgmAudioSource;
 
+    public static SoundManager instance;
+
+    
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+
+    }
+    
     public float BgmVolume
     {
         get
