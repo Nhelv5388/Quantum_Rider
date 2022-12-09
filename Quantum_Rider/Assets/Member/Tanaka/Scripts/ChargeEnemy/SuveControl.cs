@@ -189,7 +189,7 @@ public class SuveControl : MonoBehaviour
             }
         }
     }
-    private void OnCollisionExit2D(Collision col)
+    private void OnCollisionExit2D(Collision2D col)
     {
         //‰Šú’n“_‚É°‚ª‚È‚¢•°‚©‚ç—‚¿‚Ä‚µ‚Ü‚Á‚½—p
         if(col.gameObject.tag == "Floor")

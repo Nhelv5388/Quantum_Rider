@@ -4,14 +4,7 @@ using UnityEngine;
 
 public class Tama : MonoBehaviour
 {
-    /*
-    [SerializeField]
-    private float WaitTime;
-    
-    private float time;
-    [SerializeField]
-    private float ShotTime;
-    */
+
     [SerializeField]
     private float ShotSpeed;
 
@@ -23,45 +16,25 @@ public class Tama : MonoBehaviour
 
     void Update()
     {        
-
         transform.position += transform.right * Time.deltaTime * ShotSpeed;
-
-        /*
-        time += Time.deltaTime;
-
-        if (time > ShotTime)
-        {
-            ShotPrefab();
-            time = 0;
-        }
-        */
-        //Destroy(this,gameObject,3f);
-        
+        Destroy(this.gameObject, 5.0f);
     }
 
-    /*
-    private void ShotPrefab()
-    {
-        //yield return new WaitForSeconds(WaitTime);
-
-        Instantiate(this.gameObject, new Vector3(0, 0, 1), Quaternion.identity);
-        transform.position += transform.right * Time.deltaTime * ShotSpeed;
-
-        Debug.Log("aaa");
-    }
-    */
-   /*private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (other.gameObject)
+
+        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Floor"))
         {
-
-            Debug.Log("atata");
             Destroy(this.gameObject);
-
         }
-    }
-   */
 
-    
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            HPManager.instance.Damage(1);
+        }
+
+
+    }
+
 }
