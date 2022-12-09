@@ -9,8 +9,12 @@ public class UIManager : MonoBehaviour
     private int _MaxHP, _NowHP = 0;
     const int HPBarLength = 10;
     public static UIManager instance = null;
+
+    private GameObject HPUI;
     private void Awake()
     {
+
+
         if (instance == null)
         {
             instance = this;
@@ -19,6 +23,11 @@ public class UIManager : MonoBehaviour
         else
         {
             Destroy(this.gameObject);
+        }
+
+        if (HPUI == null)
+        {
+            GameObject.Find("HP");
         }
     }
     // Start is called before the first frame update
@@ -33,15 +42,18 @@ public class UIManager : MonoBehaviour
     }
     void HPBarChange()
     {
+        /*
         if (_HPBar == null)
         {
             _HPBar = GameObject.Find("HPBar").GetComponent<Image>();
-        }
+        }*/
         _NowHP = HPManager.instance.GetHP();
         if(_NowHP > _MaxHP)
         {
             _NowHP = _MaxHP;
         }
+
+        HPUI.GetComponent<Hp>().Life = _NowHP;
         _HPBar.transform.localScale=
             new Vector3((int)(HPBarLength*((float)_NowHP/_MaxHP)), 1, 1);
     }

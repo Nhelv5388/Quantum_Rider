@@ -16,7 +16,7 @@ public class Hp : MonoBehaviour
     public GameObject i;
     public GameObject j;
 
-    int Life = 10;
+    public int Life = 10;
 
        
     void Start()
@@ -104,7 +104,7 @@ public class Hp : MonoBehaviour
         if (Life == 1)
         {
             i.SetActive(false);
-            
+            j.SetActive(true);
         }
 
         if (Life == 0)

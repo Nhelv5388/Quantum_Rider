@@ -14,8 +14,11 @@ public class HPManager : MonoBehaviour
     [SerializeField]
     private int _PlayerHP=10;
     private int _MaxHP;
+
+    
     private void Awake()
     {
+
         if (instance == null)
         {
             instance = this;
@@ -38,7 +41,7 @@ public class HPManager : MonoBehaviour
     public int Damage(int damage)
     {
         _PlayerHP -= damage;
-        
+
         if(_PlayerHP<=0)
         {
             hpZero();
