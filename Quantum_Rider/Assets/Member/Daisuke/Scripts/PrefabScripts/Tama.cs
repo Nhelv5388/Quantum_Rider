@@ -20,16 +20,21 @@ public class Tama : MonoBehaviour
         Destroy(this.gameObject, 5.0f);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (other.gameObject)
+
+        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Floor"))
         {
-
-            Debug.Log("atata");
             Destroy(this.gameObject);
-
         }
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            HPManager.instance.Damage(1);
+        }
+
+
     }
 
 }

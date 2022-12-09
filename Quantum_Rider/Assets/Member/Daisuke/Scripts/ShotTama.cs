@@ -30,10 +30,10 @@ public class ShotTama : MonoBehaviour
     private void ShotPrefab()
     {
         transform.Rotate(new Vector3(0.0f, 0.0f, angle));
-        Instantiate(Tama, new Vector3(0, 0, 1), Quaternion.Euler(0, 0, angle + 45));
-        Instantiate(Tama, new Vector3(0, 0, 1), Quaternion.Euler(0, 0, angle + 135));
-        Instantiate(Tama, new Vector3(0, 0, 1), Quaternion.Euler(0, 0, angle + 225));
-        Instantiate(Tama, new Vector3(0, 0, 1), Quaternion.Euler(0, 0, angle + 315));
+        Instantiate(Tama, this.gameObject.transform.position, Quaternion.Euler(0, 0, angle + 45));
+        Instantiate(Tama, this.gameObject.transform.position, Quaternion.Euler(0, 0, angle + 135));
+        Instantiate(Tama, this.gameObject.transform.position, Quaternion.Euler(0, 0, angle + 225));
+        Instantiate(Tama, this.gameObject.transform.position, Quaternion.Euler(0, 0, angle + 315));
         angle += 45;
         transform.Rotate(new Vector3(0.0f, 0.0f, angle));
 
@@ -43,6 +43,10 @@ public class ShotTama : MonoBehaviour
     private void GunDestroy()
     {
 
+    }
+    private void OnDisable()
+    {
+        CancelInvoke("ShotPrefab");
     }
 
 }

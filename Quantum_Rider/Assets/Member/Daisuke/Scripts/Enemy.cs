@@ -20,15 +20,12 @@ public class Enemy : MonoBehaviour
 
 
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        if (other.gameObject.tag == "Tama")
+        //Debug.Log(collision.gameObject);
+        if (collision.gameObject.CompareTag("PlayerAttack"))
         {
-
-            Debug.Log("atata");
-            Destroy(this.gameObject);
-
+            this.gameObject.SetActive(false);
         }
     }
 
