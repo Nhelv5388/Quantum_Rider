@@ -38,24 +38,27 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        EnemySearch();
-        Direction();
-        BeamRotation();
-        PlayerImageReturn();
-        if (Input.GetMouseButton(0))
-        {//左クリック
-            if (_Pressed)
-            {
-                _Pressed = false;
-                Direction();
-                BeamActive();
-                Hover();
+        if (!Fade.isFade)
+        {
+            EnemySearch();
+            Direction();
+            BeamRotation();
+            PlayerImageReturn();
+            if (Input.GetMouseButton(0))
+            {//左クリック
+                if (_Pressed)
+                {
+                    _Pressed = false;
+                    Direction();
+                    BeamActive();
+                    Hover();
+                }
             }
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {//離したらビーム非表示
-            _Pressed = true;
-            //BeamActiveFalse();
+            else if (Input.GetMouseButtonUp(0))
+            {//離したらビーム非表示
+                _Pressed = true;
+                //BeamActiveFalse();
+            }
         }
     }
     void EnemySearch()
@@ -70,7 +73,6 @@ public class PlayerMove : MonoBehaviour
             foreach (GameObject t in targets)
             {
                 //Debug.Log(t);
-
                 //Debug.Log(t.gameObject.transform.position);
                 dis = Vector3.Distance
                 (transform.position,

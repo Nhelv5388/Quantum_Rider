@@ -11,6 +11,6 @@ public class BgmSample : MonoBehaviour
     AudioClip clip;
     void Start()
     {
-        soundManager.PlayBgm(clip);
+        
     }
 }
