@@ -45,6 +45,7 @@ public class HPManager : MonoBehaviour
         if (_PlayerHP<=0)
         {
             hpZero();
+            MapManager.Instance.CallFadeIn(MapManager.SceneID.GameOver);
             HpReset();
         }
         
