@@ -43,6 +43,7 @@ public static class Fade
         if (_image == null)
         {
             _image = GameObject.Find("FadeImage").GetComponent<Image>();
+            _image.gameObject.SetActive(true);
             _image.color = new Color32(0, 0, 0, 255);
         }
         if (_fadeTime != 0)
@@ -62,6 +63,7 @@ public static class Fade
                 {
                     time = 0;
                     isFade = false;
+                    _image.gameObject.SetActive(false);
                     break;
                 }
             }
@@ -77,6 +79,7 @@ public static class Fade
         if (_image == null)
         {
             _image = GameObject.Find("FadeImage").GetComponent<Image>();
+            _image.gameObject.SetActive(true);
             _image.color = new Color32(0, 0, 0, 0);
         }
         if (_fadeTime != 0)
@@ -96,7 +99,7 @@ public static class Fade
                 if (_image.color.a == 1)
                 {
                     time = 0;
-                    
+                    _image.gameObject.SetActive(false);
                     break;
                 }
             }

@@ -135,6 +135,8 @@ public class ControlChargeEnemy : MonoBehaviour
         if (!startCoolDown)
         {
             //Debug.Log("衝突ダメージ");
+            HPManager.instance.Damage(1);
+            Semanager.instance.Play("Explosion");//使用するseはあとで確認します
             startCoolDown = true;
         }
     }

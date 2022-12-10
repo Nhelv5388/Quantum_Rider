@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        HPManager.instance.hpZero += GameOver;
+        //HPManager.instance.hpZero += GameOver;
     }
 
     // Update is called once per frame
@@ -41,9 +41,9 @@ public class GameManager : MonoBehaviour
         return SceneManager.GetActiveScene().name;
     }
 
-    private void GameOver()
-    {
-        SceneChange("GameOver");
-    }
+    //private void GameOver()
+    //{
+    //    SceneChange("GameOver");
+    //}
 
 }
