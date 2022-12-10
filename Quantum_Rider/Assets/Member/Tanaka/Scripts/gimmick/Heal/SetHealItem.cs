@@ -35,9 +35,10 @@ public class SetHealItem : MonoBehaviour
 
                 healImage.gameObject.SetActive(false);
 
-                Debug.Log("HP‚ð5‰ñ•œ");
-                HPManager.instance.Heal(10);
-                HPManager.instance.HpReset();
+                //Debug.Log("HP‚ð5‰ñ•œ");
+                Semanager.instance.Play("Heal");
+                HPManager.instance.Heal(5);
+                //HPManager.instance.HpReset();
             }
         }
     }

@@ -48,10 +48,10 @@ public class SetShieldItem : MonoBehaviour
             //触れたら非表示にする
             if (col.gameObject.tag == "Player")
             {
-                Debug.Log("シールド展開");
+                //Debug.Log("シールド展開");
 
                 ShieldImage.shieldActive = true;
-
+                Semanager.instance.Play("Barrier");
                 //SE再生
                 //se.Play("6");
 
