@@ -110,13 +110,13 @@ public class PlayerMove : MonoBehaviour
                 Debug.Log("Å¬" + min);
                 if (min > SerchRange)
                 {
-
                     enemy = null;
                 }
             }
             if(enemyFrag == false)
             {
                 enemy=null;
+                min = 0;
             }
             
         }
