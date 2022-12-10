@@ -52,9 +52,13 @@ public class UIManager : MonoBehaviour
         {
             _NowHP = _MaxHP;
         }
-
+        var NowHPLegth = (int)(HPBarLength * ((float)_NowHP / _MaxHP));
         //HPUI.GetComponent<Hp>().Life = _NowHP;
-        HPUI.GetComponent<HPUIKari>().HPHenkou((int)(HPBarLength * ((float)_NowHP / _MaxHP)));
+        HPUI.GetComponent<HPUIKari>().HPHenkou(NowHPLegth);
+        if(NowHPLegth<=0)
+        {
+            Destroy(HPUI.GetComponent<HPUIKari>());
+        }
         /*
         _HPBar.transform.localScale=
             new Vector3((int)(HPBarLength*((float)_NowHP/_MaxHP)), 1, 1);
