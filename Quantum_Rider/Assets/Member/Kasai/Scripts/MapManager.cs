@@ -50,10 +50,6 @@ public class MapManager : MonoBehaviour
         {
             StartCoroutine(Fade.IEFadeOut(_image, _fadeTime,SceneChange,SceneID.GameOver));
         }
-        //if (Input.GetKeyDown(KeyCode.J)&&GameObject.Find("fdsaf") == null)
-        //{
-        //    Debug.Log("a");
-        //}
     }
     public void SceneChange(SceneID Scene)
     {
@@ -61,7 +57,7 @@ public class MapManager : MonoBehaviour
         {
             case SceneID.Title:
                 SceneManager.LoadScene("TitleScene");
-                //SoundManager.instance.Play("Title");
+                SoundManager.instance.Play("Title",true);
                 PlayerManager.Instance.PlayerSetActive(false);
                 break;
             case SceneID.Tutorial:
@@ -71,16 +67,16 @@ public class MapManager : MonoBehaviour
                 break;
             case SceneID.MainGameScene1:
                 SceneManager.LoadScene("MainGameScene");
-                //SoundManager.instance.Play("MainGame");
+                SoundManager.instance.Play("MainGame",true);
                 HPManager.instance.HpReset();
                 break;
             case SceneID.GameOver:
                 SceneManager.LoadScene("GameOver");
-                //SoundManager.instance.Play("GameOver");
+                SoundManager.instance.Play("GameOver",true);
                 break;
             case SceneID.GameClear:
                 SceneManager.LoadScene("GameClear");
-                //SoundManager.instance.Play("Title");//仮置き
+                SoundManager.instance.Play("Title",true);//今後ゲームクリア用の音源追加予定
                 break;
             default:
                 Debug.LogWarning("そのマップは存在しません");

@@ -14,8 +14,9 @@ public class HPManager : MonoBehaviour
     [SerializeField]
     private int _PlayerHP=10;
     private int _MaxHP;
+    private MapManager.SceneID mapName=MapManager.SceneID.GameOver;
 
-    
+
     private void Awake()
     {
 
@@ -44,9 +45,10 @@ public class HPManager : MonoBehaviour
         hpChange();
         if (_PlayerHP<=0)
         {
-            hpZero();
-            MapManager.Instance.CallFadeIn(MapManager.SceneID.GameOver);
+            //hpZero();
             HpReset();
+            MapManager.Instance.CallFadeIn(mapName);
+
         }
         
         return _PlayerHP;

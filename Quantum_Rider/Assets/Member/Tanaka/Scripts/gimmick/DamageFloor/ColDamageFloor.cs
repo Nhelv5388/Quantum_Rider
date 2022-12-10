@@ -32,8 +32,8 @@ public class ColDamageFloor : MonoBehaviour
             {
                 nowTime = 0.0f;
                 HPManager.instance.Damage(1);
-                Debug.Log("フィールドダメージ");
-
+                //Debug.Log("フィールドダメージ");
+                Semanager.instance.Play("Damaged");
                 //SE再生
                 //se.Play("4");
             }

@@ -38,49 +38,50 @@ public class abbbc : MonoBehaviour
         //    Debug.Log("b");
         //}
         //FadeTest.IEFadeIn(image, fadetime);
-        if(Input.GetKeyDown(KeyCode.A))
-        {
-            Semanager.instance.Play("Heal");
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            Semanager.instance.Play("Laser");
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            Semanager.instance.Play("Explosion");
-        }
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            Semanager.instance.Play("Damaged");
-        }
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            Semanager.instance.Play("Select");
-        }
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            Semanager.instance.Play("Barrier");
-        }
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            SoundManager.instance.Play("Title",true);
-        }
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            SoundManager.instance.Play("MainGame", true) ;
-        }
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            SoundManager.instance.Play("GameOver", true) ;
-        }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            //SoundManager.instance.Stop();
-            //SoundManager.instance.Play("Title",false);
-            //SoundManager.instance.Play("MainGame", false);
-            //SoundManager.instance.Play("GameOver", false);
-        }
+        //サウンドテスト
+        //if(Input.GetKeyDown(KeyCode.A))
+        //{
+        //    Semanager.instance.Play("Heal");
+        //}
+        //if (Input.GetKeyDown(KeyCode.S))
+        //{
+        //    Semanager.instance.Play("Laser");
+        //}
+        //if (Input.GetKeyDown(KeyCode.D))
+        //{
+        //    Semanager.instance.Play("Explosion");
+        //}
+        //if (Input.GetKeyDown(KeyCode.F))
+        //{
+        //    Semanager.instance.Play("Damaged");
+        //}
+        //if (Input.GetKeyDown(KeyCode.G))
+        //{
+        //    Semanager.instance.Play("Select");
+        //}
+        //if (Input.GetKeyDown(KeyCode.H))
+        //{
+        //    Semanager.instance.Play("Barrier");
+        //}
+        //if (Input.GetKeyDown(KeyCode.Z))
+        //{
+        //    SoundManager.instance.Play("Title",true);
+        //}
+        //if (Input.GetKeyDown(KeyCode.J))
+        //{
+        //    SoundManager.instance.Play("MainGame", true) ;
+        //}
+        //if (Input.GetKeyDown(KeyCode.K))
+        //{
+        //    SoundManager.instance.Play("GameOver", true) ;
+        //}
+        //if (Input.GetKeyDown(KeyCode.L))
+        //{
+        //    //SoundManager.instance.Stop();
+        //    SoundManager.instance.Play("Title", false);
+        //    SoundManager.instance.Play("MainGame", false);
+        //    SoundManager.instance.Play("GameOver", false);
+        //}
 
     }
 }

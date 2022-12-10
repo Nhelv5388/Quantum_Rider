@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4261292687833318915}
   - component: {fileID: 2659558406797175625}
   m_Layer: 0
-  m_Name: Manager
+  m_Name: Manager 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3028280363453493110}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8713f70b687c7e144a81123f24147ca9, type: 3}
   m_Name: 
@@ -56,7 +56,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3028280363453493110}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 331d9e0b2ea85d845aa0e1fc9d2f15b4, type: 3}
   m_Name: 
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3028280363453493110}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6ed329105f796348b4343adb7fabd23, type: 3}
   m_Name: 
@@ -128,7 +128,7 @@ MonoBehaviour:
   sounds:
   - name: Title
     clip: {fileID: 8300000, guid: 5e9617b2c0bb2804994f46ae282c1079, type: 3}
-    volume: 0.2
+    volume: 0.5
     audiosource: {fileID: 0}
   - name: MainGame
     clip: {fileID: 8300000, guid: ee2c8f29268e6264799c520aceaafc5a, type: 3}
@@ -140,8 +140,9 @@ MonoBehaviour:
     audiosource: {fileID: 0}
   - name: GameOver
     clip: {fileID: 8300000, guid: 94aabf4673f612942b933d6c8a4b2f40, type: 3}
-    volume: 0.15
+    volume: 0.5
     audiosource: {fileID: 0}
+  audiosource: {fileID: 0}
 --- !u!114 &2659558406797175625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,7 +150,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3028280363453493110}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 654e7f5174637a2479a30665b27a8793, type: 3}
   m_Name: 
