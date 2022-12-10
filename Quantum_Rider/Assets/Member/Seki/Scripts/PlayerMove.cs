@@ -48,6 +48,7 @@ public class PlayerMove : MonoBehaviour
             {//左クリック
                 if (_Pressed)
                 {
+                    Semanager.instance.Play("Laser");
                     _Pressed = false;
                     Direction();
                     BeamActive();
@@ -55,7 +56,7 @@ public class PlayerMove : MonoBehaviour
                 }
             }
             else if (Input.GetMouseButtonUp(0))
-            {//離したらビーム非表示
+            {//
                 _Pressed = true;
                 //BeamActiveFalse();
             }
