@@ -100,7 +100,7 @@ public static class Fade
                     break;
                 }
             }
-            SoundManager.instance.Stop();
+            //SoundManager.instance.Play("");
             fadeDelegate(scene);
         }
         

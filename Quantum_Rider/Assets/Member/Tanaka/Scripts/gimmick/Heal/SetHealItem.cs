@@ -7,8 +7,8 @@ public class SetHealItem : MonoBehaviour
     private GameObject healImage;
     private bool usedHeal = false;
 
-    GameObject seManager;
-    Semanager se = null;
+    //GameObject seManager;
+    //Semanager se = null;
     void Start()
     {
         this.gameObject.SetActive(true);
@@ -16,8 +16,8 @@ public class SetHealItem : MonoBehaviour
 
 
         //(テスト用の名前のため後で変更予定)
-        seManager = GameObject.Find("SEManager");
-        se = seManager.GetComponent<Semanager>();
+        //seManager = GameObject.Find("SEManager");
+        //se = seManager.GetComponent<Semanager>();
 
     }
 
@@ -31,7 +31,7 @@ public class SetHealItem : MonoBehaviour
                 usedHeal = true;
 
                 //SE再生
-                se.Play("1");
+                //se.Play("1");
 
                 healImage.gameObject.SetActive(false);
 

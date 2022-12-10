@@ -44,7 +44,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3028280363453493110}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8713f70b687c7e144a81123f24147ca9, type: 3}
   m_Name: 
@@ -56,12 +56,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3028280363453493110}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 331d9e0b2ea85d845aa0e1fc9d2f15b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _HPBar: {fileID: 0}
+  HPUI: {fileID: 0}
 --- !u!114 &3028280363453493133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,7 +70,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3028280363453493110}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6ed329105f796348b4343adb7fabd23, type: 3}
   m_Name: 
@@ -90,7 +91,7 @@ MonoBehaviour:
   sounds:
   - name: Heal
     clip: {fileID: 8300000, guid: 565eeaa434ea8394d9118281cead56b4, type: 3}
-    volume: 0.5
+    volume: 0.7
     audiosource: {fileID: 0}
   - name: Laser
     clip: {fileID: 8300000, guid: bb25c3694a1ca1d47850623df2c52c8e, type: 3}
@@ -98,7 +99,7 @@ MonoBehaviour:
     audiosource: {fileID: 0}
   - name: Explosion
     clip: {fileID: 8300000, guid: 74acf0ffe2f9cbd4eb9ebdc633f60140, type: 3}
-    volume: 0.5
+    volume: 0.15
     audiosource: {fileID: 0}
   - name: Damaged
     clip: {fileID: 8300000, guid: 0a7527f12f692a44f915a590aef9e19e, type: 3}
@@ -106,7 +107,7 @@ MonoBehaviour:
     audiosource: {fileID: 0}
   - name: Select
     clip: {fileID: 8300000, guid: 18610bc102dbb6441a2f4587c55345cb, type: 3}
-    volume: 0.5
+    volume: 0.3
     audiosource: {fileID: 0}
   - name: Barrier
     clip: {fileID: 8300000, guid: 41d7f43280f111e49853a3b9d49d147d, type: 3}
@@ -141,6 +142,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 94aabf4673f612942b933d6c8a4b2f40, type: 3}
     volume: 0.5
     audiosource: {fileID: 0}
+  audiosource: {fileID: 0}
 --- !u!114 &2659558406797175625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,7 +150,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3028280363453493110}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 654e7f5174637a2479a30665b27a8793, type: 3}
   m_Name: 

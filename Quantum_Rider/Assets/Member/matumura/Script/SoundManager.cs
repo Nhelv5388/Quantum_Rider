@@ -33,22 +33,32 @@ public class SoundManager : MonoBehaviour
             s.audiosource.volume = s.volume;
         }
     }
-    public void Play(string name)
+    public void Play(string name,bool flag)
     {
         //
         Sound s = Array.Find(sounds, sound => sound.name == name);
 
         if (s == null)
         {
-            print("Sound" + name + "was not found");
+            //print("Sound" + name + "was not found");
+            
+            Debug.Log("‚»‚Ì‰¹Œ¹‚Í‚È‚¢‚æ");
+            //s.audiosource.Stop();
             return;
+            
         }
-        //‚ ‚ê‚ÎPlay()
-        s.audiosource.Play();
+        if (flag)
+        {
+            //‚ ‚ê‚ÎPlay()
+            s.audiosource.Play();
+        }
+        else
+        {
+            s.audiosource.Stop();
+        }
     }
-    public void Stop()
-    {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
-        s.audiosource.Stop();
-    }
+    //public void Stop()
+    //{
+
+    //}
 }
