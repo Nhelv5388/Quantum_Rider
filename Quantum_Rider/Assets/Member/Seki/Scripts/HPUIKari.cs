@@ -15,13 +15,13 @@ public class HPUIKari : MonoBehaviour
 
     public void HPHenkou(int HPLength)
     {
-
+        //Debug.LogError(HPLength);
         for (int i = 0; i < HPLength; i++)
         {
             
             hpUI[i].SetActive(true);
         }
-        for(int i =hpUI.Length-1;i>HPLength;i--)
+        for(int i =hpUI.Length-1;i>=HPLength;i--)
         {
             hpUI[i].SetActive(false);
         }
