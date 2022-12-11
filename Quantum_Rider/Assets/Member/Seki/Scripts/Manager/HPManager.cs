@@ -16,6 +16,7 @@ public class HPManager : MonoBehaviour
     private int _MaxHP;
     private MapManager.SceneID mapName=MapManager.SceneID.GameOver;
 
+    bool death = false;
 
     private void Awake()
     {
@@ -46,7 +47,7 @@ public class HPManager : MonoBehaviour
         if (_PlayerHP<=0)
         {
             //hpZero();
-            HpReset();
+            //HpReset();
             MapManager.Instance.CallFadeIn(mapName);
 
         }
