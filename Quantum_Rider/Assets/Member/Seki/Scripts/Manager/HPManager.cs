@@ -44,10 +44,11 @@ public class HPManager : MonoBehaviour
     {
         _PlayerHP -= damage;
         hpChange();
-        if (_PlayerHP<=0)
+        if (_PlayerHP<=0&&death!)
         {
             //hpZero();
             //HpReset();
+            death = true;   
             MapManager.Instance.CallFadeIn(mapName);
 
         }
@@ -70,6 +71,7 @@ public class HPManager : MonoBehaviour
     }
     public void HpReset()
     {
+        death = false;
         _PlayerHP = _MaxHP;
     }
 
