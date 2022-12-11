@@ -48,6 +48,7 @@ public class PlayerMove : MonoBehaviour
             {//左クリック
                 if (_Pressed)
                 {
+                    Semanager.instance.Play("Laser");
                     _Pressed = false;
                     Direction();
                     BeamActive();
@@ -55,7 +56,7 @@ public class PlayerMove : MonoBehaviour
                 }
             }
             else if (Input.GetMouseButtonUp(0))
-            {//離したらビーム非表示
+            {//
                 _Pressed = true;
                 //BeamActiveFalse();
             }
@@ -67,9 +68,13 @@ public class PlayerMove : MonoBehaviour
         
         if (count >= 1)
         {
+            var enemyFrag = false;
             targets = GameObject.FindGameObjectsWithTag("Enemy");
             count = 0;
-            
+            if(targets.Length==0)
+            {
+                enemy = null;
+            }
             foreach (GameObject t in targets)
             {
                 //Debug.Log(t);
@@ -80,15 +85,15 @@ public class PlayerMove : MonoBehaviour
                 if (dis <= SerchRange)
                 {//サーチ範囲内なら
                  //
-                 /*
-                    Debug.Log("敵近いよ");
-                    Debug.Log("最小"+min);
-                    Debug.Log("距離"+dis);*/
+                 
+                   // Debug.Log("敵近いよ");
+                    
+                    //Debug.Log("距離"+dis);
                     
                     if (min == 0 || dis < min)
                     {//最初の敵もしくは一番近い敵
                         Debug.Log("ターゲットは"+ t);
-                        
+                        enemyFrag = true;
                         enemy = t;
                         min = dis;//最小の距離を更新
                         
@@ -97,20 +102,29 @@ public class PlayerMove : MonoBehaviour
                 }
                 else
                 {
+                    /*
+                    Debug.Log("ターゲットはなし");
                     min = 0;
+                    enemy = null;
+                    */
+                }
+                //Debug.Log("最小" + min);
+                if (min > SerchRange)
+                {
                     enemy = null;
                 }
             }
-            if(dis>SerchRange)
+            if(enemyFrag == false)
             {
-                
-                //enemy = null;
+                enemy=null;
+                min = 0;
             }
+            
         }
     }
     void PlayerImageReturn()
     {//プレイヤーの画像反転
-        Debug.Log(enemy);
+        //Debug.Log(enemy);
         if(enemy!=null)
         {//敵いる
             //Debug.Log(enemy);
