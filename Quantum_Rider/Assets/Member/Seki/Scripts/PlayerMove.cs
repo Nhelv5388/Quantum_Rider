@@ -108,7 +108,7 @@ public class PlayerMove : MonoBehaviour
                     enemy = null;
                     */
                 }
-                Debug.Log("Å¬" + min);
+                //Debug.Log("Å¬" + min);
                 if (min > SerchRange)
                 {
                     enemy = null;

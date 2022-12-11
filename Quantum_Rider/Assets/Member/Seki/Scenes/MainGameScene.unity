@@ -2481,6 +2481,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5091896642523974969, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+      propertyPath: ChargeSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091896642523974969, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+      propertyPath: PatrolSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5091896642523974971, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
       propertyPath: m_Name
       value: DontFallChargeEnemy (1)
@@ -14762,6 +14770,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5091896642523974969, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+      propertyPath: ChargeSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091896642523974969, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+      propertyPath: PatrolSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5091896642523974971, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
       propertyPath: m_Name
       value: DontFallChargeEnemy
@@ -15332,6 +15348,14 @@ PrefabInstance:
     - target: {fileID: 5091896642523974968, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091896642523974969, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+      propertyPath: ChargeSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091896642523974969, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+      propertyPath: PatrolSpeed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5091896642523974971, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
       propertyPath: m_Name
@@ -53054,6 +53078,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5091896642523974969, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+      propertyPath: ChargeSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091896642523974969, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+      propertyPath: PatrolSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5091896642523974971, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
       propertyPath: m_Name
       value: DontFallChargeEnemy (5)
@@ -75307,6 +75339,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5091896642523974969, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+      propertyPath: ChargeSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091896642523974969, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+      propertyPath: PatrolSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5091896642523974971, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
       propertyPath: m_Name
       value: DontFallChargeEnemy (3)
@@ -80318,6 +80358,14 @@ PrefabInstance:
     - target: {fileID: 5091896642523974968, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091896642523974969, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+      propertyPath: ChargeSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091896642523974969, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+      propertyPath: PatrolSpeed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5091896642523974971, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
       propertyPath: m_Name
