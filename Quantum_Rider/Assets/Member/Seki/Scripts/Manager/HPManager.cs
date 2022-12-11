@@ -42,7 +42,7 @@ public class HPManager : MonoBehaviour
     public int Damage(int damage)
     {
         _PlayerHP -= damage;
-        
+        hpChange();
         if (_PlayerHP<=0)
         {
             //hpZero();
@@ -50,10 +50,10 @@ public class HPManager : MonoBehaviour
             MapManager.Instance.CallFadeIn(mapName);
 
         }
-        else
-        {
-            hpChange();
-        }
+        
+        
+            
+        
         
         return _PlayerHP;
     }
