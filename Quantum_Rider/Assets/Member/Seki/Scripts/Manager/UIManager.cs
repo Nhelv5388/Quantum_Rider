@@ -59,10 +59,14 @@ public class UIManager : MonoBehaviour
         }
         var NowHPLegth = (int)(HPBarLength * ((float)_NowHP / _MaxHP));
         //HPUI.GetComponent<Hp>().Life = _NowHP;
-        
-        if(NowHPLegth>=0)
+
+        if (NowHPLegth > 0)
         {
             HPUI.GetComponent<HPUIKari>().HPHenkou(NowHPLegth);
+        }
+        else 
+        {
+            HPUI.GetComponent<HPUIKari>().HPHenkou(0);
         }
 
         /*

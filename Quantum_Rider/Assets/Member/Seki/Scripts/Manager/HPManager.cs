@@ -44,7 +44,7 @@ public class HPManager : MonoBehaviour
     {
         _PlayerHP -= damage;
         hpChange();
-        if (_PlayerHP<=0&&death!)
+        if (_PlayerHP<=0&&death==false)
         {
             //hpZero();
             //HpReset();
