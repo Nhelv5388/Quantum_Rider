@@ -74,6 +74,7 @@ public class MapManager : MonoBehaviour
             case SceneID.GameOver:
                 SceneManager.LoadScene("GameOver");
                 SoundManager.instance.Play("GameOver");
+                HPManager.instance.HpReset();
                 break;
             case SceneID.GameClear:
                 SceneManager.LoadScene("GameClear");
