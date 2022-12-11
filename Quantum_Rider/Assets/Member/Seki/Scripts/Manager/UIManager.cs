@@ -27,7 +27,7 @@ public class UIManager : MonoBehaviour
 
         if (HPUI == null)
         {
-            GameObject.Find("HP");
+            HPUI= GameObject.Find("HP");
         }
     }
     // Start is called before the first frame update
