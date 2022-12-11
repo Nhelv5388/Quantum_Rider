@@ -16,7 +16,7 @@ public class MapManager : MonoBehaviour
     {
         Title,
         Tutorial,
-        MainGameScene1,
+        MainGameScene,
         GameOver,
         GameClear,
         None
@@ -53,30 +53,31 @@ public class MapManager : MonoBehaviour
     }
     public void SceneChange(SceneID Scene)
     {
+
         switch (Scene)
         {
             case SceneID.Title:
-                SceneManager.LoadScene("TitleScene");
-                SoundManager.instance.Play("Title",true);
-                PlayerManager.Instance.PlayerSetActive(false);
+                SceneManager.LoadScene("TitleSeki");
+                SoundManager.instance.Play("Title");
+                //PlayerManager.Instance.PlayerSetActive(false);
                 break;
             case SceneID.Tutorial:
                 SceneManager.LoadScene("TutorialScene");
                 //SoundManager.instance.Play("MainGame");
                 HPManager.instance.HpReset();
                 break;
-            case SceneID.MainGameScene1:
+            case SceneID.MainGameScene:
                 SceneManager.LoadScene("MainGameScene");
-                SoundManager.instance.Play("MainGame",true);
+                SoundManager.instance.Play("MainGame");
                 HPManager.instance.HpReset();
                 break;
             case SceneID.GameOver:
                 SceneManager.LoadScene("GameOver");
-                SoundManager.instance.Play("GameOver",true);
+                SoundManager.instance.Play("GameOver");
                 break;
             case SceneID.GameClear:
                 SceneManager.LoadScene("GameClear");
-                SoundManager.instance.Play("Title",true);//今後ゲームクリア用の音源追加予定
+                SoundManager.instance.Play("Title");//今後ゲームクリア用の音源追加予定
                 break;
             default:
                 Debug.LogWarning("そのマップは存在しません");

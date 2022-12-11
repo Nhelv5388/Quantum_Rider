@@ -184,6 +184,7 @@ public class ControlChargeEnemy : MonoBehaviour
             if (col.gameObject.tag == "PlayerAttack")
             {
                 this.gameObject.SetActive(false);
+                Semanager.instance.Play("Explosion");
             }
         }
     }

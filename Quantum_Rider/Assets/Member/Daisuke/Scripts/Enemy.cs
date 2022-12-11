@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour
         //Debug.Log(collision.gameObject);
         if (collision.gameObject.CompareTag("PlayerAttack"))
         {
+            Semanager.instance.Play("Explosion");
             this.gameObject.SetActive(false);
         }
     }

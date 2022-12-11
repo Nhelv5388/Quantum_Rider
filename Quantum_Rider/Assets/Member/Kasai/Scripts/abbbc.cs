@@ -38,8 +38,8 @@ public class abbbc : MonoBehaviour
         //    Debug.Log("b");
         //}
         //FadeTest.IEFadeIn(image, fadetime);
-        //サウンドテスト
-        //if(Input.GetKeyDown(KeyCode.A))
+        ////サウンドテスト
+        //if (Input.GetKeyDown(KeyCode.A))
         //{
         //    Semanager.instance.Play("Heal");
         //}
@@ -65,22 +65,20 @@ public class abbbc : MonoBehaviour
         //}
         //if (Input.GetKeyDown(KeyCode.Z))
         //{
-        //    SoundManager.instance.Play("Title",true);
+        //    SoundManager.instance.Play("Title");
         //}
         //if (Input.GetKeyDown(KeyCode.J))
         //{
-        //    SoundManager.instance.Play("MainGame", true) ;
+        //    SoundManager.instance.Play("MainGame");
         //}
         //if (Input.GetKeyDown(KeyCode.K))
         //{
-        //    SoundManager.instance.Play("GameOver", true) ;
+        //    SoundManager.instance.Play("GameOver");
         //}
         //if (Input.GetKeyDown(KeyCode.L))
         //{
         //    //SoundManager.instance.Stop();
-        //    SoundManager.instance.Play("Title", false);
-        //    SoundManager.instance.Play("MainGame", false);
-        //    SoundManager.instance.Play("GameOver", false);
+
         //}
 
     }
