@@ -11,6 +11,7 @@ TagManager:
   - Floor
   - HealSphere
   - HPUI
+  - DamageFloor
   layers:
   - Default
   - TransparentFX

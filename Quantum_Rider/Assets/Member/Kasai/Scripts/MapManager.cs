@@ -33,12 +33,22 @@ public class MapManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        Fade.GetFadeImage();
+        var _fadeImage = GameObject.Find("FadeImage");
+        _image= _fadeImage.GetComponent<Image>();
+        Debug.Log(_image);
+        _fadeImage.gameObject.SetActive(false);
+
+
+
+
     }
 
     void Start()
     {
         SceneManager.sceneLoaded += OnSceneLoad;
         Fade.fadeDelegate += CallFadeIn;
+
     }
     private void Update()
     {
@@ -99,7 +109,7 @@ public class MapManager : MonoBehaviour
             
         }
         
-        //Debug.Log(_image);
+        //Debug.Log("aaaa");
         //ƒV[ƒ“Às‚Éimageæ“¾
         StartCoroutine(Fade.IEFadeIn(_image, _fadeTime));
     }

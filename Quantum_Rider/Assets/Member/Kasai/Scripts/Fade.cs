@@ -11,7 +11,7 @@ public static class Fade
 	public delegate void FadeDelegate(MapManager.SceneID scene);
     public static FadeDelegate fadeDelegate;
     public static bool isFade = false;
-    private static GameObject _fadeImage;
+    [SerializeField]private static GameObject _fadeImage;
     //public static IEnumerator FadeChange(bool trigger, FadeDelegate fadeDelegate, MapManager.SceneID scene)
     //{
         //true‚Åfadein
@@ -40,10 +40,7 @@ public static class Fade
     //}
     public static IEnumerator IEFadeIn(Image _image, float _fadeTime)
     {
-        if (_fadeImage == null)
-        {
-            _fadeImage = GameObject.Find("FadeImage");
-        }
+        GetFadeImage();
         //Debug.Log("fadein");
         //Debug.Log("FadeIn" + _image);
         Debug.Log(_fadeTime);
@@ -80,12 +77,10 @@ public static class Fade
     }
     public static IEnumerator IEFadeOut(Image _image, float _fadeTime, FadeDelegate fadeDelegate, MapManager.SceneID scene)
     {
-        if (_fadeImage == null)
-        {
-            _fadeImage = GameObject.Find("FadeImage");
-        }
+        GetFadeImage();
+        _fadeImage.gameObject.SetActive(true);
         //Debug.Log("fadeout");
-        Debug.Log("FadeOut" + _image);
+        Debug.Log( _fadeImage);
         isFade = true;
         if (_image == null)
         {
@@ -93,7 +88,7 @@ public static class Fade
 
             _image.color = new Color32(0, 0, 0, 0);
         }
-        _fadeImage.gameObject.SetActive(true);
+
         if (_fadeTime != 0)
         {
             while (_image.color.a <= 1)
@@ -120,5 +115,13 @@ public static class Fade
     public static void FadeChange(Image _image, float _fadeTime, FadeDelegate fadeDelegate, MapManager.SceneID scene)
     {
         StaticMono.StartCoroutine(IEFadeOut(_image, _fadeTime,fadeDelegate,scene));
+    }
+
+    public static void GetFadeImage()
+    {
+        if (_fadeImage == null)
+        {
+            _fadeImage = GameObject.Find("FadeImage");
+        }
     }
 }

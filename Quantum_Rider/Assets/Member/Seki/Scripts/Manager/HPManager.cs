@@ -42,6 +42,11 @@ public class HPManager : MonoBehaviour
     }
     public int Damage(int damage)
     {
+        //if (SetShieldItem.usingShieldItem == true)
+        //{
+        //    Heal(1);
+        //}
+
         _PlayerHP -= damage;
         hpChange();
         if (_PlayerHP<=0&&death==false)

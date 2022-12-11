@@ -24,7 +24,7 @@ public class Tama : MonoBehaviour
     {
 
 
-        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Floor"))
+        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Floor") || collision.gameObject.CompareTag("DamageFloor"))
         {
             Destroy(this.gameObject);
         }
