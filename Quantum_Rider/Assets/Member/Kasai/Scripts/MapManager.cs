@@ -98,7 +98,7 @@ public class MapManager : MonoBehaviour
             
         }
         
-        Debug.Log(_image);
+        //Debug.Log(_image);
         //ƒV[ƒ“Às‚Éimageæ“¾
         StartCoroutine(Fade.IEFadeIn(_image, _fadeTime));
     }
