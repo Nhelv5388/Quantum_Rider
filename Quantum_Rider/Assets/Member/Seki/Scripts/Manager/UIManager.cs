@@ -25,10 +25,7 @@ public class UIManager : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        if (HPUI == null)
-        {
-            HPUI = GameObject.FindGameObjectWithTag("HPUI");
-        }
+
     }
     // Start is called before the first frame update
     void Start()
@@ -42,6 +39,10 @@ public class UIManager : MonoBehaviour
     }
     void HPBarChange()
     {
+        if (HPUI == null)
+        {
+            HPUI = GameObject.FindGameObjectWithTag("HPUI");
+        }
         /*
         if (_HPBar == null)
         {

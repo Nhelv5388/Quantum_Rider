@@ -10,6 +10,7 @@ TagManager:
   - Wall
   - Floor
   - HealSphere
+  - HPUI
   layers:
   - Default
   - TransparentFX
