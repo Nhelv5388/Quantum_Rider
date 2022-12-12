@@ -10,5 +10,6 @@ public class SceneChange : MonoBehaviour
     {
         //Debug.Log("MoveToScene");
         MapManager.Instance.CallFadeIn(mapName);
+        //SceneManager.LoadScene("MainGameScene");
     }
 }

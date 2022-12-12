@@ -9,11 +9,11 @@ public class MapManager : MonoBehaviour
     public static MapManager Instance { get => _instance; }
     static MapManager _instance;
     [SerializeField] private float _fadeTime;
-    private Image _image;
 
-    PlayerManager playerManager;
+    private MouseTarget _mouseTarget;
     public enum SceneID
     {
+        //別スクリプトからマップ名を指定するときに使用
         Title,
         Tutorial,
         MainGameScene,
@@ -23,7 +23,6 @@ public class MapManager : MonoBehaviour
     }
     private void Awake()
     {
-        playerManager = PlayerManager.Instance;
         if (Instance == null)
         {
             _instance = this;
@@ -33,15 +32,16 @@ public class MapManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        Fade.GetFadeImage();
-        var _fadeImage = GameObject.Find("FadeImage");
-        _image= _fadeImage.GetComponent<Image>();
-        Debug.Log(_image);
-        _fadeImage.gameObject.SetActive(false);
 
+        
 
-
-
+        ////FadeからImageを取得
+        //Fade.GetFadeImage();//タイトルでボタンが押せない問題を修正のため
+        ////var _fadeImage = GameObject.Find("FadeImage");
+        ////_image= _fadeImage.GetComponent<Image>();
+        //Debug.Log(Fade._fadeImage);
+        //Fade._fadeImage.gameObject.SetActive(false);
+        
     }
 
     void Start()
@@ -49,21 +49,33 @@ public class MapManager : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoad;
         Fade.fadeDelegate += CallFadeIn;
 
+        //タイトルシーンのみで実行
+        if (SceneManager.GetActiveScene().name == "TitleSeki")
+        {
+            SoundManager.instance.Play("Title");
+            //FadeからImageを取得
+            Fade.GetFadeImage();//タイトルでボタンが押せない問題を修正のため
+            //Debug.Log(Fade._fadeImage);
+            Fade._fadeImage.gameObject.SetActive(false);
+        }
+
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.I))
-        {
-            StartCoroutine(Fade.IEFadeIn(_image, _fadeTime));
-        }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            StartCoroutine(Fade.IEFadeOut(_image, _fadeTime,SceneChange,SceneID.GameOver));
-        }
+        //デバッグ用
+        //if(Input.GetKeyDown(KeyCode.I))
+        //{
+        //    StartCoroutine(Fade.IEFadeIn(_fadeTime));
+        //}
+        //if (Input.GetKeyDown(KeyCode.O))
+        //{
+        //    StartCoroutine(Fade.IEFadeOut(_fadeTime,SceneChange,SceneID.GameOver));
+        //}
+        
+        
     }
     public void SceneChange(SceneID Scene)
     {
-
         switch (Scene)
         {
             case SceneID.Title:
@@ -97,20 +109,23 @@ public class MapManager : MonoBehaviour
     }
     public void CallFadeIn(SceneID scene)
     {
-        //StartCoroutine(Fade.FadeChange(false,SceneChange, scene));
-        //StartCoroutine(Fade.FadeChange(_image,_fadeTime,SceneChange,scene));
-        Fade.FadeChange(_image, _fadeTime, SceneChange, scene);
+        Fade.FadeChange(_fadeTime, SceneChange, scene);
     }
     void OnSceneLoad(Scene scene, LoadSceneMode mode)
     {
-        if (_image == null&& GameObject.Find("FadeImage") != null)
+        //if (_image == null&& GameObject.Find("FadeImage") != null)
+        //{
+        //    _image = GameObject.Find("FadeImage").GetComponent<Image>();
+        //}
+        if (SceneManager.GetActiveScene().name == "MainGameScene")
         {
-            _image = GameObject.Find("FadeImage").GetComponent<Image>();
-            
+            Cursor.visible = false;
         }
-        
-        //Debug.Log("aaaa");
-        //シーン実行時にimage取得
-        StartCoroutine(Fade.IEFadeIn(_image, _fadeTime));
+        else
+        {
+            Cursor.visible = true;
+        }
+
+        StartCoroutine(Fade.IEFadeIn(_fadeTime));
     }
 }
