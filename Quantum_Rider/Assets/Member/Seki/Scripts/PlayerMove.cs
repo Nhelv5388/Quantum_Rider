@@ -28,6 +28,8 @@ public class PlayerMove : MonoBehaviour
 
     Vector3 _Myvelocity, _HoverVec, _HoverDirection, _PlayerScreenPos,_distance;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,11 +50,7 @@ public class PlayerMove : MonoBehaviour
             {//ç∂ÉNÉäÉbÉN
                 if (_Pressed)
                 {
-                    Semanager.instance.Play("Laser");
-                    _Pressed = false;
-                    Direction();
-                    BeamActive();
-                    Hover();
+                    MouseClick();
                 }
             }
             else if (Input.GetMouseButtonUp(0))
@@ -61,6 +59,14 @@ public class PlayerMove : MonoBehaviour
                 //BeamActiveFalse();
             }
         }
+    }
+    void MouseClick()
+    {
+        Semanager.instance.Play("Laser");
+        _Pressed = false;
+        Direction();
+        BeamActive();
+        Hover();
     }
     void EnemySearch()
     {
