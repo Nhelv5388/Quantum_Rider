@@ -25,4 +25,9 @@ public class ShieldImage : MonoBehaviour
             SetShieldItem.usingShieldItem = false;
         }
     }
+    public void ShieleBroken()
+    {
+        this.gameObject.SetActive(false);
+        SetShieldItem.usingShieldItem = false;
+    }
 }

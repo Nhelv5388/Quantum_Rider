@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MouseTarget : MonoBehaviour
 {
-    [SerializeField,Header("マウスカーソル消したかったらfalseにしてね")] bool cursortrigger = true;
+    //[SerializeField,Header("マウスカーソル消したかったらfalseにしてね")] public bool CursorFrag = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +14,7 @@ public class MouseTarget : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Cursor.visible = cursortrigger;
+        //Cursor.visible = CursorFrag;
         this.gameObject.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y,0);
     }
 }

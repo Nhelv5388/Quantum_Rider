@@ -31,6 +31,7 @@ public class SoundManager : MonoBehaviour
             s.audiosource = gameObject.AddComponent<AudioSource>();
             s.audiosource.clip = s.clip;
             s.audiosource.volume = s.volume;
+            s.audiosource.loop=true;
         }
     }
     public void Play(string name)

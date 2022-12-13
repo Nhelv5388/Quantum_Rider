@@ -11,61 +11,31 @@ public static class Fade
 	public delegate void FadeDelegate(MapManager.SceneID scene);
     public static FadeDelegate fadeDelegate;
     public static bool isFade = false;
-    private static GameObject _fadeImage;
-    //public static IEnumerator FadeChange(bool trigger, FadeDelegate fadeDelegate, MapManager.SceneID scene)
-    //{
-        //true‚Åfadein
-        //false‚Åfadeout
-  //      if (trigger)
-  //      {
-  //          while (alfa > 0)
-  //          {
-  //              alfa -= (byte)fadeSpeed;                
-  //              SetAlpha();
-  //              yield return null;
-  //          }
-  //          fadeImage.enabled = false;
-
-  //      }
-  //      else
-  //      {
-  //          while (alfa < 255)
-  //          {
-  //              alfa += (byte)fadeSpeed;
-  //              SetAlpha();
-                //yield return null;
-  //          }
-		//	fadeDelegate(scene);
-		//}
-    //}
-    public static IEnumerator IEFadeIn(Image _image, float _fadeTime)
+    public static GameObject _fadeImage;
+    private static Image image;
+    public static IEnumerator IEFadeIn(float _fadeTime)
     {
-        if (_fadeImage == null)
+        GetFadeImage();
+        //Debug.Log(_fadeTime);
+        if (image == null)
         {
-            _fadeImage = GameObject.Find("FadeImage");
-        }
-        //Debug.Log("fadein");
-        //Debug.Log("FadeIn" + _image);
-        Debug.Log(_fadeTime);
-        if (_image == null)
-        {
-            _image = _fadeImage.GetComponent<Image>();
-            _image.color = new Color32(0, 0, 0, 255);
+            image = _fadeImage.GetComponent<Image>();
+            image.color = new Color32(0, 0, 0, 255);
         }
         if (_fadeTime != 0)
         {
-            while (_image.color.a >= 0)
+            while (image.color.a >= 0)
             {
                 time += Time.deltaTime;
                 if (time >= _fadeTime / 255)
                 {
                     time -= _fadeTime / 255;
-                    Color32 c = _image.color;
+                    Color32 c = image.color;
                     c.a--;
-                    _image.color = c;
+                    image.color = c;
                 }
                 yield return null;
-                if (_image.color.a == 0)
+                if (image.color.a == 0)
                 {
                     time = 0;
                     isFade = false;
@@ -78,36 +48,34 @@ public static class Fade
         }
 
     }
-    public static IEnumerator IEFadeOut(Image _image, float _fadeTime, FadeDelegate fadeDelegate, MapManager.SceneID scene)
+    public static IEnumerator IEFadeOut(float _fadeTime, FadeDelegate fadeDelegate, MapManager.SceneID scene)
     {
-        if (_fadeImage == null)
-        {
-            _fadeImage = GameObject.Find("FadeImage");
-        }
-        //Debug.Log("fadeout");
-        Debug.Log("FadeOut" + _image);
-        isFade = true;
-        if (_image == null)
-        {
-            _image = _fadeImage.GetComponent<Image>();
-
-            _image.color = new Color32(0, 0, 0, 0);
-        }
+        GetFadeImage();
         _fadeImage.gameObject.SetActive(true);
+        //Debug.Log("fadeout");
+        //Debug.Log( _fadeImage);
+        isFade = true;
+        if (image == null)
+        {
+            image = _fadeImage.GetComponent<Image>();
+
+            image.color = new Color32(0, 0, 0, 0);
+        }
+
         if (_fadeTime != 0)
         {
-            while (_image.color.a <= 1)
+            while (image.color.a <= 1)
             {
                 time += Time.deltaTime;
                 if (time >= _fadeTime / 255)
                 {
                     time -= _fadeTime / 255;
-                    Color32 c = _image.color;
+                    Color32 c = image.color;
                     c.a++;
-                    _image.color = c;
+                    image.color = c;
                 }
                 yield return null;
-                if (_image.color.a == 1)
+                if (image.color.a == 1)
                 {
                     time = 0;
                     break;
@@ -117,8 +85,20 @@ public static class Fade
         }
         
     }
-    public static void FadeChange(Image _image, float _fadeTime, FadeDelegate fadeDelegate, MapManager.SceneID scene)
+    public static void FadeChange(float _fadeTime, FadeDelegate fadeDelegate, MapManager.SceneID scene)
     {
-        StaticMono.StartCoroutine(IEFadeOut(_image, _fadeTime,fadeDelegate,scene));
+        StaticMono.StartCoroutine(IEFadeOut(_fadeTime,fadeDelegate,scene));
+    }
+
+    public static void GetFadeImage()
+    {
+        if (_fadeImage == null)
+        {
+            _fadeImage = GameObject.Find("FadeImage");
+        }
+        else
+        {
+            //Debug.Log(_fadeImage);
+        }
     }
 }

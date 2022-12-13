@@ -47,7 +47,15 @@ public class ColDamageFloor : MonoBehaviour
 
         
     }
-
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            HPManager.instance.Damage(1);
+            //Debug.Log("フィールドダメージ");
+            Semanager.instance.Play("Damaged");
+        }
+    }
     private void OnCollisionStay2D(Collision2D col)
     {
         if (col.gameObject.tag == "Player")
@@ -64,19 +72,19 @@ public class ColDamageFloor : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D col)
-    {
-        if (col.gameObject.tag == "Player")
-        {
-            startCol = true;
-        }
-    }
+    //private void OnTriggerStay2D(Collider2D col)
+    //{
+    //    if (col.gameObject.tag == "Player")
+    //    {
+    //        startCol = true;
+    //    }
+    //}
 
-    private void OnTriggerExit2D(Collider2D col)
-    {
-        if (col.gameObject.tag == "Player")
-        {
-            endCol = true;
-        }
-    }
+    //private void OnTriggerExit2D(Collider2D col)
+    //{
+    //    if (col.gameObject.tag == "Player")
+    //    {
+    //        endCol = true;
+    //    }
+    //}
 }

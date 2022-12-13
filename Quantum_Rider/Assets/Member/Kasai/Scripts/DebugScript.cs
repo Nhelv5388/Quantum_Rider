@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class debug : MonoBehaviour
+public class DebugScript : MonoBehaviour
 {
     public int damage;
     // Start is called before the first frame update

@@ -38,6 +38,8 @@ public class ControlChargeEnemy : MonoBehaviour
     [Header("(停止)")]
     [SerializeField]
     private bool stopping = false;
+    //葛西が勝手に書き足しました
+    private bool death=false;
     void Start()
     {
         if(this.gameObject.transform.localRotation == Quaternion.Euler(0f, 0f, 0f))
@@ -58,7 +60,7 @@ public class ControlChargeEnemy : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
         //攻撃のクールタイム中は移動速度を変化させない
         if (startCoolDown)
@@ -145,7 +147,7 @@ public class ControlChargeEnemy : MonoBehaviour
     {
         if (col.gameObject.tag == "Wall")
         {
-            Debug.Log(this.gameObject.name);
+            //Debug.Log(this.gameObject.name);
             returnNow = true;
         }
         if (col.gameObject.tag == "Enemy")
@@ -179,12 +181,14 @@ public class ControlChargeEnemy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         //プレイヤーの攻撃で死亡
-        if (!immortality)
+        if (!immortality&&!death)
         {
             if (col.gameObject.tag == "PlayerAttack")
             {
                 this.gameObject.SetActive(false);
                 Semanager.instance.Play("Explosion");
+                this.death = true;//SEが多重に呼ばれるバグの修正
+                //Debug.Log("SE");
             }
         }
     }

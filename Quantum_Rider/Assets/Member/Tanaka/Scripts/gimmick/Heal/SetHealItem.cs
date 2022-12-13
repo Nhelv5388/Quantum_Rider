@@ -7,6 +7,9 @@ public class SetHealItem : MonoBehaviour
     private GameObject healImage;
     private bool usedHeal = false;
 
+    //‰ñ•œ—Êİ’è
+    [SerializeField] private int _healValue;
+
     //GameObject seManager;
     //Semanager se = null;
     void Start()
@@ -37,7 +40,7 @@ public class SetHealItem : MonoBehaviour
 
                 //Debug.Log("HP‚ğ5‰ñ•œ");
                 Semanager.instance.Play("Heal");
-                HPManager.instance.Heal(5);
+                HPManager.instance.Heal(_healValue);
                 //HPManager.instance.HpReset();
             }
         }

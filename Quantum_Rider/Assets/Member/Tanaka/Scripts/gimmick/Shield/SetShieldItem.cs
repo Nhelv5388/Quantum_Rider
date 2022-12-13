@@ -24,6 +24,8 @@ public class SetShieldItem : MonoBehaviour
         shieldImage = transform.Find("ShieldImage").gameObject;
         this.gameObject.SetActive(true);
 
+        usedShieldItem = false;
+        usingShieldItem = false;
         //(テスト用の名前のため後で変更予定)
         //seManager = GameObject.Find("SEManager");
         //se = seManager.GetComponent<Semanager>();
