@@ -9,8 +9,6 @@ public class MapManager : MonoBehaviour
     public static MapManager Instance { get => _instance; }
     static MapManager _instance;
     [SerializeField] private float _fadeTime;
-
-    private MouseTarget _mouseTarget;
     public enum SceneID
     {
         //別スクリプトからマップ名を指定するときに使用

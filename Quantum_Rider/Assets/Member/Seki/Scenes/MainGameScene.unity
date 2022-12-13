@@ -144,6 +144,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 96
@@ -511,6 +515,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 77
@@ -795,6 +803,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 41
@@ -962,6 +974,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -2594,11 +2610,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5091896642523974969, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
       propertyPath: ChargeSpeed
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5091896642523974969, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
       propertyPath: PatrolSpeed
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5091896642523974971, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
       propertyPath: m_Name
@@ -2843,6 +2859,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -3278,6 +3298,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -3742,6 +3766,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 34
@@ -3798,6 +3826,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -4098,6 +4130,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 171
@@ -4154,6 +4190,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -4443,6 +4483,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -5123,6 +5167,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 63
@@ -5402,6 +5450,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 29
@@ -5651,6 +5703,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -6021,6 +6077,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -6432,6 +6492,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -6488,6 +6552,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -8052,6 +8120,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 154
@@ -8108,6 +8180,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -8192,7 +8268,7 @@ GameObject:
   - component: {fileID: 250142651}
   m_Layer: 0
   m_Name: Damage
-  m_TagString: Floor
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10584,6 +10660,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 31
@@ -10929,6 +11009,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -11660,6 +11744,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 117
@@ -11857,6 +11945,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -52863,6 +52955,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 98
@@ -52970,6 +53066,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 69
@@ -53026,6 +53126,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -53499,11 +53603,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5091896642523974969, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
       propertyPath: ChargeSpeed
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5091896642523974969, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
       propertyPath: PatrolSpeed
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5091896642523974971, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
       propertyPath: m_Name
@@ -53521,6 +53625,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -53700,6 +53808,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 172
@@ -53756,6 +53868,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -54078,11 +54194,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5091896642523974969, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
       propertyPath: ChargeSpeed
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5091896642523974969, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
       propertyPath: PatrolSpeed
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5091896642523974971, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
       propertyPath: m_Name
@@ -54231,6 +54347,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -54779,6 +54899,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 80
@@ -54947,6 +55071,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 121
@@ -55088,6 +55216,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -55453,6 +55585,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -56374,6 +56510,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 152
@@ -56623,6 +56763,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -57675,6 +57819,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 159
@@ -58085,6 +58233,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 74
@@ -58141,6 +58293,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -58208,6 +58364,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -58683,6 +58843,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 59
@@ -59073,6 +59237,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 124
@@ -59139,6 +59307,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -60680,6 +60852,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 107
@@ -61559,6 +61735,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 47
@@ -62026,6 +62206,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 174
@@ -62193,6 +62377,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -62593,6 +62781,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -63190,6 +63382,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -63944,6 +64140,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 168
@@ -64344,6 +64544,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 167
@@ -64400,6 +64604,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -64569,6 +64777,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 28
@@ -64625,6 +64837,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -65278,6 +65494,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 50
@@ -65450,6 +65670,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -66482,6 +66706,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 112
@@ -66548,6 +66776,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -67449,6 +67681,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 90
@@ -68265,6 +68501,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -69917,6 +70157,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 149
@@ -70307,6 +70551,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 103
@@ -70596,6 +70844,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -70803,6 +71055,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -71135,6 +71391,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 134
@@ -71192,6 +71452,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 55
@@ -71248,6 +71512,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -71416,6 +71684,11 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 3633532751613657161, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
   m_PrefabInstance: {fileID: 841907795}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &817491400 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5091896642523974968, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+  m_PrefabInstance: {fileID: 1751702751}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &818697663
 GameObject:
   m_ObjectHideFlags: 0
@@ -71538,6 +71811,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 115
@@ -71594,6 +71871,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -72079,6 +72360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 93
@@ -72362,6 +72647,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -72671,6 +72960,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -73175,6 +73468,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 131
@@ -73231,6 +73528,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -73627,6 +73928,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 61
@@ -73683,6 +73988,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -73940,6 +74249,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -74351,6 +74664,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 53
@@ -74750,6 +75067,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -75382,6 +75703,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -76111,6 +76436,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 68
@@ -76733,6 +77062,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 164
@@ -77011,6 +77344,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -77654,6 +77991,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 71
@@ -77821,6 +78162,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -85302,6 +85647,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 108
@@ -85470,6 +85819,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 111
@@ -85637,6 +85990,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -85826,6 +86183,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 100
@@ -85882,6 +86243,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -86606,6 +86971,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 82
@@ -87071,6 +87440,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -87893,6 +88266,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 83
@@ -88219,6 +88596,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -89617,6 +89998,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 51
@@ -89683,6 +90068,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -89977,6 +90366,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -90593,6 +90986,95 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 0}
   fadetime: 0
+--- !u!1001 &1178804546
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1204911059}
+    m_Modifications:
+    - target: {fileID: 1701927916406133416, guid: 918fa00e2ed10ec49a5338f99c237a3b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564910489331182704, guid: 918fa00e2ed10ec49a5338f99c237a3b, type: 3}
+      propertyPath: m_Name
+      value: ShieldSpere (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564910489331182705, guid: 918fa00e2ed10ec49a5338f99c237a3b, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564910489331182705, guid: 918fa00e2ed10ec49a5338f99c237a3b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564910489331182705, guid: 918fa00e2ed10ec49a5338f99c237a3b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 4354533572912518410, guid: 918fa00e2ed10ec49a5338f99c237a3b, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4354533572912518410, guid: 918fa00e2ed10ec49a5338f99c237a3b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 56.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4354533572912518410, guid: 918fa00e2ed10ec49a5338f99c237a3b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -13.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4354533572912518410, guid: 918fa00e2ed10ec49a5338f99c237a3b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4354533572912518410, guid: 918fa00e2ed10ec49a5338f99c237a3b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4354533572912518410, guid: 918fa00e2ed10ec49a5338f99c237a3b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4354533572912518410, guid: 918fa00e2ed10ec49a5338f99c237a3b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4354533572912518410, guid: 918fa00e2ed10ec49a5338f99c237a3b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4354533572912518410, guid: 918fa00e2ed10ec49a5338f99c237a3b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4354533572912518410, guid: 918fa00e2ed10ec49a5338f99c237a3b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4354533572912518410, guid: 918fa00e2ed10ec49a5338f99c237a3b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4354533572912518411, guid: 918fa00e2ed10ec49a5338f99c237a3b, type: 3}
+      propertyPath: m_Name
+      value: ShieldSpere (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4354533574324234457, guid: 918fa00e2ed10ec49a5338f99c237a3b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4354533574324234457, guid: 918fa00e2ed10ec49a5338f99c237a3b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4354533574324234457, guid: 918fa00e2ed10ec49a5338f99c237a3b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 918fa00e2ed10ec49a5338f99c237a3b, type: 3}
 --- !u!1 &1182204801
 GameObject:
   m_ObjectHideFlags: 0
@@ -90704,6 +91186,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1182706196 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3564910489331182705, guid: 918fa00e2ed10ec49a5338f99c237a3b, type: 3}
+  m_PrefabInstance: {fileID: 1178804546}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1187631684
 GameObject:
   m_ObjectHideFlags: 0
@@ -90936,6 +91423,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -91416,6 +91907,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 110
@@ -91494,6 +91989,7 @@ Transform:
   - {fileID: 250948544}
   - {fileID: 421493073}
   - {fileID: 1192609771}
+  - {fileID: 1182706196}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -92357,11 +92853,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5091896642523974969, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
       propertyPath: ChargeSpeed
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5091896642523974969, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
       propertyPath: PatrolSpeed
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5091896642523974971, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
       propertyPath: m_Name
@@ -92606,6 +93102,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -93522,6 +94022,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 57
@@ -93578,6 +94082,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -93877,6 +94385,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -94268,6 +94780,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 106
@@ -94435,6 +94951,14 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -94856,6 +95380,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 125
@@ -95145,6 +95673,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -95202,6 +95734,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -95258,6 +95794,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -95325,6 +95865,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -95978,6 +96522,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 78
@@ -96034,6 +96582,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -96546,6 +97098,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 139
@@ -96950,6 +97506,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -97474,6 +98034,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -98175,6 +98739,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 70
@@ -98231,6 +98799,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -98382,6 +98954,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 160
@@ -98498,6 +99074,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -98637,6 +99217,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -98805,6 +99389,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -99672,6 +100260,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 137
@@ -100069,6 +100661,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -100581,6 +101177,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 156
@@ -100748,6 +101348,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -101111,6 +101715,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -102250,6 +102858,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 58
@@ -102801,6 +103413,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 144
@@ -103322,6 +103938,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -103445,6 +104065,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -103834,6 +104458,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 39
@@ -104194,6 +104822,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -105163,6 +105795,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 128
@@ -105219,6 +105855,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -106396,6 +107036,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 158
@@ -106457,6 +107101,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -106904,6 +107552,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -108001,6 +108653,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 129
@@ -108390,6 +109046,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -109327,6 +109987,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 56
@@ -109383,6 +110047,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -110343,6 +111011,71 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 3633532751613657161, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
   m_PrefabInstance: {fileID: 1644449135}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1751702751
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1850347410}
+    m_Modifications:
+    - target: {fileID: 5091896642523974968, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091896642523974968, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091896642523974968, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091896642523974968, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.684894
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091896642523974968, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091896642523974968, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091896642523974968, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091896642523974968, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091896642523974968, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091896642523974968, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091896642523974968, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091896642523974969, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+      propertyPath: ChargeSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091896642523974969, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+      propertyPath: PatrolSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091896642523974971, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
+      propertyPath: m_Name
+      value: DontFallChargeEnemy (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
 --- !u!1 &1754366829
 GameObject:
   m_ObjectHideFlags: 0
@@ -110967,6 +111700,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -111376,6 +112113,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -112120,6 +112861,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 126
@@ -112177,6 +112922,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 145
@@ -112233,6 +112982,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -112401,6 +113154,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -112646,6 +113403,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 30
@@ -112702,6 +113463,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -112870,6 +113635,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -113963,6 +114732,7 @@ Transform:
   - {fileID: 1874259542}
   - {fileID: 388837782}
   - {fileID: 1231492250}
+  - {fileID: 817491400}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -115174,11 +115944,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5091896642523974969, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
       propertyPath: ChargeSpeed
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5091896642523974969, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
       propertyPath: PatrolSpeed
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5091896642523974971, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
       propertyPath: m_Name
@@ -115312,6 +116082,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -115480,6 +116254,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -116103,6 +116881,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 120
@@ -116270,6 +117052,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -117549,6 +118335,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 130
@@ -118403,6 +119193,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 66
@@ -118571,6 +119365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 135
@@ -118627,6 +119425,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -118796,6 +119598,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 122
@@ -118852,6 +119658,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -119702,6 +120512,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -119870,6 +120684,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 45
@@ -119927,6 +120745,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 170
@@ -119983,6 +120805,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -120194,11 +121020,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5091896642523974969, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
       propertyPath: ChargeSpeed
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5091896642523974969, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
       propertyPath: PatrolSpeed
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5091896642523974971, guid: 0e92e69f9f1bf0348830989a8f82a456, type: 3}
       propertyPath: m_Name
@@ -122252,6 +123078,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 40
@@ -122424,6 +123254,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -122704,6 +123538,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 97
@@ -122983,6 +123821,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 89
@@ -123039,6 +123881,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -123106,6 +123952,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -123883,6 +124733,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 43
@@ -124356,6 +125210,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -124854,6 +125712,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -126468,6 +127330,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageTile
       objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -126524,6 +127390,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder
@@ -126914,6 +127784,10 @@ PrefabInstance:
     - target: {fileID: 3633532751613657160, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_Name
       value: DamageTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633532751613657166, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3633532751613657167, guid: 4dcf7de2e3ce6574ba6707a2159618f2, type: 3}
       propertyPath: m_RootOrder

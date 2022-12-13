@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PatrolSpeed: 4
-  ChargeSpeed: 6
+  ChargeSpeed: 8
   attackCoolDown: 1
   detectionFloor: {fileID: 5091896641707691220}
   playerSerch: {fileID: 5091896641710916008}

@@ -42,26 +42,23 @@ public class HPManager : MonoBehaviour
     }
     public int Damage(int damage)
     {
-        //if (SetShieldItem.usingShieldItem == true)
-        //{
-        //    Heal(1);
-        //}
-
-        _PlayerHP -= damage;
-        hpChange();
-        if (_PlayerHP<=0&&death==false)
+        if (!ShieldImage.shieldActive)
+        {
+            _PlayerHP -= damage;
+            hpChange();
+        }
+        else
+        {
+            ShieldImage.shieldActive = false;
+        }
+        if (_PlayerHP <= 0 && death == false)
         {
             //hpZero();
             //HpReset();
-            death = true;   
+            death = true;
             MapManager.Instance.CallFadeIn(mapName);
 
         }
-        
-        
-            
-        
-        
         return _PlayerHP;
     }
     public int Heal(int heal)

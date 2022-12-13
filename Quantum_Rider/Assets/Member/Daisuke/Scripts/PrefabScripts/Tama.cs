@@ -7,6 +7,7 @@ public class Tama : MonoBehaviour
 
     [SerializeField]
     private float ShotSpeed;
+    [SerializeField]private float _bulletTimer = 3.0f;//íeÇ™è¡ñ≈Ç∑ÇÈÇ‹Ç≈ÇÃéûä‘
 
 
     void Start()
@@ -17,7 +18,7 @@ public class Tama : MonoBehaviour
     void Update()
     {        
         transform.position += transform.right * Time.deltaTime * ShotSpeed;
-        Destroy(this.gameObject, 5.0f);
+        Destroy(this.gameObject, _bulletTimer);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
