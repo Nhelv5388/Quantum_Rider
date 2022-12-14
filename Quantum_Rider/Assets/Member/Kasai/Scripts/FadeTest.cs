@@ -6,118 +6,180 @@ using UnityEngine.UI;
 public static class FadeTest
 {
     private static MonoBehaviour StaticMono = GameManager.instance as MonoBehaviour;
-
     private static float time = 0;
-    private static IEnumerator IEFadeOut(Image _image, float _fadeTime)
+    public static GameObject _fadeImage;
+    private static Image image;
+    public static IEnumerator IEFadeIn(float _fadeTime)
     {
-        if (_fadeTime != 0)
+        GetFadeImage();
+        //Debug.Log(_fadeTime);
+        if (image == null)
         {
-            while (_image.color.a >= 0)
-            {
-                time += Time.deltaTime;
-                if(time >= _fadeTime/255)
-                {
-                    time -= _fadeTime/255;
-                    Color32 c = _image.color;
-                    c.a--;
-                    _image.color = c;
-                }
-                yield return null;
-                if (_image.color.a == 0)
-                {
-                    time = 0;
-                    break;
-                }
-            }
+            image = _fadeImage.GetComponent<Image>();
+            image.color = new Color32(0, 0, 0, 255);
         }
-    }
-    public static void FadeOut(Image _image, float _fadeTime)
-    {
-        StaticMono.StartCoroutine(IEFadeOut(_image, _fadeTime));
-    }
-    public static IEnumerator IEFadeIn(Image _image, float _fadeTime)
-    {
         if (_fadeTime != 0)
         {
-            while (_image.color.a <= 1)
+            while (image.color.a >= 0)
             {
-                Debug.Log(_image.color.a);
                 time += Time.deltaTime;
                 if (time >= _fadeTime / 255)
                 {
                     time -= _fadeTime / 255;
-                    Color32 c = _image.color;
-                    c.a++;
-                    _image.color = c;
+                    Color32 c = image.color;
+                    c.a--;
+                    image.color = c;
                 }
                 yield return null;
-                if (_image.color.a == 1)
+                if (image.color.a == 0)
+                {
+                    time = 0;
+                    _fadeImage.gameObject.SetActive(false);
+                    break;
+                }
+            }
+            //fadeDelegate(scene);
+
+        }
+
+    }
+    public static IEnumerator IEFadeOut(float _fadeTime)
+    {
+        GetFadeImage();
+        _fadeImage.gameObject.SetActive(true);
+        if (image == null)
+        {
+            image = _fadeImage.GetComponent<Image>();
+
+            image.color = new Color(0, 0, 0, 0);
+        }
+
+        if (_fadeTime != 0)
+        {
+            while (image.color.a <= 1)
+            {
+                time += Time.deltaTime;
+                if (time >= _fadeTime / 255)
+                {
+                    time -= _fadeTime / 255;
+                    Color32 c = image.color;
+                    c.a++;
+                    image.color = c;
+                }
+                yield return null;
+                if (image.color.a == 1)
                 {
                     time = 0;
                     break;
                 }
             }
         }
-    }
 
-    public static IEnumerator IEFade(Image _image, float _fadeTime, bool trigger)
+    }
+    public static IEnumerator TestFadeIn(float _fadeTime)
     {
+        GetFadeImage();
+        //Debug.Log(_fadeTime);
+        if (image == null)
+        {
+            image = _fadeImage.GetComponent<Image>();
+            image.color = new Color(0, 0, 0, 1.0f);
+        }
         if (_fadeTime != 0)
         {
-            if (trigger)
+            //while (image.color.a >= 0)
+            //{
+            //    time += Time.deltaTime;
+            //    if (time >= _fadeTime / 255)
+            //    {
+            //        time -= _fadeTime / 255;
+            //        Color c = image.color;
+            //        c.a-= time/_fadeTime;
+            //        Debug.Log("alpha-");
+            //        image.color = c;
+            //    }
+            //    yield return null;
+            //    if (image.color.a == 0)
+            //    {
+            //        time = 0;
+            //        _fadeImage.gameObject.SetActive(false);
+            //        break;
+            //    }
+            //}
+            //fadeDelegate(scene);
+            while (image.color.a >= 0)
             {
-                while (_image.color.a >= 0)
+                time += Time.deltaTime;
+                var rate = time / _fadeTime;
+                Color c =image.color;
+                Debug.Log(rate);
+                c.a -= rate;
+                image.color = c;
+
+                yield return null;
+                if(image.color.a == 0)
                 {
-                    time += Time.deltaTime;
-                    if (time >= _fadeTime / 255)
-                    {
-                        time -= _fadeTime / 255;
-                        Color32 c = _image.color;
-                        c.a--;
-                        _image.color = c;
-                    }
-                    yield return null;
-                    if (_image.color.a == 0)
-                    {
-                        time = 0;
-                        break;
-                    }
+                    time = 0;
+                    _fadeImage.gameObject.SetActive(false);
+                    break;
                 }
             }
-            else
-            {
-                while (_image.color.a <= 1)
-                {
-                    Debug.Log(_image.color.a);
-                    time += Time.deltaTime;
-                    if (time >= _fadeTime / 255)
-                    {
-                        time -= _fadeTime / 255;
-                        Color32 c = _image.color;
-                        c.a++;
-                        _image.color = c;
-                    }
-                    yield return null;
-                    if (_image.color.a == 1)
-                    {
-                        time = 0;
-                        break;
-                    }
-                }
-            }
+
 
         }
 
     }
-
-
- 
-    public static void FadeIn(Image _image, float _fadeTime)
+    public static IEnumerator TestFadeOut(float _fadeTime)
     {
-        StaticMono.StartCoroutine(IEFadeIn(_image, _fadeTime));
+        GetFadeImage();
+        _fadeImage.gameObject.SetActive(true);
+        //Debug.Log("fadeout");
+        //Debug.Log( _fadeImage);
+        if (image == null)
+        {
+            image = _fadeImage.GetComponent<Image>();
+
+            image.color = new Color(0, 0, 0, 0);
+        }
+
+        if (_fadeTime != 0)
+        {
+            while (image.color.a <= 1)
+            {
+                time += Time.deltaTime;
+                if (time >= _fadeTime / 255)
+                {
+                    time -= _fadeTime / 255;
+                    Color c = image.color;
+                    c.a += time / _fadeTime;
+                    Debug.Log("alpha+");
+                    image.color = c;
+                }
+                yield return null;
+                if (image.color.a == 1)
+                {
+                    time = 0;
+                    break;
+                }
+            }
+        }
+
     }
-    public static void Fade(Image _image,float _fadeTime,bool trigger)
+    public static void FadeChange(float fadeTime)
     {
-        StaticMono.StartCoroutine(IEFade(_image, _fadeTime,trigger));
+        //Debug.Log(_fadeTime);
+        StaticMono.StartCoroutine(IEFadeOut(fadeTime));
+    }
+
+    public static void GetFadeImage()
+    {
+        if (_fadeImage == null)
+        {
+            _fadeImage = GameObject.Find("FadeImage");
+        }
+        else
+        {
+            //Debug.Log(_fadeImage);
+        }
     }
 }
