@@ -90985,7 +90985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _image: {fileID: 0}
-  fadetime: 0
+  fadeTime: 0
 --- !u!1001 &1178804546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93187,7 +93187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _image: {fileID: 0}
-  fadetime: 2
+  fadeTime: 0
 --- !u!4 &1247653498
 Transform:
   m_ObjectHideFlags: 0
@@ -128141,12 +128141,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4261292687833318915, guid: eeba1c64f40d9094da167f806f6b1bf7, type: 3}
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1cf9d86b50b6be34cac7590f0fd15ed1, type: 3}
+    - target: {fileID: 4261292687833318915, guid: eeba1c64f40d9094da167f806f6b1bf7, type: 3}
+      propertyPath: sounds.Array.data[2].name
+      value: GameClear
+      objectReference: {fileID: 0}
+    - target: {fileID: 4261292687833318915, guid: eeba1c64f40d9094da167f806f6b1bf7, type: 3}
       propertyPath: sounds.Array.data[0].volume
       value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 4261292687833318915, guid: eeba1c64f40d9094da167f806f6b1bf7, type: 3}
       propertyPath: sounds.Array.data[1].volume
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4261292687833318915, guid: eeba1c64f40d9094da167f806f6b1bf7, type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 8711971632835216550, guid: eeba1c64f40d9094da167f806f6b1bf7, type: 3}
       propertyPath: sounds.Array.data[1].volume

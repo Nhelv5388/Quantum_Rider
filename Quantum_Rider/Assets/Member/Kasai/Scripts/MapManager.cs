@@ -98,7 +98,7 @@ public class MapManager : MonoBehaviour
                 break;
             case SceneID.GameClear:
                 SceneManager.LoadScene("GameClear");
-                SoundManager.instance.Play("Title");//今後ゲームクリア用の音源追加予定
+                SoundManager.instance.Play("GameClear");//今後ゲームクリア用の音源追加予定
                 break;
             default:
                 Debug.LogWarning("そのマップは存在しません");

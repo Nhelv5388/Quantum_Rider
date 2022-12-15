@@ -134,9 +134,9 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: ee2c8f29268e6264799c520aceaafc5a, type: 3}
     volume: 0.4
     audiosource: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0.5
+  - name: GameClear
+    clip: {fileID: 8300000, guid: 1cf9d86b50b6be34cac7590f0fd15ed1, type: 3}
+    volume: 0.15
     audiosource: {fileID: 0}
   - name: GameOver
     clip: {fileID: 8300000, guid: 94aabf4673f612942b933d6c8a4b2f40, type: 3}
@@ -155,4 +155,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fadeTime: 1
-  _fadeMult: 2
