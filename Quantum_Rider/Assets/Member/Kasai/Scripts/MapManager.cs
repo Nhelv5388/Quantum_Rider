@@ -31,15 +31,15 @@ public class MapManager : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        
 
+        Application.targetFrameRate = 160;
         ////FadeからImageを取得
         //Fade.GetFadeImage();//タイトルでボタンが押せない問題を修正のため
         ////var _fadeImage = GameObject.Find("FadeImage");
         ////_image= _fadeImage.GetComponent<Image>();
         //Debug.Log(Fade._fadeImage);
         //Fade._fadeImage.gameObject.SetActive(false);
-        
+
     }
 
     void Start()

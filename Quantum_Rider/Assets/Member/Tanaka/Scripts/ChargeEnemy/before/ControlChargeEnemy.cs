@@ -150,6 +150,11 @@ public class ControlChargeEnemy : MonoBehaviour
             //Debug.Log(this.gameObject.name);
             returnNow = true;
         }
+        if (col.gameObject.tag == "DamageFloor")
+        {
+            //Debug.Log(this.gameObject.name);
+            returnNow = true;
+        }
         if (col.gameObject.tag == "Enemy")
         {
             returnNow = true;

@@ -95,7 +95,7 @@ MonoBehaviour:
     audiosource: {fileID: 0}
   - name: Laser
     clip: {fileID: 8300000, guid: bb25c3694a1ca1d47850623df2c52c8e, type: 3}
-    volume: 0.3
+    volume: 0.2
     audiosource: {fileID: 0}
   - name: Explosion
     clip: {fileID: 8300000, guid: 74acf0ffe2f9cbd4eb9ebdc633f60140, type: 3}

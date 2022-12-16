@@ -237,8 +237,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7214ffb5a397ace4f9317dd5d0a5992a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PatrolSpeed: 4
-  ChargeSpeed: 8
+  PatrolSpeed: 6
+  ChargeSpeed: 10
   attackCoolDown: 1
   detectionFloor: {fileID: 5091896641707691220}
   playerSerch: {fileID: 5091896641710916008}

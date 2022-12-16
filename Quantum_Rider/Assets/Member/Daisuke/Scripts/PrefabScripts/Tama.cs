@@ -15,7 +15,7 @@ public class Tama : MonoBehaviour
         //time = 0;
     }
 
-    void Update()
+    void FixedUpdate()
     {        
         transform.position += transform.right * Time.deltaTime * ShotSpeed;
         Destroy(this.gameObject, _bulletTimer);
