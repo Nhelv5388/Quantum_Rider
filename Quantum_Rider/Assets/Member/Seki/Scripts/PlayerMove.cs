@@ -69,7 +69,7 @@ public class PlayerMove : MonoBehaviour
         Hover();
     }
     void EnemySearch()
-    {
+    {//“G’Tõ
         count += Time.deltaTime;
         
         if (count >= 1)
@@ -83,19 +83,12 @@ public class PlayerMove : MonoBehaviour
             }
             foreach (GameObject t in targets)
             {
-                //Debug.Log(t);
-                //Debug.Log(t.gameObject.transform.position);
+
                 dis = Vector3.Distance
                 (transform.position,
                 t.gameObject.transform.position);
                 if (dis <= SerchRange)
                 {//ƒT[ƒ`”ÍˆÍ“à‚È‚ç
-                 //
-                 
-                   // Debug.Log("“G‹ß‚¢‚æ");
-                    
-                    //Debug.Log("‹——£"+dis);
-                    
                     if (min == 0 || dis < min)
                     {//Å‰‚Ì“G‚à‚µ‚­‚Íˆê”Ô‹ß‚¢“G
                         Debug.Log("ƒ^[ƒQƒbƒg‚Í"+ t);
@@ -176,8 +169,7 @@ public class PlayerMove : MonoBehaviour
             {
                 t.gameObject.
                 GetComponent<SpriteRenderer>().sortingOrder += 4;
-            }
-            
+            } 
         }
     }
 
