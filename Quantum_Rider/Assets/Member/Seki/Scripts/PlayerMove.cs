@@ -9,7 +9,7 @@ public class PlayerMove : MonoBehaviour
 
     [SerializeField]
     GameObject rotationObjectRight, rotationObjectLeft, 
-        beamRight,beamLeft, beamRightPos, beamLeftPos;
+        beamRight,beamLeft, beamRightPos, beamLeftPos,beamParent;
 
     [SerializeField]
     GameObject[] targets,rightGun,leftGun;
@@ -22,7 +22,7 @@ public class PlayerMove : MonoBehaviour
     bool _Pressed = true;
 
     public bool moveFrag=true;
-
+    public bool throughFrag = false;
     const int Power = 200;
     const float SerchRange = 6;
 
@@ -46,6 +46,8 @@ public class PlayerMove : MonoBehaviour
             Direction();
             BeamRotation();
             PlayerImageReturn();
+            Rounding();
+            
             if (Input.GetMouseButton(0))
             {//左クリック
                 if (_Pressed)
@@ -59,6 +61,7 @@ public class PlayerMove : MonoBehaviour
                 //BeamActiveFalse();
             }
         }
+        Debug.Log(this.gameObject.GetComponent<Rigidbody2D>().velocity);
     }
     void MouseClick()
     {
@@ -215,8 +218,13 @@ public class PlayerMove : MonoBehaviour
     }
     void BeamActive()
     {//ビーム表示
-        Instantiate(beamRight, beamRightPos.transform.position, _RotationRight);
-        Instantiate(beamLeft, beamLeftPos.transform.position, _RotationLeft);
+        var RightBeam= Instantiate(beamRight, beamRightPos.transform.position, _RotationRight,beamParent.transform);
+        var LeftBeam =Instantiate(beamLeft, beamLeftPos.transform.position, _RotationLeft,beamParent.transform);
+        if(throughFrag)
+        {
+            RightBeam.GetComponent<BeamMove>().through = true;
+            LeftBeam.GetComponent<BeamMove>().through = true;
+        }
         /*:beamRight.SetActive(true);
         beamLeft.SetActive(true);*/
         BeamRotation();
@@ -233,7 +241,14 @@ public class PlayerMove : MonoBehaviour
         (_HoverDirection * hoverPower * Power);
 
         VelocityApply();
+        Rounding();
 
+        
+    }
+
+    void Rounding()
+    {
+        _Myvelocity = this.gameObject.GetComponent<Rigidbody2D>().velocity;
         if (_Myvelocity.x > hoverMaxX)
         {
             _Myvelocity.x = hoverMaxX;
@@ -252,6 +267,7 @@ public class PlayerMove : MonoBehaviour
             _Myvelocity.y = -hoverMaxY;
         }
         this.gameObject.GetComponent<Rigidbody2D>().velocity = _Myvelocity;
+
     }
     void VelocityApply()
     {
