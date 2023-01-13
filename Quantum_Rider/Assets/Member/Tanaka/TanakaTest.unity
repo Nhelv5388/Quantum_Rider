@@ -1192,8 +1192,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7214ffb5a397ace4f9317dd5d0a5992a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PatrolSpeed: 0.5
-  ChargeSpeed: 1
+  PatrolSpeed: 1
+  ChargeSpeed: 5
   attackCoolDown: 1
   detectionFloor: {fileID: 246088943131072509}
   playerSerch: {fileID: 246088943117294209}
@@ -1495,6 +1495,7 @@ MonoBehaviour:
   - {fileID: 9187857582174660488}
   - {fileID: 9187857582286699853}
   - {fileID: 9187857583304847755}
+  moveFrag: 1
 --- !u!1 &544892534477647806
 GameObject:
   m_ObjectHideFlags: 0
@@ -2663,8 +2664,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7214ffb5a397ace4f9317dd5d0a5992a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PatrolSpeed: 0.5
-  ChargeSpeed: 1
+  PatrolSpeed: 1
+  ChargeSpeed: 5
   attackCoolDown: 1
   detectionFloor: {fileID: 5091896643554611796}
   playerSerch: {fileID: 5091896643616333608}
@@ -2785,8 +2786,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7214ffb5a397ace4f9317dd5d0a5992a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PatrolSpeed: 0.5
-  ChargeSpeed: 1
+  PatrolSpeed: 1
+  ChargeSpeed: 5
   attackCoolDown: 1
   detectionFloor: {fileID: 5091896643698993326}
   playerSerch: {fileID: 5091896643746031058}
@@ -3433,8 +3434,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7214ffb5a397ace4f9317dd5d0a5992a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PatrolSpeed: 0.5
-  ChargeSpeed: 1
+  PatrolSpeed: 1
+  ChargeSpeed: 5
   attackCoolDown: 1
   detectionFloor: {fileID: 5091896642993812012}
   playerSerch: {fileID: 5091896642973777744}
@@ -3670,6 +3671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 444941dfd4e34604289f5bbea78984ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _healValue: 0
 --- !u!58 &6208515479913101873
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3921,7 +3923,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46a321e0ddfd14e47ba38a4b136b7876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _EnemyTag: Enemy
 --- !u!1 &7306944160905573779
 GameObject:
   m_ObjectHideFlags: 0
