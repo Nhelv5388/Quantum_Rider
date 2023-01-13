@@ -10,7 +10,7 @@ public static class Fade
 
 	public delegate void FadeDelegate(MapManager.SceneID scene);
     public static FadeDelegate fadeDelegate;
-    public static bool isFade = false;
+    public static bool isFade = false;//これがTrueの間はプレイヤーの操作を受け付けない
     public static GameObject _fadeImage;
     private static Image image;
     public static IEnumerator IEFadeIn(float _fadeTime)
