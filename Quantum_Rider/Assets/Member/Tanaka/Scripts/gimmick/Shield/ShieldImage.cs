@@ -15,19 +15,19 @@ public class ShieldImage : MonoBehaviour
     {
         
     }
-
+    
     private void OnTriggerEnter2D(Collider2D col)
     {
         if(col.gameObject.tag == "EnemyAttack" || col.gameObject.tag == "DamageFloor")
         {
             HPManager.instance.Heal(1);
-            this.gameObject.SetActive(false);
-            SetShieldItem.usingShieldItem = false;
         }
     }
+    
     public void ShieleBroken()
     {
         this.gameObject.SetActive(false);
         SetShieldItem.usingShieldItem = false;
     }
+    
 }
