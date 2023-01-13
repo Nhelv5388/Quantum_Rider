@@ -55199,6 +55199,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 544892535705167199, guid: 8f9c7c2f6734b154fa1b44ebeac0338d, type: 3}
+      propertyPath: hoverMaxX
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 544892535705167199, guid: 8f9c7c2f6734b154fa1b44ebeac0338d, type: 3}
+      propertyPath: hoverMaxY
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 6289059276655554070, guid: 8f9c7c2f6734b154fa1b44ebeac0338d, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -55207,7 +55215,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7302492909919587363, guid: 8f9c7c2f6734b154fa1b44ebeac0338d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8f9c7c2f6734b154fa1b44ebeac0338d, type: 3}
 --- !u!1001 &409660183
 PrefabInstance:
