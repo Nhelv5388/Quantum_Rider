@@ -9,7 +9,7 @@ public class PlayerMove : MonoBehaviour
 
     [SerializeField]
     GameObject rotationObjectRight, rotationObjectLeft, 
-        beamRight,beamLeft, beamRightPos, beamLeftPos;
+        beamRight,beamLeft, beamRightPos, beamLeftPos,beamParent;
 
     [SerializeField]
     GameObject[] targets,rightGun,leftGun;
@@ -218,8 +218,8 @@ public class PlayerMove : MonoBehaviour
     }
     void BeamActive()
     {//ÉrÅ[ÉÄï\é¶
-        var RightBeam= Instantiate(beamRight, beamRightPos.transform.position, _RotationRight);
-        var LeftBeam =Instantiate(beamLeft, beamLeftPos.transform.position, _RotationLeft);
+        var RightBeam= Instantiate(beamRight, beamRightPos.transform.position, _RotationRight,beamParent.transform);
+        var LeftBeam =Instantiate(beamLeft, beamLeftPos.transform.position, _RotationLeft,beamParent.transform);
         if(throughFrag)
         {
             RightBeam.GetComponent<BeamMove>().through = true;
