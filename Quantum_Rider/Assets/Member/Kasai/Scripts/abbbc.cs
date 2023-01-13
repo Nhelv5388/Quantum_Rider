@@ -44,7 +44,7 @@ public class abbbc : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("fadein");
-            FadeTest.FadeinFixed(fadeSpeed);
+            FadeTest.StartFade(fadeSpeed);
             
         }
     }
