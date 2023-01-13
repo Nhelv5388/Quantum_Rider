@@ -13,10 +13,11 @@ public class BeamMove : MonoBehaviour
     int speed = 1;
 
     Vector3 direction;
+    public bool through = false;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Destroy(this.gameObject, 5);
     }
 
     // Update is called once per frame
@@ -27,10 +28,10 @@ public class BeamMove : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Ç±Ç±Ç…è¡Ç∑èåèÇ
-        if(collision.gameObject.CompareTag("Wall")||
+        if((collision.gameObject.CompareTag("Wall")||
             collision.gameObject.CompareTag("Floor")||
             collision.gameObject.CompareTag("Enemy") ||
-            collision.gameObject.CompareTag("DamageFloor"))
+            collision.gameObject.CompareTag("DamageFloor"))&&!through)
 
         {
             Destroy(this.gameObject);
