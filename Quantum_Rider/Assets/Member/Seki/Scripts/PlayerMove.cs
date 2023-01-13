@@ -241,7 +241,7 @@ public class PlayerMove : MonoBehaviour
         (_HoverDirection * hoverPower * Power);
 
         VelocityApply();
-        //Rounding();
+        Rounding();
 
         
     }
