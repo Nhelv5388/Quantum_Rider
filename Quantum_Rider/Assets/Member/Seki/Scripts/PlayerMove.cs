@@ -28,12 +28,13 @@ public class PlayerMove : MonoBehaviour
 
     Vector3 _Myvelocity, _HoverVec, _HoverDirection, _PlayerScreenPos,_distance;
 
-
+    Rigidbody2D rb = null;
 
     // Start is called before the first frame update
     void Start()
     {
         //Debug.Log("start");
+        rb = this.gameObject.GetComponent<Rigidbody2D>();
         targets = GameObject.FindGameObjectsWithTag("Enemy");
     }
 
@@ -61,7 +62,14 @@ public class PlayerMove : MonoBehaviour
                 //BeamActiveFalse();
             }
         }
-        Debug.Log(this.gameObject.GetComponent<Rigidbody2D>().velocity);
+
+        //VelocityApply();
+        if (rb.velocity.y<-11)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, -11);
+            //this.gameObject.gameObject.GetComponent<Rigidbody2D>().velocity.y = -11;
+        }
+        //Debug.Log(this.gameObject.GetComponent<Rigidbody2D>().velocity);
     }
     void MouseClick()
     {
@@ -152,7 +160,6 @@ public class PlayerMove : MonoBehaviour
             FlipTrue();
         }
     }
-
     void FlipTrue()
     {//銃のレイヤー変え
         foreach(var t in rightGun)
@@ -175,7 +182,6 @@ public class PlayerMove : MonoBehaviour
             } 
         }
     }
-
     void FlipFalse()
     {//銃のレイヤー変え
         foreach (var t in rightGun)
@@ -237,12 +243,13 @@ public class PlayerMove : MonoBehaviour
     }
     void Hover()
     {//浮く
-        this.gameObject.GetComponent<Rigidbody2D>().AddForce
+        rb.AddForce
         (_HoverDirection * hoverPower * Power);
-
+        //Debug.Log(_HoverDirection * hoverPower * Power);
         VelocityApply();
+        //Debug.Log(_Myvelocity.y);
         Rounding();
-
+        //Debug.Log(_Myvelocity.y);
         
     }
 
@@ -266,11 +273,11 @@ public class PlayerMove : MonoBehaviour
         {
             _Myvelocity.y = -hoverMaxY;
         }
-        this.gameObject.GetComponent<Rigidbody2D>().velocity = _Myvelocity;
+        rb.velocity = _Myvelocity;
 
     }
     void VelocityApply()
     {
-        _Myvelocity = this.gameObject.GetComponent<Rigidbody2D>().velocity;
+        _Myvelocity = rb.velocity;
     }
 }
