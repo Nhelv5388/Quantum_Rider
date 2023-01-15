@@ -46,7 +46,7 @@ public class PlayerMove : MonoBehaviour
             Direction();
             BeamRotation();
             PlayerImageReturn();
-            Rounding();
+            //Rounding();
             
             if (Input.GetMouseButton(0))
             {//ç∂ÉNÉäÉbÉN
@@ -248,7 +248,7 @@ public class PlayerMove : MonoBehaviour
 
     void Rounding()
     {
-        _Myvelocity = this.gameObject.GetComponent<Rigidbody2D>().velocity;
+        //_Myvelocity = this.gameObject.GetComponent<Rigidbody2D>().velocity;
         if (_Myvelocity.x > hoverMaxX)
         {
             _Myvelocity.x = hoverMaxX;
