@@ -10,15 +10,17 @@ public class ShotTama : MonoBehaviour
     // ’e‚Ì”­ŽËŠÔŠu
     [SerializeField]
     private float Shotinterval;
-    private int angle = 0;
-
+    [SerializeField]
+    private int angle;
+    bool coroutineBool = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
+
         InvokeRepeating(nameof(ShotPrefab), 1.5f, Shotinterval);
-        transform.Rotate(new Vector3(0.0f, 0.0f, 0.0f));
+        transform.Rotate(new Vector3(0.0f, 0.0f, angle));
     }
 
     // Update is called once per frame
@@ -35,6 +37,7 @@ public class ShotTama : MonoBehaviour
         Instantiate(Tama, this.gameObject.transform.position, Quaternion.Euler(0, 0, angle + 225));
         Instantiate(Tama, this.gameObject.transform.position, Quaternion.Euler(0, 0, angle + 315));
         angle += 45;
+        Debug.Log(angle);
         transform.Rotate(new Vector3(0.0f, 0.0f, angle));
 
     }
