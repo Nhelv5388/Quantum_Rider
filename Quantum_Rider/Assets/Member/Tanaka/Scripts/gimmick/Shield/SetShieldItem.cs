@@ -4,20 +4,12 @@ using UnityEngine;
 
 public class SetShieldItem : MonoBehaviour
 {
-    [SerializeField]
-    private float activeTime = 3.0f;
-    [SerializeField]
-    private float nowTime = 0.0f;
-
     //シールドのアイテム画像
     private GameObject shieldItemImage;
     //プレイヤーに付属させるシールド画像
     private GameObject shieldImage;
     //プレイヤーの画像
     private GameObject playerPos;
-
-    private ParticleSystem brokenPar;
-
 
     private bool activeSheild = false;
     private bool usedShieldItem = false;
@@ -41,27 +33,13 @@ public class SetShieldItem : MonoBehaviour
 
     void Update()
     {
-        
         if (activeSheild)
         {
             shieldImage.transform.position = playerPos.transform.localPosition;
         }
-        /*
         else
         {
             shieldImage.SetActive(false);
-        }
-        */
-        if(ShieldImage.shieldActive == true)
-        {
-            nowTime += Time.deltaTime;
-            if(nowTime >= activeTime)
-            {
-                ShieldImage.shieldActive = false;
-                shieldImage.SetActive(false);
-                activeSheild = false;
-                nowTime = 0.0f;
-            }
         }
     }
 
