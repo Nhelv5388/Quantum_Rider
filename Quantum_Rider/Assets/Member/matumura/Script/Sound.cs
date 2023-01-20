@@ -8,6 +8,8 @@ public class Sound
     public string name;
     [Tooltip("サウンドの音源")]
     public AudioClip clip;
+
+
     [Tooltip("サウンドのボリュームを、0.0から1.0まで")]
     [SerializeField, Range(0.0f, 1.0f)]
     public float volume;

@@ -47,7 +47,11 @@ public class PlayerMove : MonoBehaviour
             Direction();
             BeamRotation();
             PlayerImageReturn();
-            //Rounding();
+<<<<<<< HEAD
+            Rounding();
+=======
+            //Rounding()
+>>>>>>> origin/sokudo
             
             if (Input.GetMouseButton(0))
             {//ç∂ÉNÉäÉbÉN
@@ -57,11 +61,14 @@ public class PlayerMove : MonoBehaviour
                 }
             }
             else if (Input.GetMouseButtonUp(0))
-            {//
+            {
                 _Pressed = true;
                 //BeamActiveFalse();
             }
         }
+<<<<<<< HEAD
+        Debug.Log(this.gameObject.GetComponent<Rigidbody2D>().velocity);
+=======
 
         //VelocityApply();
         if (rb.velocity.y<-11)
@@ -70,6 +77,7 @@ public class PlayerMove : MonoBehaviour
             //this.gameObject.gameObject.GetComponent<Rigidbody2D>().velocity.y = -11;
         }
         //Debug.Log(this.gameObject.GetComponent<Rigidbody2D>().velocity);
+>>>>>>> origin/sokudo
     }
     void MouseClick()
     {
@@ -247,15 +255,24 @@ public class PlayerMove : MonoBehaviour
         (_HoverDirection * hoverPower * Power);
         //Debug.Log(_HoverDirection * hoverPower * Power);
         VelocityApply();
+<<<<<<< HEAD
+        Rounding();
+
+=======
         //Debug.Log(_Myvelocity.y);
         Rounding();
         //Debug.Log(_Myvelocity.y);
+>>>>>>> origin/sokudo
         
     }
 
     void Rounding()
     {
+<<<<<<< HEAD
+        _Myvelocity = this.gameObject.GetComponent<Rigidbody2D>().velocity;
+=======
         //_Myvelocity = this.gameObject.GetComponent<Rigidbody2D>().velocity;
+>>>>>>> origin/sokudo
         if (_Myvelocity.x > hoverMaxX)
         {
             _Myvelocity.x = hoverMaxX;
@@ -273,7 +290,11 @@ public class PlayerMove : MonoBehaviour
         {
             _Myvelocity.y = -hoverMaxY;
         }
+<<<<<<< HEAD
+        this.gameObject.GetComponent<Rigidbody2D>().velocity = _Myvelocity;
+=======
         rb.velocity = _Myvelocity;
+>>>>>>> origin/sokudo
 
     }
     void VelocityApply()

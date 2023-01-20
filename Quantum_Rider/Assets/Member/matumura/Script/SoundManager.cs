@@ -8,6 +8,10 @@ public class SoundManager : MonoBehaviour
 
     public static SoundManager instance;
 
+    [SerializeField] private AudioSource audioSourceComponent;
+
+    [SerializeField] AudioSource audiosource;
+
     private void Awake()
     {
         //AudioManagerインスタンスがなければ生成する
@@ -54,12 +58,35 @@ public class SoundManager : MonoBehaviour
             //s.audiosource.Stop();
             return;
             
-        }     
+        }
+
         //あればPlay()
         s.audiosource.Play();
     }
-    //public void Stop()
-    //{
 
-    //}
+
+    /*private void Stop()
+    {
+        audioSourceComponent.Stop();
+    }*/
+
+    public void Stop()
+    {
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            // 一時停止
+            audiosource.Pause();
+        }
+        else if (Input.GetKeyDown(KeyCode.Space))
+        {
+            // 再開
+            audiosource.UnPause();
+        }
+    }
+
+    /*public void Stop()
+        {
+        
+        }*/
+
 }
