@@ -16,6 +16,7 @@ public class SetShieldItem : MonoBehaviour
     //ÉvÉåÉCÉÑÅ[ÇÃâÊëú
     private GameObject playerPos;
 
+    private GameObject brokenEffect;
     private ParticleSystem brokenPar;
 
 
@@ -30,6 +31,14 @@ public class SetShieldItem : MonoBehaviour
     {
         shieldItemImage = transform .Find("ShieldItemImage").gameObject;
         shieldImage = transform.Find("ShieldImage").gameObject;
+
+        //
+        brokenEffect = transform.Find("BrokenEffect").gameObject;
+        if(brokenEffect != null)
+        {
+            brokenPar = brokenEffect.GetComponent<ParticleSystem>();
+        }
+
         this.gameObject.SetActive(true);
 
         usedShieldItem = false;
@@ -41,29 +50,27 @@ public class SetShieldItem : MonoBehaviour
 
     void Update()
     {
-        
+
         if (activeSheild)
         {
             shieldImage.transform.position = playerPos.transform.localPosition;
         }
-        /*
-        else
-        {
-            shieldImage.SetActive(false);
-        }
-        */
-        if(ShieldImage.shieldActive == true)
+        if (ShieldImage.shieldActive == true)
         {
             nowTime += Time.deltaTime;
-            if(nowTime >= activeTime)
+            //å¯â êÿÇÍ
+            if (nowTime >= activeTime)
             {
                 ShieldImage.shieldActive = false;
                 shieldImage.SetActive(false);
                 activeSheild = false;
                 nowTime = 0.0f;
+
+                if (brokenPar != null) brokenPar.Play();
             }
         }
     }
+    
 
     private void OnTriggerEnter2D(Collider2D col)
     {

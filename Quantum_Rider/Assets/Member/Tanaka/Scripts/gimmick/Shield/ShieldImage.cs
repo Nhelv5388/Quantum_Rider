@@ -5,24 +5,15 @@ using UnityEngine;
 public class ShieldImage : MonoBehaviour
 {
     static public bool shieldActive = false;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     
+    /*ˆê‰ñŒÀ‚èê—p
     private void OnTriggerEnter2D(Collider2D col)
     {
         if(col.gameObject.tag == "EnemyAttack" || col.gameObject.tag == "DamageFloor")
         {
-            HPManager.instance.Heal(1);
+            //HPManager.instance.Heal(1);
         }
-    }
+    }*/
     
     public void ShieleBroken()
     {
