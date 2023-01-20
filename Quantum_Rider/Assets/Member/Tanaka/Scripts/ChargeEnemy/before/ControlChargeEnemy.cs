@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class ControlChargeEnemy : MonoBehaviour
@@ -38,8 +39,14 @@ public class ControlChargeEnemy : MonoBehaviour
     [Header("(停止)")]
     [SerializeField]
     private bool stopping = false;
+
     //葛西が勝手に書き足しました
     private bool death=false;
+
+    //爆発アニメーションの保存位置
+    private string ad = "Assets/Member/Seki/Prefabs/BOMB!!!.prefab";
+    private GameObject bomb;
+
     void Start()
     {
         if(this.gameObject.transform.localRotation == Quaternion.Euler(0f, 0f, 0f))
@@ -56,7 +63,8 @@ public class ControlChargeEnemy : MonoBehaviour
         
         playerSerch.transform.localPosition = dStartPos;
         detectionFloor.transform.localPosition = pStartPos;
-        
+
+        bomb = AssetDatabase.LoadAssetAtPath<GameObject>(ad);
     }
 
 
@@ -190,10 +198,12 @@ public class ControlChargeEnemy : MonoBehaviour
         {
             if (col.gameObject.tag == "PlayerAttack")
             {
+                GameObject obj = Instantiate(bomb, this.transform.position, Quaternion.identity);
                 this.gameObject.SetActive(false);
                 Semanager.instance.Play("Explosion");
                 this.death = true;//SEが多重に呼ばれるバグの修正
                 //Debug.Log("SE");
+
             }
         }
     }
