@@ -109319,7 +109319,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 10
   m_TargetDisplay: 0
@@ -110945,6 +110945,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1683278344}
+  - component: {fileID: 1683278345}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -110967,6 +110968,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1683278345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683278343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1464015b0535bb04bbb62799fa74c163, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1683838038 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1549695743459001506, guid: 9618f4bf60477f14bae1228a8bb25f49, type: 3}
@@ -118184,7 +118197,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1850347410
 Transform:
   m_ObjectHideFlags: 0
