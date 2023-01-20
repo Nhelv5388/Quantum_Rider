@@ -38,10 +38,8 @@ public class ControlChargeEnemy : MonoBehaviour
     [Header("(停止)")]
     [SerializeField]
     private bool stopping = false;
-
     //葛西が勝手に書き足しました
     private bool death=false;
-
     void Start()
     {
         if(this.gameObject.transform.localRotation == Quaternion.Euler(0f, 0f, 0f))
@@ -88,7 +86,7 @@ public class ControlChargeEnemy : MonoBehaviour
         }
         if (floorSerch.noFloor || returnNow)
         {
-            StartCoroutine(ReturnNow());
+            StartCoroutine(ReturnEnemy());
         }
         //判別ようにアタッチしたRB対策
         detectionFloor.transform.localPosition = dStartPos;
@@ -115,10 +113,10 @@ public class ControlChargeEnemy : MonoBehaviour
         }
 
     }
-
-    //床から落ちない
-    IEnumerator ReturnNow()
+    //転回
+    IEnumerator ReturnEnemy()
     {
+        returnNow = false;
         //右に進む
         if (RightDirection)
         {
@@ -131,11 +129,9 @@ public class ControlChargeEnemy : MonoBehaviour
             RightDirection = true;
             this.gameObject.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
         }
-        yield return null;
-        returnNow = false;
-
+        yield return new WaitForSeconds(1);
     }
-
+    
     private void ChargeHit()
     {
         if (!startCoolDown)
@@ -151,11 +147,16 @@ public class ControlChargeEnemy : MonoBehaviour
     {
         if (col.gameObject.tag == "Wall")
         {
+            //Debug.Log(this.gameObject.name);
             returnNow = true;
         }
         if (col.gameObject.tag == "DamageFloor")
         {
             //Debug.Log(this.gameObject.name);
+            returnNow = true;
+        }
+        if (col.gameObject.tag == "Enemy")
+        {
             returnNow = true;
         }
         if (col.gameObject.tag == "Player")
