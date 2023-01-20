@@ -8,9 +8,9 @@ public class SoundManager : MonoBehaviour
 
     public static SoundManager instance;
 
-    [SerializeField] private AudioSource audioSourceComponent;
+    
 
-    [SerializeField] AudioSource audiosource;
+    
 
     private void Awake()
     {
@@ -70,23 +70,7 @@ public class SoundManager : MonoBehaviour
         audioSourceComponent.Stop();
     }*/
 
-    public void Stop()
-    {
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            // àÍéûí‚é~
-            audiosource.Pause();
-        }
-        else if (Input.GetKeyDown(KeyCode.Space))
-        {
-            // çƒäJ
-            audiosource.UnPause();
-        }
-    }
+    
 
-    /*public void Stop()
-        {
-        
-        }*/
 
 }

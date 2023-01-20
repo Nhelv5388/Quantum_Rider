@@ -500,11 +500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf1eb5eff5beb0b4ba638d52c54f4ffc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds:
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    audiosource: {fileID: 0}
+  sounds: []
 --- !u!4 &734255632
 Transform:
   m_ObjectHideFlags: 0
@@ -529,7 +525,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1395425727}
-  - component: {fileID: 1395425728}
   m_Layer: 0
   m_Name: BGm
   m_TagString: Untagged
@@ -552,20 +547,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1395425728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1395425726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 159ab30b75119de43b978cd0509fea02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds: []
-  audiosource: {fileID: 0}
 --- !u!1 &2124803973
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,6 +557,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2124803976}
   - component: {fileID: 2124803974}
+  - component: {fileID: 2124803977}
   m_Layer: 0
   m_Name: BgmManager
   m_TagString: Untagged
@@ -600,7 +582,6 @@ MonoBehaviour:
     clip: {fileID: 0}
     volume: 0
     audiosource: {fileID: 0}
-  audiosource: {fileID: 0}
 --- !u!4 &2124803976
 Transform:
   m_ObjectHideFlags: 0
@@ -616,3 +597,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2124803977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124803973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82bfcb2c8e951584796c979f576d4a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audiosource: {fileID: 0}
