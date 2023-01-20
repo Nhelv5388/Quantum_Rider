@@ -61,7 +61,7 @@ public class PlayerMove : MonoBehaviour
                 }
             }
             else if (Input.GetMouseButtonUp(0))
-            {//
+            {
                 _Pressed = true;
                 //BeamActiveFalse();
             }
