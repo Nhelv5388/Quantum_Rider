@@ -42,14 +42,15 @@ public class HPManager : MonoBehaviour
     }
     public int Damage(int damage)
     {
-        if (!ShieldImage.shieldActive)
+        if (!SetShieldItem.usingShieldItem)
         {
             _PlayerHP -= damage;
             hpChange();
         }
         else
         {
-            ShieldImage.shieldActive = false;
+            //Œ’m‚ªŸè‚É‰ü•Ï‚µ‚Ü‚µ‚½B
+            //SetShieldItem.usingShieldItem = false;
         }
         if (_PlayerHP <= 0 && death == false)
         {

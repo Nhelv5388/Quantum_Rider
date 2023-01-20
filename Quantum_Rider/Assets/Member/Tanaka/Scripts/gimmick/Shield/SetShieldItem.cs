@@ -5,7 +5,7 @@ using UnityEngine;
 public class SetShieldItem : MonoBehaviour
 {
     [SerializeField]
-    private float activeTime = 3.0f;
+    private float activeTime;
     [SerializeField]
     private float nowTime = 0.0f;
 
@@ -19,9 +19,9 @@ public class SetShieldItem : MonoBehaviour
     private GameObject brokenEffect;
     private ParticleSystem brokenPar;
 
-
-    private bool activeSheild = false;
+    //このアイテムが使われたか
     private bool usedShieldItem = false;
+    //現在使われているか
     static public bool usingShieldItem = false;
 
     //GameObject seManager;
@@ -51,23 +51,33 @@ public class SetShieldItem : MonoBehaviour
     void Update()
     {
 
-        if (activeSheild)
+        if (usingShieldItem == true)
         {
             shieldImage.transform.position = playerPos.transform.localPosition;
+            brokenEffect.transform.position = playerPos.transform.localPosition;
         }
-        if (ShieldImage.shieldActive == true)
+        if (usingShieldItem == true)
         {
             nowTime += Time.deltaTime;
             //効果切れ
             if (nowTime >= activeTime)
             {
-                ShieldImage.shieldActive = false;
+                usingShieldItem = false;
                 shieldImage.SetActive(false);
-                activeSheild = false;
+                usingShieldItem = false;
                 nowTime = 0.0f;
-
+                Semanager.instance.Play("BarrierLost");
                 if (brokenPar != null) brokenPar.Play();
+                Debug.Log("<color=green>BarrierLost</color>");
             }
+        }
+
+        if (!usingShieldItem)
+        {
+            usingShieldItem = false;
+            shieldImage.SetActive(false);
+            usingShieldItem = false;
+            nowTime = 0.0f;
         }
     }
     
@@ -81,7 +91,7 @@ public class SetShieldItem : MonoBehaviour
             {
                 //Debug.Log("シールド展開");
 
-                ShieldImage.shieldActive = true;
+                usingShieldItem = true;
                 Semanager.instance.Play("Barrier");
                 //SE再生
                 //se.Play("6");
@@ -89,9 +99,7 @@ public class SetShieldItem : MonoBehaviour
                 shieldItemImage.gameObject.SetActive(false);
                 shieldImage.SetActive(true);
                 playerPos = col.gameObject;
-                activeSheild = true;
                 usedShieldItem = true;
-                usingShieldItem = true;
                 
             }
         }

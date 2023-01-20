@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ShieldImage : MonoBehaviour
 {
-    static public bool shieldActive = false;
-    
     /*ˆê‰ñŒÀ‚èê—p
     private void OnTriggerEnter2D(Collider2D col)
     {
