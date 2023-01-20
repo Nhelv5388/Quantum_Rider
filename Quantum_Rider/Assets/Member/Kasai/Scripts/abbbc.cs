@@ -47,5 +47,9 @@ public class abbbc : MonoBehaviour
             FadeTest.StartFade(fadeSpeed);
             
         }
+        if(Input.GetKeyDown(KeyCode.V))
+        {
+            StartCoroutine(FadeTest.FadeinFixed(fadeSpeed));
+        }
     }
 }
