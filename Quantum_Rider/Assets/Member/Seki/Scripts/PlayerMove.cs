@@ -50,7 +50,7 @@ public class PlayerMove : MonoBehaviour
 <<<<<<< HEAD
             Rounding();
 =======
-            //Rounding();
+            //Rounding()
 >>>>>>> origin/sokudo
             
             if (Input.GetMouseButton(0))
