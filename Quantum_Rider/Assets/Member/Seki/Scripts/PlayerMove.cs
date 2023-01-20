@@ -6,7 +6,7 @@ public class PlayerMove : MonoBehaviour
 {
     [SerializeField]
     float hoverMaxX, hoverMaxY = 0, hoverPower = 1,beamActiveTime=0.5f;
-    //çXêVÇ©ÇØÇΩ
+
     [SerializeField]
     GameObject rotationObjectRight, rotationObjectLeft, 
         beamRight,beamLeft, beamRightPos, beamLeftPos,beamParent;
