@@ -14,6 +14,7 @@ public class MapManager : MonoBehaviour
         //別スクリプトからマップ名を指定するときに使用
         Title,
         Tutorial,
+        EasyMap,
         MainGameScene,
         GameOver,
         GameClear,
@@ -83,7 +84,12 @@ public class MapManager : MonoBehaviour
                 break;
             case SceneID.Tutorial:
                 SceneManager.LoadScene("TutorialScene");
-                //SoundManager.instance.Play("MainGame");
+                SoundManager.instance.Play("MainGame");
+                HPManager.instance.HpReset();
+                break;
+            case SceneID.EasyMap:
+                SceneManager.LoadScene("EasyMap");
+                SoundManager.instance.Play("MainGame");
                 HPManager.instance.HpReset();
                 break;
             case SceneID.MainGameScene:
@@ -98,7 +104,7 @@ public class MapManager : MonoBehaviour
                 break;
             case SceneID.GameClear:
                 SceneManager.LoadScene("GameClear");
-                SoundManager.instance.Play("GameClear");//今後ゲームクリア用の音源追加予定
+                SoundManager.instance.Play("GameClear");
                 break;
             default:
                 Debug.LogWarning("そのマップは存在しません");
