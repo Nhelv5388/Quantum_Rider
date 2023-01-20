@@ -113,6 +113,14 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 41d7f43280f111e49853a3b9d49d147d, type: 3}
     volume: 0.5
     audiosource: {fileID: 0}
+  - name: PlayerDamage
+    clip: {fileID: 8300000, guid: 8e7628c2ca6255149ae96e70fac20e31, type: 3}
+    volume: 0.5
+    audiosource: {fileID: 0}
+  - name: BarrierLost
+    clip: {fileID: 8300000, guid: 7f9a3f453df5ef34c913d65f69bf16f7, type: 3}
+    volume: 0.5
+    audiosource: {fileID: 0}
 --- !u!114 &4261292687833318915
 MonoBehaviour:
   m_ObjectHideFlags: 0

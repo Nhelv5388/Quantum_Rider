@@ -5,15 +5,16 @@ using UnityEngine.UI;
 
 public class abbbc : MonoBehaviour
 {
+
     [SerializeField]
-    private float fadeTime;//多分使わない
+    private Image _image;
     [SerializeField]
-    private float fadeSpeed;
+    private float fadeTime;
     // Start is called before the first frame update
     void Start()
     {
         FadeTest.GetFadeImage();//タイトルでボタンが押せない問題を修正のため
-                            Debug.Log(FadeTest._fadeImage);
+                            //Debug.Log(Fade._fadeImage);
     }
 
     // Update is called once per frame
@@ -41,11 +42,17 @@ public class abbbc : MonoBehaviour
         //{
         //    StartCoroutine(FadeTest.TestFadeOut(fadeTime));
         //}
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.A))
         {
-            Debug.Log("fadein");
-            FadeTest.StartFade(fadeSpeed);
-            
+            Semanager.instance.Play("Heal");
+        }
+        if(Input.GetKeyDown(KeyCode.S))
+        {
+            Semanager.instance.Play("PlayerDamage");
+        }
+        if(Input.GetKeyDown(KeyCode.D))
+        {
+            Semanager.instance.Play("BarrierLost");
         }
     }
 }

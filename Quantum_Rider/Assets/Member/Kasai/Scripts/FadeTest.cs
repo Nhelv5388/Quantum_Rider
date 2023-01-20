@@ -182,32 +182,4 @@ public static class FadeTest
             //Debug.Log(_fadeImage);
         }
     }
-    public static IEnumerator FadeinFixed(float fadespeed)
-    {
-        GetFadeImage();
-        //_fadeImage.SetActive(true);
-        if (image == null)
-        {
-            image = _fadeImage.GetComponent<Image>();
-            image.color = new Color(0, 0, 0, 1.0f);
-        }
-        while(image.color.a >= 0)
-        {
-            Color c = image.color;
-            c.a -= fadespeed;
-            image.color = c;
-            yield return null;
-            Debug.Log(c.a);
-            if (image.color.a == 0)
-            {
-                _fadeImage.gameObject.SetActive(false);
-                break;
-            }
-        }
-    }
-    public static void StartFade(float fade)
-    {
-        Debug.Log(fade);
-        StaticMono.StartCoroutine(FadeinFixed(fade));
-    }
 }
