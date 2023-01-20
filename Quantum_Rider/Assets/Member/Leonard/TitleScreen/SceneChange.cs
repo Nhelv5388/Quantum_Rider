@@ -30,4 +30,10 @@ public class SceneChange : MonoBehaviour
         Debug.Log("Hard");
         SceneManager.LoadScene("Hard");
     }
+
+    public void Tutorial()
+    {
+        Debug.Log("Tutorial");
+        SceneManager.LoadScene("Tutorial");
+    }
 }
