@@ -20,27 +20,39 @@ public class abbbc : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.I))
-        {
-            StartCoroutine(FadeTest.IEFadeIn(fadeTime));
-        }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            StartCoroutine(FadeTest.IEFadeOut(fadeTime));
-        }
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            FadeTest.FadeChange(fadeTime);
-        }
+        //if(Input.GetKeyDown(KeyCode.I))
+        //{
+        //    StartCoroutine(FadeTest.IEFadeIn(fadeTime));
+        //}
+        //if (Input.GetKeyDown(KeyCode.O))
+        //{
+        //    StartCoroutine(FadeTest.IEFadeOut(fadeTime));
+        //}
+        //if (Input.GetKeyDown(KeyCode.P))
+        //{
+        //    FadeTest.FadeChange(fadeTime);
+        //}
 
-        //êVÇµÇ¢ÇŸÇ§ÇÕÇ±Ç¡Çø
-        if (Input.GetKeyDown(KeyCode.J))
+        ////êVÇµÇ¢ÇŸÇ§ÇÕÇ±Ç¡Çø
+        //if (Input.GetKeyDown(KeyCode.J))
+        //{
+        //    StartCoroutine(FadeTest.TestFadeIn(fadeTime));
+        //}
+        //if (Input.GetKeyDown(KeyCode.K))
+        //{
+        //    StartCoroutine(FadeTest.TestFadeOut(fadeTime));
+        //}
+        if(Input.GetKeyDown(KeyCode.A))
         {
-            StartCoroutine(FadeTest.TestFadeIn(fadeTime));
+            Semanager.instance.Play("Heal");
         }
-        if (Input.GetKeyDown(KeyCode.K))
+        if(Input.GetKeyDown(KeyCode.S))
         {
-            StartCoroutine(FadeTest.TestFadeOut(fadeTime));
+            Semanager.instance.Play("PlayerDamage");
+        }
+        if(Input.GetKeyDown(KeyCode.D))
+        {
+            Semanager.instance.Play("BarrierLost");
         }
     }
 }
