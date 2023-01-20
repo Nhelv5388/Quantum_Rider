@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public static class FadeTest
 {
     private static MonoBehaviour StaticMono = GameManager.instance as MonoBehaviour;
+    private static MonoBehaviour StaticMonotest = GameManager.instance;
     private static float time = 0;
     public static GameObject _fadeImage;
     private static Image image;
@@ -181,5 +182,33 @@ public static class FadeTest
         {
             //Debug.Log(_fadeImage);
         }
+    }
+    public static IEnumerator FadeinFixed(float fadespeed)
+    {
+        GetFadeImage();
+        //_fadeImage.SetActive(true);
+        if (image == null)
+        {
+            image = _fadeImage.GetComponent<Image>();
+            image.color = new Color(0, 0, 0, 1.0f);
+        }
+        while(image.color.a >= 0)
+        {
+            Color c = image.color;
+            c.a -= fadespeed;
+            image.color = c;
+            yield return null;
+            Debug.Log(c.a);
+            if (image.color.a == 0)
+            {
+                _fadeImage.gameObject.SetActive(false);
+                break;
+            }
+        }
+    }
+    public static void StartFade(float fadespeed)
+    {
+        Debug.Log(fadespeed);
+        StaticMonotest.StartCoroutine(FadeinFixed(fadespeed));
     }
 }

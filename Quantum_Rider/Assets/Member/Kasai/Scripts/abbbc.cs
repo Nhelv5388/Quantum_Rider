@@ -5,42 +5,51 @@ using UnityEngine.UI;
 
 public class abbbc : MonoBehaviour
 {
-
     [SerializeField]
-    private Image _image;
+    private float fadeTime;//多分使わない
     [SerializeField]
-    private float fadeTime;
+    private float fadeSpeed;
     // Start is called before the first frame update
     void Start()
     {
         FadeTest.GetFadeImage();//タイトルでボタンが押せない問題を修正のため
-                            //Debug.Log(Fade._fadeImage);
+                            Debug.Log(FadeTest._fadeImage);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.I))
-        {
-            StartCoroutine(FadeTest.IEFadeIn(fadeTime));
-        }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            StartCoroutine(FadeTest.IEFadeOut(fadeTime));
-        }
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            FadeTest.FadeChange(fadeTime);
-        }
+        //if(Input.GetKeyDown(KeyCode.I))
+        //{
+        //    StartCoroutine(FadeTest.IEFadeIn(fadeTime));
+        //}
+        //if (Input.GetKeyDown(KeyCode.O))
+        //{
+        //    StartCoroutine(FadeTest.IEFadeOut(fadeTime));
+        //}
+        //if (Input.GetKeyDown(KeyCode.P))
+        //{
+        //    FadeTest.FadeChange(fadeTime);
+        //}
 
-        //新しいほうはこっち
-        if (Input.GetKeyDown(KeyCode.J))
+        ////新しいほうはこっち
+        //if (Input.GetKeyDown(KeyCode.J))
+        //{
+        //    StartCoroutine(FadeTest.TestFadeIn(fadeTime));
+        //}
+        //if (Input.GetKeyDown(KeyCode.K))
+        //{
+        //    StartCoroutine(FadeTest.TestFadeOut(fadeTime));
+        //}
+        if(Input.GetKeyDown(KeyCode.Space))
         {
-            StartCoroutine(FadeTest.TestFadeIn(fadeTime));
+            Debug.Log("fadein");
+            FadeTest.StartFade(fadeSpeed);
+            
         }
-        if (Input.GetKeyDown(KeyCode.K))
+        if(Input.GetKeyDown(KeyCode.V))
         {
-            StartCoroutine(FadeTest.TestFadeOut(fadeTime));
+            StartCoroutine(FadeTest.FadeinFixed(fadeSpeed));
         }
     }
 }
