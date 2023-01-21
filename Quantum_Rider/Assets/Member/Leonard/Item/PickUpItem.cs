@@ -5,7 +5,7 @@ using UnityEngine;
 public class PickUpItem : MonoBehaviour
 {
     public GameObject prefab;
-    public Vector3 spawn = new Vector3(0,0,0);
+    private Vector3 spawn = new Vector3(0,0,0);
 
     private void Start()
     {
