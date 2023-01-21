@@ -230,6 +230,7 @@ public class PlayerMove : MonoBehaviour
         {
             RightBeam.GetComponent<BeamMove>().through = true;
             LeftBeam.GetComponent<BeamMove>().through = true;
+            
         }
         /*:beamRight.SetActive(true);
         beamLeft.SetActive(true);*/
