@@ -18,7 +18,10 @@ public class Enemy : MonoBehaviour
         
     }
 
-
+    private void Destroy()
+    {
+        
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -27,7 +30,10 @@ public class Enemy : MonoBehaviour
         {
             Semanager.instance.Play("Explosion");
             this.gameObject.SetActive(false);
+            //Instantiate("BOMB!!!");
         }
+
+
     }
 
 }
