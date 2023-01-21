@@ -8,6 +8,10 @@ public class SoundManager : MonoBehaviour
 
     public static SoundManager instance;
 
+    
+
+    
+
     private void Awake()
     {
         //AudioManagerインスタンスがなければ生成する
@@ -54,12 +58,19 @@ public class SoundManager : MonoBehaviour
             //s.audiosource.Stop();
             return;
             
-        }     
+        }
+
         //あればPlay()
         s.audiosource.Play();
     }
-    //public void Stop()
-    //{
 
-    //}
+
+    /*private void Stop()
+    {
+        audioSourceComponent.Stop();
+    }*/
+
+    
+
+
 }
