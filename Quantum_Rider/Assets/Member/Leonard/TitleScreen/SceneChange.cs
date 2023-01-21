@@ -5,29 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
-    //[SerializeField] private MapManager.SceneID mapName;
+    [SerializeField] private MapManager.SceneID mapName;//マップ移動に必要だからコメントアウトしないで
     public void MoveToScene()
     {
         //Debug.Log("MoveToScene");
-        //MapManager.Instance.CallFadeIn(mapName);
-        SceneManager.LoadScene("Difficulty");
+        MapManager.Instance.CallFadeIn(mapName);
+        //SceneManager.LoadScene("Difficulty");
     }
 
     public void exitgame()
     {
-        Debug.Log("ExitGame");
+        //Debug.Log("ExitGame");
         Application.Quit();
     }
 
-    public void EasyMode()
-    {
-        Debug.Log("Easy");
-        SceneManager.LoadScene("Easy");
-    }
+    //public void EasyMode()
+    //{
+    //    Debug.Log("Easy");
+    //    SceneManager.LoadScene("Easy");
+    //}
 
-    public void HardMode()
-    {
-        Debug.Log("Hard");
-        SceneManager.LoadScene("Hard");
-    }
+    //public void HardMode()
+    //{
+    //    Debug.Log("Hard");
+    //    SceneManager.LoadScene("Hard");
+    //}
 }

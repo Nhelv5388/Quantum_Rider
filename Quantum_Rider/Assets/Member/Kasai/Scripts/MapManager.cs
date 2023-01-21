@@ -1,14 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MapManager : MonoBehaviour
 {
     public static MapManager Instance { get => _instance; }
     static MapManager _instance;
     [SerializeField] private float _fadeTime;
+    private SceneID beforeMap = SceneID.None;
     public enum SceneID
     {
         //別スクリプトからマップ名を指定するときに使用
@@ -70,8 +68,8 @@ public class MapManager : MonoBehaviour
         //{
         //    StartCoroutine(Fade.IEFadeOut(_fadeTime,SceneChange,SceneID.GameOver));
         //}
-        
-        
+
+
     }
     public void SceneChange(SceneID Scene)
     {
@@ -121,7 +119,10 @@ public class MapManager : MonoBehaviour
         //{
         //    _image = GameObject.Find("FadeImage").GetComponent<Image>();
         //}
-        if (SceneManager.GetActiveScene().name == "MainGameScene")
+        //メインゲームに移動したらマウスカーソルを消す
+        if (SceneManager.GetActiveScene().name == "MainGameScene" ||
+            SceneManager.GetActiveScene().name == "EasyMap" ||
+            SceneManager.GetActiveScene().name == "TutorialMap")
         {
             Cursor.visible = false;
         }
@@ -129,7 +130,12 @@ public class MapManager : MonoBehaviour
         {
             Cursor.visible = true;
         }
-
-        StartCoroutine(Fade.IEFadeIn(_fadeTime));
+        //
+        if (SceneManager.GetActiveScene().name == "GameOver")
+        {
+            GameOver gameOver=new GameOver();
+            gameOver.mapName = beforeMap;
+        }
+            StartCoroutine(Fade.IEFadeIn(_fadeTime));
     }
 }
