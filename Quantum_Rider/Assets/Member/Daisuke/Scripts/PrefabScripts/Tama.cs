@@ -33,7 +33,7 @@ public class Tama : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             HPManager.instance.Damage(1);
-            Semanager.instance.Play("Explosion");
+            Semanager.instance.Play("PlayerDamage");
         }
 
 
