@@ -1,51 +1,35 @@
-ï»¿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SetShieldItem : MonoBehaviour
+public class beforeShieldSpere : MonoBehaviour
 {
     [SerializeField]
     private float activeTime;
     [SerializeField]
     private float nowTime = 0.0f;
 
-    //ã‚·ãƒ¼ãƒ«ãƒ‰ã®ã‚¢ã‚¤ãƒ†ãƒ ç”»åƒ
+    //ƒV[ƒ‹ƒh‚ÌƒAƒCƒeƒ€‰æ‘œ
     private GameObject shieldItemImage;
-    //ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã«ä»˜å±ã•ã›ã‚‹ã‚·ãƒ¼ãƒ«ãƒ‰ç”»åƒ
+    //ƒvƒŒƒCƒ„[‚É•t‘®‚³‚¹‚éƒV[ƒ‹ƒh‰æ‘œ
     private GameObject shieldImage;
-    //ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®ç”»åƒ
+    //ƒvƒŒƒCƒ„[‚Ì‰æ‘œ
     private GameObject playerPos;
 
-    private GameObject brokenEffect;
-    private ParticleSystem brokenPar;
-
-    //ã“ã®ã‚¢ã‚¤ãƒ†ãƒ ãŒä½¿ã‚ã‚ŒãŸã‹
+    //‚±‚ÌƒAƒCƒeƒ€‚ªg‚í‚ê‚½‚©
     private bool usedShieldItem = false;
-    //ç¾åœ¨ä½¿ã‚ã‚Œã¦ã„ã‚‹ã‹
+    //Œ»İg‚í‚ê‚Ä‚¢‚é‚©
     static public bool usingShieldItem = false;
-
-    //GameObject seManager;
-    //Semanager se = null;
 
     void Start()
     {
-        shieldItemImage = transform .Find("ShieldItemImage").gameObject;
+        shieldItemImage = transform.Find("ShieldItemImage").gameObject;
         shieldImage = transform.Find("ShieldImage").gameObject;
-
-        //ã‚¨ãƒ•ã‚§ã‚¯ãƒˆä»˜å±ã®æ™‚
-        brokenEffect = transform.Find("BrokenEffect").gameObject;
-        if(brokenEffect != null)
-        {
-            brokenPar = brokenEffect.GetComponent<ParticleSystem>();
-        }
 
         this.gameObject.SetActive(true);
 
         usedShieldItem = false;
         usingShieldItem = false;
-        //(ãƒ†ã‚¹ãƒˆç”¨ã®åå‰ã®ãŸã‚å¾Œã§å¤‰æ›´äºˆå®š)
-        //seManager = GameObject.Find("SEManager");
-        //se = seManager.GetComponent<Semanager>();
     }
 
     void Update()
@@ -54,12 +38,11 @@ public class SetShieldItem : MonoBehaviour
         if (usingShieldItem == true && playerPos != null)
         {
             shieldImage.transform.position = playerPos.transform.localPosition;
-            if(brokenEffect != null)brokenEffect.transform.position = playerPos.transform.localPosition;
         }
         if (usingShieldItem == true)
         {
             nowTime += Time.deltaTime;
-            //åŠ¹æœåˆ‡ã‚Œ
+            //Œø‰ÊØ‚ê
             if (nowTime >= activeTime)
             {
                 usingShieldItem = false;
@@ -67,12 +50,11 @@ public class SetShieldItem : MonoBehaviour
                 usingShieldItem = false;
                 nowTime = 0.0f;
                 Semanager.instance.Play("BarrierLost");
-                if (brokenPar != null) brokenPar.Play();
                 Debug.Log("<color=green>BarrierLost</color>");
             }
         }
 
-        //ãƒã‚°å¯¾ç­–
+        //ƒoƒO‘Îô
         if (!usingShieldItem)
         {
             usingShieldItem = false;
@@ -81,27 +63,27 @@ public class SetShieldItem : MonoBehaviour
             nowTime = 0.0f;
         }
     }
-    
+
 
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (!usedShieldItem && !usingShieldItem)
         {
-            //è§¦ã‚ŒãŸã‚‰éè¡¨ç¤ºã«ã™ã‚‹
+            //G‚ê‚½‚ç”ñ•\¦‚É‚·‚é
             if (col.gameObject.tag == "Player")
             {
-                //Debug.Log("ã‚·ãƒ¼ãƒ«ãƒ‰å±•é–‹");
+                //Debug.Log("ƒV[ƒ‹ƒh“WŠJ");
 
                 usingShieldItem = true;
                 Semanager.instance.Play("Barrier");
-                //SEå†ç”Ÿ
+                //SEÄ¶
                 //se.Play("6");
 
                 shieldItemImage.gameObject.SetActive(false);
                 shieldImage.SetActive(true);
                 playerPos = col.gameObject;
                 usedShieldItem = true;
-                
+
             }
         }
     }
