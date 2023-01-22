@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-
+    [SerializeField]
+    private GameObject bomb;
     
 
 
@@ -28,9 +29,11 @@ public class Enemy : MonoBehaviour
         //Debug.Log(collision.gameObject);
         if (collision.gameObject.CompareTag("PlayerAttack"))
         {
+            //Debug.Log("a");
             Semanager.instance.Play("Explosion");
+            Instantiate(bomb,this.transform.position,Quaternion.identity);
             this.gameObject.SetActive(false);
-            //Instantiate("BOMB!!!");
+            
         }
 
 
