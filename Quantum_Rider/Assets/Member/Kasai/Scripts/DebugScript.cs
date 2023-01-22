@@ -5,6 +5,7 @@ using UnityEngine;
 public class DebugScript : MonoBehaviour
 {
     public int damage;
+    private bool debugMode=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,9 +15,18 @@ public class DebugScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyUp(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.RightShift))
+        {
+            debugMode = true;
+        }
+        if(Input.GetKeyUp(KeyCode.Space)&&debugMode)
         {
             HPManager.instance.Damage(damage);
         }
+        if(Input.GetKeyDown(KeyCode.Tab)&&debugMode)
+        {
+            HPManager.instance.Heal(10);
+        }
+        
     }
 }

@@ -6,7 +6,9 @@ public class Tutorial : MonoBehaviour
 {
     [SerializeField] private GameObject[] wall;
     [SerializeField] private GameObject[] enemy;
-    private int EnemyKillCount = 0;
+    private bool sound=false;
+    private bool sound2 = false;
+    private bool sound3 = false;
 
     // Start is called before the first frame update
     void Start()
@@ -20,15 +22,30 @@ public class Tutorial : MonoBehaviour
         enemy = GameObject.FindGameObjectsWithTag("Enemy");
         if(enemy.Length <= 4)
         {
+            if (!sound) 
+            {
+                Semanager.instance.Play("Explosion");
+                sound = true;
+            }
+
             wall[0].SetActive(false);
         }
         if (enemy.Length <= 1)
         {
-            Debug.Log(2);
+            if (!sound2)
+            {
+                Semanager.instance.Play("Explosion");
+                sound2 = true;
+            }
             wall[1].SetActive(false);
         }
         if (enemy.Length <= 0)
         {
+            if (!sound3)
+            {
+                Semanager.instance.Play("Explosion");
+                sound3 = true;
+            }
             wall[2].SetActive(false);
         }
 

@@ -68,7 +68,7 @@ public class MapManager : MonoBehaviour
         //{
         //    StartCoroutine(Fade.IEFadeOut(_fadeTime,SceneChange,SceneID.GameOver));
         //}
-
+        Debug.Log(beforeMap);
 
     }
     public void SceneChange(SceneID Scene)
@@ -81,18 +81,21 @@ public class MapManager : MonoBehaviour
                 //PlayerManager.Instance.PlayerSetActive(false);
                 break;
             case SceneID.Tutorial:
-                SceneManager.LoadScene("TutorialScene");
+                SceneManager.LoadScene("TutorialMap");
                 SoundManager.instance.Play("MainGame");
+                beforeMap = Scene;
                 HPManager.instance.HpReset();
                 break;
             case SceneID.EasyMap:
                 SceneManager.LoadScene("EasyMap");
                 SoundManager.instance.Play("MainGame");
+                beforeMap = Scene;
                 HPManager.instance.HpReset();
                 break;
             case SceneID.MainGameScene:
                 SceneManager.LoadScene("MainGameScene");
                 SoundManager.instance.Play("MainGame");
+                beforeMap = Scene;
                 HPManager.instance.HpReset();
                 break;
             case SceneID.GameOver:
@@ -133,8 +136,8 @@ public class MapManager : MonoBehaviour
         //
         if (SceneManager.GetActiveScene().name == "GameOver")
         {
-            GameOver gameOver=new GameOver();
-            gameOver.mapName = beforeMap;
+            GetComponent<GameOver>();
+            GameOver.mapName = beforeMap;
         }
             StartCoroutine(Fade.IEFadeIn(_fadeTime));
     }
