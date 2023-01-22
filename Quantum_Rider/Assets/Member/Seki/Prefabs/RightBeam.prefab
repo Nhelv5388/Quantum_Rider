@@ -173,6 +173,8 @@ MonoBehaviour:
   beamPos: {fileID: 0}
   beamDirection: {fileID: 0}
   speed: 10
+  timer: 3
+  through: 0
 --- !u!50 &8365325446043298889
 Rigidbody2D:
   serializedVersion: 4

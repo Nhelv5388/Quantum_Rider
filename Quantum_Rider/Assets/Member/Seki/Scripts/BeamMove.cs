@@ -11,13 +11,14 @@ public class BeamMove : MonoBehaviour
 
     [SerializeField]
     int speed = 1;
+    [SerializeField] private float timer = 3;
 
     Vector3 direction;
     public bool through = false;
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(this.gameObject, 5);
+        Destroy(this.gameObject, timer);
     }
 
     // Update is called once per frame
