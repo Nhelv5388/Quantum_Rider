@@ -20,14 +20,18 @@ public class Throw : MonoBehaviour
         {
             a = col.gameObject;
             col.gameObject.GetComponent<PlayerMove>().throughFrag = true;
-            this.gameObject.SetActive(false);
             StartCoroutine(Frag(col.gameObject));
+            Semanager.instance.Play("Barrier");
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
+            
         }
     }
 
     IEnumerator Frag(GameObject a)
     {
         yield return new WaitForSeconds(seconds);
+        Semanager.instance.Play("BarrierLost");
         a.gameObject.GetComponent<PlayerMove>().throughFrag = false;
     }
 
