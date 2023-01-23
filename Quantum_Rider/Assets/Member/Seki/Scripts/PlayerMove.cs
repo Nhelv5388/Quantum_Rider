@@ -102,7 +102,7 @@ public class PlayerMove : MonoBehaviour
                 {//サーチ範囲内なら
                     if (min == 0 || dis < min)
                     {//最初の敵もしくは一番近い敵
-                        Debug.Log("ターゲットは"+ t);
+                        //Debug.Log("ターゲットは"+ t);
                         enemyFrag = true;
                         enemy = t;
                         min = dis;//最小の距離を更新

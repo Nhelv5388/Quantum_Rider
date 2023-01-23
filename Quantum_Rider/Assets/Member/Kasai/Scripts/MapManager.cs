@@ -68,7 +68,7 @@ public class MapManager : MonoBehaviour
         //{
         //    StartCoroutine(Fade.IEFadeOut(_fadeTime,SceneChange,SceneID.GameOver));
         //}
-        Debug.Log(beforeMap);
+        //Debug.Log(beforeMap);
 
     }
     public void SceneChange(SceneID Scene)

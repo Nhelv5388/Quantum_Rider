@@ -44,8 +44,8 @@ public class ControlChargeEnemy : MonoBehaviour
     private bool death=false;
 
     //爆発アニメーションの保存位置
-    private string ad = "Assets/Member/Seki/Prefabs/BOMB!!!.prefab";
-    private GameObject bomb;
+    //private string ad = "Assets/Member/Seki/Prefabs/BOMB!!!.prefab";
+    [SerializeField] private GameObject bomb;
 
     void Start()
     {
@@ -64,7 +64,7 @@ public class ControlChargeEnemy : MonoBehaviour
         playerSerch.transform.localPosition = dStartPos;
         detectionFloor.transform.localPosition = pStartPos;
 
-        bomb = AssetDatabase.LoadAssetAtPath<GameObject>(ad);
+        //bomb = AssetDatabase.LoadAssetAtPath<GameObject>(ad);
     }
 
 

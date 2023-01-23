@@ -5,6 +5,7 @@ using UnityEngine;
 public class Mokujin : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField] GameObject bomb;
     void Start()
     {
 
@@ -19,7 +20,8 @@ public class Mokujin : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("PlayerAttack"))
         {
-            Destroy(this.gameObject);
+            Instantiate(bomb,this.transform.position,Quaternion.identity);
+            this.gameObject.SetActive(false);
             //this.gameObject.SetActive(false);
         }
 

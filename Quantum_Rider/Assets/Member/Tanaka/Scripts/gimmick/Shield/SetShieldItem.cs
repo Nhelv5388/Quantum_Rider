@@ -68,7 +68,7 @@ public class SetShieldItem : MonoBehaviour
                 nowTime = 0.0f;
                 Semanager.instance.Play("BarrierLost");
                 if (brokenPar != null) brokenPar.Play();
-                Debug.Log("<color=green>BarrierLost</color>");
+                //Debug.Log("<color=green>BarrierLost</color>");
             }
         }
 

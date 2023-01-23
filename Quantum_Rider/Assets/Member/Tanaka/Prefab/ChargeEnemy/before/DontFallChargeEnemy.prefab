@@ -167,6 +167,7 @@ MonoBehaviour:
   playerSerch: {fileID: 2599841637975924744}
   immortality: 0
   stopping: 0
+  bomb: {fileID: 6730253973809579167, guid: 0264005ccdca21241b5e7c10694ca504, type: 3}
 --- !u!61 &2599841637162642590
 BoxCollider2D:
   m_ObjectHideFlags: 0

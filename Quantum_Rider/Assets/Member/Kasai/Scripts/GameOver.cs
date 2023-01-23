@@ -8,7 +8,7 @@ public class GameOver : MonoBehaviour
     [HideInInspector] public static MapManager.SceneID mapName;//マップ移動に必要だからコメントアウトしないで
     public void Retry()
     {
-        Debug.Log(mapName);
+        //Debug.Log(mapName);
         MapManager.Instance.CallFadeIn(mapName);
     }
 }
