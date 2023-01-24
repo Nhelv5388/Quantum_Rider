@@ -23,8 +23,11 @@ public class ControlChargeEnemy : MonoBehaviour
 
     //進行方向
     private bool RightDirection = true;
-    private bool returnNow = false;
-    
+    public bool returnNow = false;
+    public bool returnEnemy = false;
+    private bool stopping = false;
+    private float stopTime = 0.0f;
+
 
     [SerializeField]
     private GameObject detectionFloor;
@@ -36,9 +39,7 @@ public class ControlChargeEnemy : MonoBehaviour
     [Header("以下デバッグ用\n(不死)")]
     [SerializeField]
     private bool immortality = false;
-    [Header("(停止)")]
-    [SerializeField]
-    private bool stopping = false;
+    
 
     //葛西が勝手に書き足しました
     private bool death=false;
@@ -94,12 +95,29 @@ public class ControlChargeEnemy : MonoBehaviour
         }
         if (floorSerch.noFloor || returnNow)
         {
+            StartCoroutine(ReturnWall());
+        }
+        if (returnEnemy)
+        {
             StartCoroutine(ReturnEnemy());
         }
+
         //判別ようにアタッチしたRB対策
         detectionFloor.transform.localPosition = dStartPos;
         playerSerch.transform.localPosition = pStartPos;
-        
+
+        if (stopping)
+        {
+            stopTime += Time.deltaTime;
+            if(stopTime >= 1.0f)
+            {
+                stopping = false;
+            }
+        }
+        else
+        {
+            stopTime = 0f;
+        }
     }
 
     //巡回中(プレイヤー未発見時)
@@ -124,6 +142,24 @@ public class ControlChargeEnemy : MonoBehaviour
     //転回
     IEnumerator ReturnEnemy()
     {
+        //右に進む
+        if (RightDirection)
+        {
+            RightDirection = false;
+            this.gameObject.transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
+        }
+        //左に進む
+        else if (!RightDirection)
+        {
+            RightDirection = true;
+            this.gameObject.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+        }
+        yield return null;
+        returnEnemy = false;
+        stopping = false;
+    }
+    IEnumerator ReturnWall()
+    {
         returnNow = false;
         //右に進む
         if (RightDirection)
@@ -137,9 +173,9 @@ public class ControlChargeEnemy : MonoBehaviour
             RightDirection = true;
             this.gameObject.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
         }
-        yield return new WaitForSeconds(1);
+        yield return null;
     }
-    
+
     private void ChargeHit()
     {
         if (!startCoolDown)
@@ -163,10 +199,6 @@ public class ControlChargeEnemy : MonoBehaviour
             //Debug.Log(this.gameObject.name);
             returnNow = true;
         }
-        if (col.gameObject.tag == "Enemy")
-        {
-            returnNow = true;
-        }
         if (col.gameObject.tag == "Player")
         {
             ChargeHit();
@@ -178,16 +210,24 @@ public class ControlChargeEnemy : MonoBehaviour
         //バグ対策
         if (col.gameObject.tag == "Enemy")
         {
+            //衝突した敵が右を向いている
             if(col.gameObject.transform.localRotation == Quaternion.Euler(0f, 0f, 0f))
             {
-                if(this.gameObject.transform.localRotation == Quaternion.Euler(0f, -180f, 0f))
+                //自分は左を向いている
+                if(this.gameObject.transform.localRotation != Quaternion.Euler(0f, 0f, 0f))
                 {
-                    returnNow = true;
+                    returnEnemy = true;
+                    
                 }
             }
+            //自分は右を向いている
             else
             {
-                returnNow = true;
+                returnEnemy = true;
+            }
+            if (col.gameObject.transform.position.x >= this.gameObject.transform.position.x)
+            {
+                stopping = true;
             }
         }
     }

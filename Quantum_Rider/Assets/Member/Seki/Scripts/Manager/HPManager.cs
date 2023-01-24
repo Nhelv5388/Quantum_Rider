@@ -42,7 +42,7 @@ public class HPManager : MonoBehaviour
     }
     public int Damage(int damage)
     {
-        if (!SetShieldItem.usingShieldItem&&!Fade.isFade)
+        if (!SetShieldItem.usingShieldItem && !beforeShieldSpere.usingShieldItem)
         {
             _PlayerHP -= damage;
             hpChange();
