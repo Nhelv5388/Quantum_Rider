@@ -11,13 +11,14 @@ public class ParDamageFloor : MonoBehaviour
     private bool startCol = false;
     private bool endCol = false;
 
-    private GameObject LaserPar;
-    private ParticleSystem par;
+    [SerializeField] private GameObject LaserPar;
+     //private ParticleSystem par;
 
     void Start()
     {
-        LaserPar = transform.GetChild(0).gameObject;
-        par = LaserPar.GetComponent<ParticleSystem>();
+        LaserPar.SetActive(false);
+        //LaserPar = transform.GetChild(0).gameObject;
+        //par = LaserPar.GetComponent<ParticleSystem>();
     }
 
 
@@ -32,7 +33,8 @@ public class ParDamageFloor : MonoBehaviour
                 nowTime = 0.0f;
                 HPManager.instance.Damage(1);
                 Semanager.instance.Play("Damaged");
-                par.Play();
+                //par.Play();
+                //Debug.Log("Damage");
             }
             if (endCol)
             {
@@ -50,6 +52,10 @@ public class ParDamageFloor : MonoBehaviour
         {
             HPManager.instance.Damage(1);
             Semanager.instance.Play("Damaged");
+            LaserPar.transform.position= col.transform.position;
+            LaserPar.SetActive(true);
+
+            //par.Play();
         }
     }
     private void OnCollisionStay2D(Collision2D col)
