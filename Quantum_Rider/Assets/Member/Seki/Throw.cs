@@ -20,6 +20,7 @@ public class Throw : MonoBehaviour
         {
             a = col.gameObject;
             col.gameObject.GetComponent<PlayerMove>().throughFrag = true;
+            if(seconds!=0)
             StartCoroutine(Frag(col.gameObject));
             Semanager.instance.Play("Barrier");
             this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
