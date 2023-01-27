@@ -51,6 +51,7 @@ public class ColDamageFloor : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
+            Debug.Log("ColDamage");
             HPManager.instance.Damage(1);
             //Debug.Log("フィールドダメージ");
             Semanager.instance.Play("Damaged");
