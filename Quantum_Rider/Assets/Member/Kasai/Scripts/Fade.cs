@@ -10,14 +10,14 @@ public static class Fade
 
 	public delegate void FadeDelegate(MapManager.SceneID scene);
     public static FadeDelegate fadeDelegate;
-    public static bool isFade = false;
+    public static bool isFade = false;//ここがTrueなら体力の処理やシーン遷移に制限をかける
     public static GameObject _fadeImage;
     private static Image image;
+    //FadeIn
     public static IEnumerator IEFadeIn(float _fadeTime)
     {
         GetFadeImage();
-        //Debug.Log(_fadeTime);
-        if (image == null)
+        if (image == null)//Imageの色を指定する
         {
             image = _fadeImage.GetComponent<Image>();
             image.color = new Color32(0, 0, 0, 255);
@@ -43,17 +43,15 @@ public static class Fade
                     break;
                 }
             }
-            //fadeDelegate(scene);
             
         }
 
     }
+    //FadeOut
     public static IEnumerator IEFadeOut(float _fadeTime, FadeDelegate fadeDelegate, MapManager.SceneID scene)
     {
         GetFadeImage();
         _fadeImage.gameObject.SetActive(true);
-        //Debug.Log("fadeout");
-        //Debug.Log( _fadeImage);
         isFade = true;
         if (image == null)
         {
@@ -81,7 +79,7 @@ public static class Fade
                     break;
                 }
             }
-            fadeDelegate(scene);
+            fadeDelegate(scene);//フェードアウトの処理が終わったらシーンを遷移させる
         }
         
     }
@@ -90,7 +88,7 @@ public static class Fade
         StaticMono.StartCoroutine(IEFadeOut(_fadeTime,fadeDelegate,scene));
     }
 
-    public static void GetFadeImage()
+    public static void GetFadeImage()//FadeImageがないなら取得
     {
         if (_fadeImage == null)
         {
@@ -98,7 +96,7 @@ public static class Fade
         }
         else
         {
-            //Debug.Log(_fadeImage);
+
         }
     }
 }

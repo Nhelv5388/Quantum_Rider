@@ -6,7 +6,7 @@ public class MapManager : MonoBehaviour
     public static MapManager Instance { get => _instance; }
     static MapManager _instance;
     [SerializeField] private float _fadeTime;
-    private SceneID beforeMap = SceneID.None;
+    private SceneID beforeMap = SceneID.None;//直前にいたシーン名を格納
     public enum SceneID
     {
         //別スクリプトからマップ名を指定するときに使用
@@ -29,15 +29,8 @@ public class MapManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
-
+        //FPSを固定
         Application.targetFrameRate = 160;
-        ////FadeからImageを取得
-        //Fade.GetFadeImage();//タイトルでボタンが押せない問題を修正のため
-        ////var _fadeImage = GameObject.Find("FadeImage");
-        ////_image= _fadeImage.GetComponent<Image>();
-        //Debug.Log(Fade._fadeImage);
-        //Fade._fadeImage.gameObject.SetActive(false);
 
     }
 
@@ -52,25 +45,11 @@ public class MapManager : MonoBehaviour
             SoundManager.instance.Play("Title");
             //FadeからImageを取得
             Fade.GetFadeImage();//タイトルでボタンが押せない問題を修正のため
-            //Debug.Log(Fade._fadeImage);
             Fade._fadeImage.gameObject.SetActive(false);
         }
 
     }
-    private void Update()
-    {
-        //デバッグ用
-        //if(Input.GetKeyDown(KeyCode.I))
-        //{
-        //    StartCoroutine(Fade.IEFadeIn(_fadeTime));
-        //}
-        //if (Input.GetKeyDown(KeyCode.O))
-        //{
-        //    StartCoroutine(Fade.IEFadeOut(_fadeTime,SceneChange,SceneID.GameOver));
-        //}
-        //Debug.Log(beforeMap);
-
-    }
+    //Sceneのマップに移動
     public void SceneChange(SceneID Scene)
     {
         switch (Scene)
@@ -78,7 +57,6 @@ public class MapManager : MonoBehaviour
             case SceneID.Title:
                 SceneManager.LoadScene("TitleSeki");
                 SoundManager.instance.Play("Title");
-                //PlayerManager.Instance.PlayerSetActive(false);
                 break;
             case SceneID.Tutorial:
                 SceneManager.LoadScene("TutorialMap");
@@ -118,10 +96,6 @@ public class MapManager : MonoBehaviour
     }
     void OnSceneLoad(Scene scene, LoadSceneMode mode)
     {
-        //if (_image == null&& GameObject.Find("FadeImage") != null)
-        //{
-        //    _image = GameObject.Find("FadeImage").GetComponent<Image>();
-        //}
         //メインゲームに移動したらマウスカーソルを消す
         if (SceneManager.GetActiveScene().name == "MainGameScene" ||
             SceneManager.GetActiveScene().name == "EasyMap" ||
@@ -133,7 +107,7 @@ public class MapManager : MonoBehaviour
         {
             Cursor.visible = true;
         }
-        //
+        //GameOverスクリプトにリトライ時に移動するマップを指定する
         if (SceneManager.GetActiveScene().name == "GameOver")
         {
             GetComponent<GameOver>();

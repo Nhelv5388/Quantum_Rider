@@ -9,9 +9,7 @@ public class Gate : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player")&&!Fade.isFade)
         {
-            //MapManager.Instance.SceneChange(mapName);
-            //HPManager.instance.HpReset();
-            MapManager.Instance.CallFadeIn(mapName);
+            MapManager.Instance.CallFadeIn(mapName);//マップマネージャーからフェード処理とマップ移動処理を呼ぶ
         }
     }
 }

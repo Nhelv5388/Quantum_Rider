@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class MouseTarget : MonoBehaviour
 {
-    //[SerializeField,Header("マウスカーソル消したかったらfalseにしてね")] public bool CursorFrag = true;
-    // Start is called before the first frame update
     void Start()
     {
 
