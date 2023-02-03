@@ -10,12 +10,15 @@ public class ParDamageFloor : MonoBehaviour
 
     private bool startCol = false;
     private bool endCol = false;
-
+    private GameObject _playerObject;
+    private Vector3 _playerPos = Vector3.zero;
     [SerializeField] private GameObject LaserPar;
     private ParticleSystem par;
 
     void Start()
     {
+        _playerObject = GameObject.FindWithTag("Player");
+        
         LaserPar = Instantiate(LaserPar,Vector3.zero,Quaternion.identity);
         par = LaserPar.GetComponent<ParticleSystem>();
     }
@@ -31,6 +34,8 @@ public class ParDamageFloor : MonoBehaviour
                 nowTime = 0.0f;
                 HPManager.instance.Damage(1);
                 Semanager.instance.Play("Damaged");
+                _playerPos = _playerObject.transform.position;
+                LaserPar.transform.position = _playerPos;
                 par.Play();
             }
             if (endCol)
@@ -49,10 +54,12 @@ public class ParDamageFloor : MonoBehaviour
         {
             HPManager.instance.Damage(1);
             Semanager.instance.Play("Damaged");
-            LaserPar.transform.position = new Vector3(
-                col.transform.position.x,
-                col.transform.position.y,
-                col.transform.position.z);
+            //LaserPar.transform.position = new Vector3(
+            //    col.transform.position.x,
+            //    col.transform.position.y,
+            //    col.transform.position.z);
+            _playerPos = _playerObject.transform.position;
+            LaserPar.transform.position = _playerPos;
             par.Play();
         }
     }
